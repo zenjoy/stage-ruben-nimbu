@@ -1,0 +1,12 @@
+.DS_Store
+.sass-cache
+.bundle
+.adyenrc
+.idea
+‡‡
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+dist/
+
+# Dependency directories
+node_modules/

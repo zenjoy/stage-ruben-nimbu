@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended", "prettier"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "globals": {
+    "DEBUG": false
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
