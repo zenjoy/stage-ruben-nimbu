@@ -7,9 +7,35 @@
 html,
 body {
   @apply h-full;
+  background: #F7F7F7;
 }
 
-.arrow, .titleColor {
-  color: #FDB833;
+// fonts
+$font-outfit: 'Outfit', 'sans-serif';
+$font-franklin: 'Libre Franklin', 'sans-serif';
+
+// colors
+$primariy-color: #FDB833; 
+$secondary-color: #84C7D0; 
+$tertiary-color: #708D81; 
+$white-color: #F7F7F7;
+$black-color: #272727;
+
+
+
+.arrow,
+.titleColor,
+.primary {
+  color: $primariy-color;
 }
 
+header {
+  margin: 0 auto;
+  max-width: 90rem;
+  width: 100%;
+  font-family: $font-franklin;
+}
+.element {
+  height: 75%;
+  width: 100%;
+}

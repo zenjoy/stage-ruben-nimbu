@@ -47,24 +47,38 @@
     </main>
   -->
 
-    <div class="bg-white">
-      <header x-data="{ isOpen: false }" class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <div class="bg">
+      <header x-data="{ isOpen: false }" class="absolute navbar-expand-lg inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-6" aria-label="Global">
           <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
-              <img class="h-8 w-auto" src="<%= require('./images/nimbu_logo.png') %>" alt="" />
+              <img class="h-7 w-auto" src="<%= require('./images/nimbu_logo.png') %>" alt="logo" />
             </a>
           </div>
 
           <div class="hidden lg:flex lg:gap-x-12">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Website</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">E-commerce</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Mobile Apps</a>
+            <a
+              href="#"
+              class="relative text-black hover:text-black transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-yellow before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-yellow after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] text-md font-semibold leading-6 text-gray-900"
+              >Website</a
+            >
+            <a
+              href="#"
+              class="relative text-black hover:text-black transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-yellow before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-yellow after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] text-md font-semibold leading-6 text-gray-900"
+              >E-commerce</a
+            >
+            <a
+              href="#"
+              class="relative text-black hover:text-black transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-yellow before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-yellow after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] text-md font-semibold leading-6 text-gray-900"
+              >Mobile Apps</a
+            >
           </div>
 
           <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+            <a
+              href="#"
+              class="relative text-black hover:text-black transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-yellow before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-yellow after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] text-md font-semibold leading-6 text-gray-900"
               >Pricing <span class="arrow" aria-hidden="true">&rarr;</span></a
             >
           </div>
@@ -80,8 +94,8 @@
                 class="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
+                stroke-width="1.8"
+                stroke="#fdb833"
                 aria-hidden="true"
               >
                 <path
@@ -103,17 +117,21 @@
         >
           <div class="fixed inset-0 z-50"></div>
           <div
-            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-md sm:ring-gray-900/10"
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-full sm:ring-gray-900/10 bg-yellow"
           >
             <div class="flex items-center justify-between">
               <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
-                <img />
+                <img
+                  class="h-8 w-auto"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  alt=""
+                />
               </a>
               <button
                 @click="isOpen = !isOpen"
                 type="button"
-                class="-m-2.5 rounded-md p-2.5 text-gray-700"
+                class="-m-2.5 rounded-md p-2.5 text-black-700"
               >
                 <span class="sr-only">Close menu</span>
                 <svg
@@ -129,7 +147,7 @@
               </button>
             </div>
             <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="-my-6 divide-y divide-black">
                 <div class="space-y-2 py-6">
                   <a
                     href="#"
@@ -160,21 +178,23 @@
         </div>
       </header>
 
-      <div class="relative isolate px-6  lg:px-8">
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+      <div class="relative isolate px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl pt-52 pb-20">
+          <div class="sm:mb-6 sm:flex sm:justify-center text-center">
             <div
-              class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+              class="relative rounded-full px-3 py-1 text-sm leading-6 text-black-600 ring-2 ring-black hover:ring-yellow text-xs"
             >
               Announcing our next round of funding.
-              <a href="#" class="font-semibold text-indigo-600"
+              <a href="#" class="font-semibold font-franklin"
                 ><span class="absolute inset-0" aria-hidden="true"></span>
                 <span class="titleColor" aria-hidden="true">Read more&rarr;</span></a
               >
             </div>
           </div>
           <div class="text-center">
-            <h1 class="font-bold tracking-tight text-gray-900 sm:text-7xl font-outfit">
+            <h1
+              class="font-bold text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl pt-5 font-outfit"
+            >
               A Revolutionary Web & <span class="titleColor">App platform</span>
             </h1>
             <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -184,9 +204,42 @@
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                class="rounded-full bg-black px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white hover:bg-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
                 >Get started</a
               >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="relative isolate bg-cover element" style="background-image: url('/images/backgroundElement.png')"
+    >
+      <div class="pt-24 pb-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center"></div>
+          <img
+            src="<%= require('./images/nimbu_dashboard.png') %>"
+            alt="App screenshot"
+            width="2432"
+            height="1442"
+          />
+        </div>
+        <div class="relative isolate px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl pt-52 pb-20">
+            
+            <div class="text-center">
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                Let us take care of your infrastructure
+              </p>
+              <h1
+                class="font-bold text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl pt-5 font-outfit"
+              >
+                Focus on what <span class="titleColor">you love</span>
+              </h1>
+              
+              
             </div>
           </div>
         </div>
