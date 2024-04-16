@@ -45,19 +45,8 @@
         Edit <code>src/index.js</code> and save to reload.
       </p>
     </main>
-  -->
 
-    <div class="bg">
-      <header x-data="{ isOpen: false }" class="absolute navbar-expand-lg inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-6" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img class="h-7 w-auto" src="<%= require('./images/nimbu_logo.png') %>" alt="logo" />
-            </a>
-          </div>
-
-          <div class="hidden lg:flex lg:gap-x-12">
+             <div class="hidden lg:flex lg:gap-x-12">
             <a
               href="#"
               class="relative text-black hover:text-black transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-yellow before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-yellow after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] text-md font-semibold leading-6 text-gray-900"
@@ -82,20 +71,35 @@
               >Pricing <span class="arrow" aria-hidden="true">&rarr;</span></a
             >
           </div>
+  -->
 
-          <div class="flex lg:hidden">
+    <div class="bg">
+      <header
+        x-data="{ isOpen: false }"
+        class="menu-container absolute inset-x-0 top-0 z-50 header_nimbu"
+      >
+        <nav class="flex items-center justify-between p-6 lg:px-6" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-7 w-auto" src="<%= require('./images/nimbu_logo.png') %>" alt="logo" />
+            </a>
+          </div>
+
+          <div class="flex">
             <button
               @click="isOpen = !isOpen"
               type="button"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 transition-colors duration-500"
+              :class="{ 'text-yellow': isOpen }"
             >
               <span class="sr-only">Open main menu</span>
               <svg
-                class="h-6 w-6"
+                class="h-10 w-10"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.8"
-                stroke="#fdb833"
+                stroke-width="2"
+                :stroke="isOpen ? 'currentColor' : '#fdb833'"
                 aria-hidden="true"
               >
                 <path
@@ -108,37 +112,40 @@
           </div>
         </nav>
 
+        <!-- Mobile menu content -->
         <div
           x-show="isOpen"
           @click.away="isOpen = false"
-          class="lg:hidden"
+          :class="{ 'overflow-hidden': isOpen }"
+          class="menu-container fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-500"
           role="dialog"
           aria-modal="true"
         >
-          <div class="fixed inset-0 z-50"></div>
+          <div class="absolute inset-0 bg-black opacity-25"></div>
           <div
-            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-full sm:ring-gray-900/10 bg-yellow"
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-full sm:ring-gray-900/10 bg-black transition-transform duration-500"
+            :style="{ transform: isOpen ? 'translateX(0)' : 'translateX(100%)' }" 
           >
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between lg:px-6 pb-11 header_nimbu">
               <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
                 <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
+                  class="h-7 w-auto"
+                  src="<%= require('./images/nimbu_logo.png') %>"
+                  alt="logo"
                 />
               </a>
               <button
                 @click="isOpen = !isOpen"
                 type="button"
-                class="-m-2.5 rounded-md p-2.5 text-black-700"
+                class="-m-2.5 rounded-md p-2.5 text-yellow transition-colors duration-500"
               >
                 <span class="sr-only">Close menu</span>
                 <svg
-                  class="h-6 w-6"
+                  class="h-10 w-10"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  stroke-width="2"
                   stroke="currentColor"
                   aria-hidden="true"
                 >
@@ -146,32 +153,37 @@
                 </svg>
               </button>
             </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-black">
-                <div class="space-y-2 py-6">
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >Website</a
-                  >
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >E-commerce</a
-                  >
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >Mobile Apps</a
-                  >
+            <div class="flex justify-center items-center h-[80vh]">
+              <div class="mt-6 flow-root header_nimbu_ham">
+                <div class="-my-6 divide-y divide-black">
+                  <div class="ham_tekst">
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-yellow"
+                      >Website</a
+                    >
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-yellow"
+                      >E-commerce</a
+                    >
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-yellow"
+                      >Mobile Apps</a
+                    >
+
+                    <a
+                      href="#"
+                      class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-yellow"
+                      >Pricing</a
+                    >
+                  </div>
                 </div>
-                <div class="py-6">
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >Pricing</a
-                  >
-                </div>
+                <video class="rounded-xl" controls autoplay>
+                  <source src="/images/dashboard_video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
@@ -185,17 +197,17 @@
               class="relative rounded-full px-3 py-1 text-sm leading-6 text-black-600 ring-2 ring-black hover:ring-yellow text-xs"
             >
               Announcing our next round of funding.
-              <a href="#" class="font-semibold font-franklin"
+              <a href="#scroll" class="font-semibold font-franklin"
                 ><span class="absolute inset-0" aria-hidden="true"></span>
                 <span class="titleColor" aria-hidden="true">Read more&rarr;</span></a
               >
             </div>
           </div>
           <div class="text-center">
-            <h1
-              class="font-bold text-4xl font-bold tracking-tight text-gray-900 sm:text-7xl pt-5 font-outfit"
-            >
-              A Revolutionary Web & <span class="titleColor">App platform</span>
+            <h1 class="text-6 xl font-bold tracking-tight text-black sm:text-7xl pt-5 font-outfit">
+              <span class="block overflow-hidden line-clamp-2">
+                A Revolutionary Web & <span class="titleColor">App platform</span>
+              </span>
             </h1>
             <p class="mt-6 text-lg leading-8 text-gray-600">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
@@ -204,7 +216,7 @@
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white hover:bg-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
+                class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white hover:ring-2 ring-black hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
                 >Get started</a
               >
             </div>
@@ -214,33 +226,182 @@
     </div>
 
     <div
-      class="relative isolate bg-cover element" style="background-image: url('/images/backgroundElement.png')"
+      class="relative isolate bg-cover element"
+      style="background-image: url('<%= require('./images/backgroundElement.png') %>')"
     >
-      <div class="pt-24 pb-24">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl text-center"></div>
-          <img
-            src="<%= require('./images/nimbu_dashboard.png') %>"
-            alt="App screenshot"
-            width="2432"
-            height="1442"
-          />
+      <div id="scroll">
+        <div class="pt-24 pb-24">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <video class="h-full w-full rounded-xl" controls autoplay>
+              <source src="/images/dashboard_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
+
         <div class="relative isolate px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl pt-52 pb-20">
-            
+          <div class="mx-auto max-w-2xl pt-32 pb-20">
             <div class="text-center">
               <p class="mt-6 text-lg leading-8 text-gray-600">
                 Let us take care of your infrastructure
               </p>
               <h1
-                class="font-bold text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl pt-5 font-outfit"
+                class="font-bold text-4xl font-bold tracking-tight text-black sm:text-6xl font-outfit"
               >
                 Focus on what <span class="titleColor">you love</span>
               </h1>
-              
-              
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="loading demo-10">
+      <main>
+        <div class="content content--highlight content--intro"></div>
+        <div class="wrap">
+          <div class="content content--sticky content--half bg-1">
+            <img
+              class="content__img content__img--large"
+              src="<%= require('./images/shape1.png') %>"
+            />
+            <h2 class="content__title">Building websites</h2>
+            <p class="content__text content__text--narrow text-meta">
+              The algorithm's workings are shrouded in complexity.
+            </p>
+            <a
+              href="#"
+              class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white hover:ring-2 ring-black hover:bg-blue hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
+              >Learn More</a
+            >
+          </div>
+          <div class="content content--sticky content--half bg-2">
+            <img
+              class="content__img content__img--large"
+              src="<%= require('./images/shape2.png') %>"
+            />
+            <h2 class="content__title">Building apps</h2>
+            <p class="content__text content__text--narrow text-meta">
+              Enshrining the principles of conformity and reinforcing the status quo.
+            </p>
+            <a
+              href="#"
+              class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white hover:ring-2 ring-black hover:bg-yellow hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
+              >Learn More</a
+            >
+          </div>
+          <div class="content content--sticky content--half bg-3">
+            <img
+              class="content__img content__img--large"
+              src="<%= require('./images/shape3.png') %>"
+            />
+            <h2 class="content__title">Manage content</h2>
+            <p class="content__text content__text--narrow text-meta">
+              The elusive entities, lacking human form, operate in the shadows.
+            </p>
+            <a
+              href="#"
+              class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white hover:ring-2 ring-black hover:bg-green hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <div class="relative isolate px-6 lg:px-8 bg-black pb-16">
+      <div class="mx-auto max-w-2xl pt-32">
+        <div class="text-center">
+          <h1
+            class="font-bold text-4xl font-bold tracking-tight text-white sm:text-6xl font-outfit"
+          >
+            Clients
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full max-w-7xl mx-auto px-4 md:px-6 py-24">
+        <div class="text-center">
+          <div
+            x-data="{}"
+            x-init="$nextTick(() => {
+                    let ul = $refs.logos;
+                    ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                    ul.nextSibling.setAttribute('aria-hidden', 'true');
+                })"
+            class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+          >
+            <ul
+              x-ref="logos"
+              class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+            >
+              <li>
+                <img src="<%= require('./images/facebook.svg') %>" alt="Facebook" />
+              </li>
+              <li>
+                <img src="<%= require('./images/disney.svg') %>" alt="Disney" />
+              </li>
+              <li>
+                <img src="<%= require('./images/airbnb.svg') %>" alt="Airbnb" />
+              </li>
+              <li>
+                <img src="<%= require('./images/apple.svg') %>" alt="Apple" />
+              </li>
+              <li>
+                <img src="<%= require('./images/spark.svg') %>" alt="Spark" />
+              </li>
+              <li>
+                <img src="<%= require('./images/samsung.svg') %>" alt="Samsung" />
+              </li>
+              <li>
+                <img src="<%= require('./images/quora.svg') %>" alt="Quora" />
+              </li>
+              <li>
+                <img src="<%= require('./images/sass.svg') %>" alt="Sass" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-screen-2xl relative">
+        <!-- Achtergronddiv -->
+        <div class="absolute inset-0 bg-yellow rounded-3xl overflow-hidden z-0 pt-21"></div>
+        <!-- Inhoud -->
+        <div class="relative z-10 max-w-screen-2xl">
+          <div class="mx-auto max-w-2xl lg:max-w-none">
+            <div class="text-center">
+              <h2 class="text-3xl font-bold tracking-tight text-black sm:text-6xl pt-20">
+                Empowering <span class="text-white">success</span> in numbers
+              </h2>
+              <p class="mt-4 text-lg leading-8 text-black pb-20">
+                Lorem ipsum dolor sit amet consect adipisicing possimus.
+              </p>
+            </div>
+            <!-- Beschrijvingslijst -->
+            <dl
+              class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-3xl text-center sm:grid-cols-1 lg:grid-cols-3"
+            >
+              <div class="flex flex-col bg-black p-8">
+                <dt class="text-sm font-semibold leading-6 text-gray-300">Setisfactionn rate</dt>
+                <dd class="order-first text-5xl font-semibold tracking-tight text-white">97%</dd>
+              </div>
+              <div class="flex flex-col bg-black p-8">
+                <dt class="text-sm font-semibold leading-6 text-gray-300">Delivered projects</dt>
+                <dd class="order-first text-5xl font-semibold tracking-tight text-white">1000+</dd>
+              </div>
+              <div class="flex flex-col bg-black p-8">
+                <dt class="text-sm font-semibold leading-6 text-gray-300">Years of experience</dt>
+                <dd class="order-first text-5xl font-semibold tracking-tight text-white">10+</dd>
+              </div>
+            </dl>
           </div>
         </div>
       </div>
