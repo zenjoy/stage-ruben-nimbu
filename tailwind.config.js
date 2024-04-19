@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       animation: {
         'infinite-scroll': 'infinite-scroll 15s linear infinite',
+        'infinite-scroll2': 'infinite-scroll 55s linear infinite',
       },
       keyframes: {
         'infinite-scroll': {

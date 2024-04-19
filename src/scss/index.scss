@@ -34,12 +34,13 @@ $black-color: #272727;
   color: $primariy-color;
 }
 
+// header + navbar
 .header_nimbu {
   margin: 0 auto;
-  max-width: 90rem;
+  max-width: 85rem;
   width: 100%;
   font-family: $font-franklin;
-  padding-top: 10px;
+  padding-top: 2rem;
 }
 .header_nimbu_ham {
   margin: 0 auto;
@@ -50,18 +51,21 @@ $black-color: #272727;
   justify-content: space-evenly;
   flex-direction: row-reverse;
 }
-.ham_tekst a{
+.ham_tekst a {
   font-size: 2rem;
   align-items: center;
   padding: 15px;
-
 }
 .overflow-hidden {
   overflow: hidden;
 }
 .menu-container {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
+
+// element
 .element {
   height: 900px;
   width: 100%;
@@ -86,6 +90,7 @@ $black-color: #272727;
   }
 }
 
+// carts
 .demo-10 {
   --color-text: #000;
   --color-bg: #e1e1e1;
@@ -269,4 +274,30 @@ $black-color: #272727;
   .content--half {
     width: 50%;
   }
+}
+
+@import 'swiper/css';
+
+.swiper {
+  // height: 450px;
+  overflow: visible;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.05),
+    0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    
 }

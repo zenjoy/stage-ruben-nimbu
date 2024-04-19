@@ -61,6 +61,8 @@
     "prettier:format": "prettier --write ."
   },
   "dependencies": {
-    "alpinejs": "^3.13.7"
+    "alpinejs": "^3.13.7",
+    "flickity": "^3.0.0",
+    "swiper": "^11.1.1"
   }
 }

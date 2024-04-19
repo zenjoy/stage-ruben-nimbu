@@ -7,7 +7,8 @@ module.exports = merge(webpackCommonConfig, {
   devtool: 'eval-source-map',
   devServer: {
     open: true,
-    hot: true,
+    hot: false,
+    liveReload: false,
     watchFiles: [`${paths.src}/*.html`, `${paths.src}/images/**.*`],
     port: process.env.PORT || 8080,
   },
