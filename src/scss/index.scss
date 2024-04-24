@@ -45,16 +45,33 @@ $black-color: #272727;
 .header_nimbu_ham {
   margin: 0 auto;
   max-width: 90rem;
-  width: 100%;
+  width: 80%;
   font-family: $font-franklin;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 150px;
+  z-index: 1;
+}
+.ham_tekst {
+  margin-top: 130px;
+  margin-left: 60px;
+  width: 100%;
 }
 .ham_tekst a {
   font-size: 2rem;
   align-items: center;
-  padding: 15px;
+  padding: 20px;
+  margin-right: 150px;
+
+}
+.header_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: start;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -64,6 +81,16 @@ $black-color: #272727;
     opacity 0.3s ease,
     transform 0.3s ease;
 }
+.hamLogo {
+  border-radius: 50%;
+  justify-content: start;
+  display: flex;
+}
+.roundFunding {
+  background-color: #e4b14a;
+  border: 1px solid $primariy-color;
+}
+
 
 // element
 .element {
@@ -193,7 +220,6 @@ $black-color: #272727;
 }
 
 .content--intro {
-  padding-top: 23vh;
   padding-bottom: 4vh;
   z-index: 2;
 }
@@ -299,5 +325,17 @@ $black-color: #272727;
   box-shadow:
     0 4px 8px 0 rgba(0, 0, 0, 0.05),
     0 6px 20px 0 rgba(0, 0, 0, 0.1);
-    
+}
+
+.svg-center {
+  display: block;
+  margin: 0 auto; 
+}
+
+.container_nimbu {
+  width: 100%;
+  max-width: 2000px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
 }
