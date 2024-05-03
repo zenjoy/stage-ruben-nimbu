@@ -9,14 +9,28 @@
     <!-- TODO: https://realfavicongenerator.net/ -->
     <link rel="stylesheet" href="path/to/fontawesome/css/all.min.css" />
 
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="shortcut icon" href="<%= require('./images/nimbu_logomark.png') %>" />
+    <link
+      rel="shortcut icon"
+      href="<%= require('./images/nimbu_logomark.png') %>"
+    />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#465e69" />
     <link rel="shortcut icon" href="favicon.ico" />
 
-    <meta name="apple-mobile-web-app-title" content="Webpack Tailwind Starter" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="Webpack Tailwind Starter"
+    />
     <meta name="application-name" content="Webpack Tailwind Starter" />
     <meta name="msapplication-TileColor" content="#e2e8f0" />
     <meta name="msapplication-config" content="browserconfig.xml" />
@@ -24,13 +38,19 @@
 
     <!-- Title & description -->
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <meta name="description" content="TODO: Add a description of your project here." />
+    <meta
+      name="description"
+      content="TODO: Add a description of your project here."
+    />
 
     <!-- Facebook Open-Graph Tags -->
     <meta property="og:title" content="Webpack Tailwind Starter" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Webpack Tailwind Starter" />
-    <meta property="og:description" content="TODO: Add a description of your project here." />
+    <meta
+      property="og:description"
+      content="TODO: Add a description of your project here."
+    />
     <meta property="og:url" content="<%= publicUrl %>/" />
     <meta property="og:image" content="<%= publicUrl %>/fb_cover.jpg" />
   </head>
@@ -74,37 +94,59 @@
           </div>
   -->
 
-    <div class="bg">
+    <div
+      class="background_main bg-cover"
+      style="background-image: url('<%= require('./images/grid.png') %>')"
+    >
       <header
         x-data="{ isOpen: false }"
-        class="menu-container absolute inset-x-0 top-0 z-50 header_nimbu"
+        class="navbar-expand-lg absolute inset-x-0 top-0 z-50"
       >
-        <nav class="flex items-center justify-between p-3 lg:px-6" aria-label="Global">
+        <nav
+          class="flex items-center justify-between p-6 lg:px-6"
+          aria-label="Global"
+        >
           <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
-              <img class="h-7 w-auto" src="<%= require('./images/nimbu_logo.png') %>" alt="logo" />
+              <img
+                class="h-7 w-auto transition-transform duration-300 hover:scale-95"
+                src="<%= require('./images/nimbu_logo.png') %>"
+                alt="logo"
+              />
             </a>
           </div>
 
-          <div class="flex items-center gap-x-8">
+          <div class="hidden lg:flex lg:gap-x-12">
             <a
-              class="inline-flex rounded-full px-5 py-2 text-sm font-semibold font-franklin transition bg-black text-white hover:bg-white ring-2 hover:ring-2 ring-black hover:bg-white hover:text-black"
-              href="/contact"
+              href="#"
+              class="text-md relative font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-500 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-500 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              >Solutions</a
             >
-              <span class="relative top-px">Contact us</span>
+            <a
+              href="#"
+              class="text-md relative font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-500 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-500 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="text-md relative font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-500 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-500 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              >Pricing
             </a>
+          </div>
+
+          <div class="flex lg:hidden">
             <button
               @click="isOpen = !isOpen"
               type="button"
-              class="-m-2.5 inline-flex items-center justify-center p-2.5 text-black transition-colors duration-400 rounded-full p-2.5 transition hover:bg-yellow"
-              :class="{ 'text-yellow': isOpen, 'header_nimbu': isOpen }"
+              class="group -m-2.5 rounded-full bg-white/10 p-2.5 transition hover:bg-darkblue"
             >
               <span class="sr-only">Open main menu</span>
+
               <svg
                 viewBox="0 0 24 24"
                 aria-hidden="true"
-                class="h-6 w-6 fill-black rounded-full group-hover:fill-neutral-700"
+                class="size-6 fill-yellow group-hover:fill-yellow"
               >
                 <path d="M2 6h20v2H2zM2 16h20v2H2z"></path>
               </svg>
@@ -112,79 +154,65 @@
           </div>
         </nav>
 
-        <!-- Mobile menu content -->
         <div
           x-show="isOpen"
           @click.away="isOpen = false"
-          :class="{ 'overflow-hidden': isOpen }"
-          class="menu-container fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-500"
+          class="lg:hidden"
           role="dialog"
           aria-modal="true"
         >
-          <div class="absolute inset-0 bg-black"></div>
+          <div class="fixed inset-0 z-50"></div>
           <div
-            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-full sm:ring-gray-900/10 bg-black transition-transform duration-500"
-            :style="{ transform: isOpen ? 'translateX(0)' : 'translateX(100%)' }"
-           
+            class="transition-background fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-yellow p-6 duration-300 sm:max-w-lg sm:ring-gray-900/10"
           >
-            <div class="menu-container absolute inset-x-0 top-2 z-50 header_nimbu">
-              <div class="flex items-center justify-between p-3 lg:px-6">
-                <a href="#" class="-m-1.5 p-1.5">
-                  <span class="sr-only">Your Company</span>
-                  <img
-                    class="h-7 w-auto"
-                    src="<%= require('./images/nimbu_logo.png') %>"
-                    alt="logo"
-                  />
-                </a>
-                <button
-                  @click="isOpen = !isOpen"
-                  type="button"
-                  class="-m-2.5 p-2.5 transition-colors duration-400 rounded-full p-2.5 transition hover:bg-yellow"
-                >
-                  <span class="sr-only">Close menu</span>
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    class="h-6 w-6 fill-white group-hover:fill-neutral-200"
-                  >
-                    <path d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z"></path>
-                    <path d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z"></path>
-                  </svg>
-                </button>
-              </div>
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img
+                  class="h-7 w-auto"
+                  src="<%= require('./images/nimbu_logo_white.png') %>"
+                  alt="logomark_nimbu"
+                />
+              </a>
+              <button
+                @click="isOpen = !isOpen"
+                type="button"
+                class="group -m-2.5 rounded-full p-2.5 transition hover:bg-white/10"
+              >
+                <span class="sr-only">Close menu</span>
 
-              <div class="header_container h-[80vh]">
-                <div class="mt-6 flow-root header_nimbu_ham">
-                  <div class="mt-20">
-                    <div class="ham_tekst">
-                      <a
-                        href="#"
-                        class="-mx-5 block px-3 py-6 text-base font-semibold leading-7 text-white hover:text-yellow transition-colors duration-200"
-                        >Website</a
-                      >
-                      <a
-                        href="#"
-                        class="-mx-5 block px-3 py-6 text-base font-semibold leading-7 text-white hover:text-yellow transition-colors duration-200"
-                        >E-commerce</a
-                      >
-                      <a
-                        href="#"
-                        class="-mx-5 block px-3 py-6 text-base font-semibold leading-7 text-white hover:text-yellow transition-colors duration-200"
-                        >Mobile Apps</a
-                      >
-                      <a
-                        href="#"
-                        class="-mx-5 block px-3 py-6 text-base font-semibold leading-7 text-white hover:text-yellow transition-colors duration-200"
-                        >Pricing</a
-                      >
-                    </div>
-                  </div>
-                  <div class="mx-auto max-w-2xl pb-20">
-                    <video class="h-full w-full hamLogo" autoplay muted loop>
-                      <source src="<%= require('./images/nimbu_3d.mp4') %>" type="video/mp4" />
-                    </video>
-                  </div>
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="size-6 fill-white group-hover:fill-neutral-200"
+                >
+                  <path
+                    d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z"
+                  ></path>
+                  <path
+                    d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root pt-5">
+              <div class="-my-6">
+                <div class="space-y-2 py-6">
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
+                    >Solutions</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
+                    >Contact</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
+                    >Pricing</a
+                  >
                 </div>
               </div>
             </div>
@@ -192,35 +220,39 @@
         </div>
       </header>
 
-      <div class="relative isolate px-6 lg:px-8 nimbu_start bg-cover">
-        <div class="mx-auto max-w-4xl pt-56 pb-48">
+      <div class="relative isolate bg-cover px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl pb-48 pt-56">
           <div
-            class="sm:mb-6 sm:flex sm:justify-center text-center hover:scale-95 transition-transform duration-300"
+            class="text-center transition-transform duration-300 hover:scale-95 sm:mb-6 sm:flex sm:justify-center"
           >
             <div
-              class="relative rounded-full px-3 py-2 text-sm leading-6 text-white text-xs roundFunding"
+              class="relative rounded-lg px-3 py-2 text-sm leading-6 text-white ring-2 ring-white"
             >
               Announcing our next round of funding.
-              <a href="#scroll" class="font-semibold font-franklin"
+              <a href="#scroll" class="font-franklin font-semibold"
                 ><span class="absolute inset-0" aria-hidden="true"></span>
                 <span aria-hidden="true">Read more&rarr;</span></a
               >
             </div>
           </div>
           <div class="text-center">
-            <h1 class="text-6xl font-bold tracking-tight text-black sm:text-8xl font-outfit">
-              <span class="block overflow-hidden line-clamp-2">
-                A Revolutionary Web & <span class="titleColor">App platform</span>
+            <h1
+              class="font-outfit text-6xl font-bold tracking-tight text-white sm:text-8xl"
+            >
+              <span class="line-clamp-2 block overflow-hidden">
+                A Revolutionary Web &
+                <span class="text-yellow">App platform</span>
               </span>
             </h1>
-            <p class="mt-6 text-lg flex pt-5 text-black">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-              commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+            <p class="mt-6 flex pt-5 text-lg text-white">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+              fugiat aliqua.
             </p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white ring-2 hover:ring-2 ring-black hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 transition-colors duration-300"
+                class="rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 >Get started</a
               >
             </div>
@@ -230,28 +262,38 @@
     </div>
 
     <div
-      class="relative isolate bg-cover element"
-      style="background-image: url('<%= require('./images/backgroundElement.png') %>')"
+      class="element relative isolate bg-cover"
+      style="
+        background-image: url('<%= require('./images/bg-nimbu-lines.png') %>');
+      "
     >
       <div id="scroll">
-        <div class="pt-24 pb-24">
+        <div class="py-24">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <video class="h-full w-full rounded-2xl drop-shadow-xl" autoplay muted loop>
-              <source src="<%= require('./images/dashboard_video_test.mp4') %>" type="video/mp4" />
+            <video
+              class="size-full rounded-lg drop-shadow-xl"
+              autoplay
+              muted
+              loop
+            >
+              <source
+                src="<%= require('./images/dashboard_video_test.mp4') %>"
+                type="video/mp4"
+              />
             </video>
           </div>
         </div>
 
         <div class="relative isolate px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl pt-32 pb-20">
+          <div class="mx-auto max-w-2xl pb-20 pt-32">
             <div class="text-center">
-              <p class="mt-6 text-lg leading-8 text-gray-600">
+              <p class="mt-6 text-lg leading-8 text-white">
                 Let us take care of your infrastructure
               </p>
               <h1
-                class="font-bold text-4xl font-bold tracking-tight text-black sm:text-6xl font-outfit"
+                class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
               >
-                Focus on what <span class="titleColor">you love</span>
+                Focus on what <span class="text-yellow">you love</span>
               </h1>
             </div>
           </div>
@@ -262,49 +304,77 @@
     <section class="loading demo-10 pt-72">
       <main>
         <div class="content content--highlight content--intro"></div>
-        <div class="wrap bg-black rounded-3xl">
+        <div class="wrap rounded-lg">
           <div class="content content--sticky content--half bg-1">
-            <img
-              class="content__img content__img--large"
-              src="<%= require('./images/shape1.png') %>"
-            />
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <video
+                class="size-full rounded-lg drop-shadow-xl"
+                autoplay
+                muted
+                loop
+              >
+                <source
+                  src="<%= require('./images/dashboard_video_test.mp4') %>"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
             <h2 class="content__title">Building websites</h2>
             <p class="content__text content__text--narrow text-meta">
               The algorithm's workings are shrouded in complexity.
             </p>
             <a
               href="#"
-              class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white hover:ring-2 ring-black hover:bg-blue hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 ring-2 transition-colors duration-300"
+              class="rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-blue hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >Learn More</a
             >
           </div>
           <div class="content content--sticky content--half bg-2">
-            <img
-              class="content__img content__img--large"
-              src="<%= require('./images/shape2.png') %>"
-            />
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <video
+                class="size-full rounded-lg drop-shadow-xl"
+                autoplay
+                muted
+                loop
+              >
+                <source
+                  src="<%= require('./images/dashboard_video_test.mp4') %>"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
             <h2 class="content__title">Building apps</h2>
             <p class="content__text content__text--narrow text-meta">
-              Enshrining the principles of conformity and reinforcing the status quo.
+              Enshrining the principles of conformity and reinforcing the status
+              quo.
             </p>
             <a
               href="#"
-              class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white hover:ring-2 ring-black hover:bg-yellow hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 ring-2 transition-colors duration-300"
+              class="rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-blue3 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >Learn More</a
             >
           </div>
           <div class="content content--sticky content--half bg-3">
-            <img
-              class="content__img content__img--large"
-              src="<%= require('./images/shape3.png') %>"
-            />
-            <h2 class="content__title">Manage content</h2>
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <video
+                class="size-full rounded-lg drop-shadow-xl"
+                autoplay
+                muted
+                loop
+              >
+                <source
+                  src="<%= require('./images/dashboard_video_test.mp4') %>"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <h2 class="content__title">E-commerce</h2>
             <p class="content__text content__text--narrow text-meta">
               The elusive entities, lacking human form, operate in the shadows.
             </p>
             <a
               href="#"
-              class="rounded-full bg-black px-20 py-3.5 text-sm font-semibold text-white hover:ring-2 ring-black hover:bg-green hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600 ring-2 transition-colors duration-300"
+              class="hover:bg-green rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >Learn More</a
             >
           </div>
@@ -312,23 +382,24 @@
       </main>
     </section>
 
-    <div class="relative isolate px-6 lg:px-8 bg-black pb-16">
+    <div class="relative isolate bg-darkblue px-6 pb-16 lg:px-8">
       <div class="mx-auto max-w-2xl pt-32">
         <div class="text-center">
           <h1
-            class="font-bold text-4xl font-bold tracking-tight text-white sm:text-7xl font-outfit"
+            class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-7xl"
           >
             Clients
           </h1>
           <p class="mt-6 text-lg leading-8 text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
           </p>
         </div>
       </div>
 
-      <div class="w-full max-w-7xl mx-auto px-4 md:px-6 py-24">
+      <div class="mx-auto w-full max-w-7xl px-4 py-24 md:px-6">
         <div class="text-center">
           <div
             x-data="{}"
@@ -337,14 +408,17 @@
                     ul.insertAdjacentHTML('afterend', ul.outerHTML);
                     ul.nextSibling.setAttribute('aria-hidden', 'true');
                 })"
-            class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+            class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
           >
             <ul
               x-ref="logos"
-              class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+              class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8"
             >
               <li>
-                <img src="<%= require('./images/facebook.svg') %>" alt="Facebook" />
+                <img
+                  src="<%= require('./images/facebook.svg') %>"
+                  alt="Facebook"
+                />
               </li>
               <li>
                 <img src="<%= require('./images/disney.svg') %>" alt="Disney" />
@@ -359,7 +433,10 @@
                 <img src="<%= require('./images/spark.svg') %>" alt="Spark" />
               </li>
               <li>
-                <img src="<%= require('./images/samsung.svg') %>" alt="Samsung" />
+                <img
+                  src="<%= require('./images/samsung.svg') %>"
+                  alt="Samsung"
+                />
               </li>
               <li>
                 <img src="<%= require('./images/quora.svg') %>" alt="Quora" />
@@ -373,46 +450,78 @@
       </div>
     </div>
 
-    <div class="bg-white py-24 sm:py-44 mx-auto max-w-full px-12 lg:px-20">
-      <div class="mx-auto max-w-screen-2xl relative">
-        <div class="absolute inset-0 bg-yellow rounded-2xl overflow-hidden z-0"></div>
+    <div class="mx-auto max-w-full bg-darkblue px-5 py-24 sm:py-44 lg:px-20">
+      <div class="relative mx-auto max-w-screen-2xl">
+        <div
+          class="absolute inset-0 z-0 overflow-hidden rounded-lg bg-blue"
+        ></div>
 
         <div class="relative z-10 max-w-screen-2xl">
           <div class="mx-auto max-w-2xl lg:max-w-none">
             <div class="text-center">
               <h2
-                class="text-3xl font-bold tracking-tight text-black sm:text-7xl pt-20 pb-10 font-outfit"
+                class="pb-10 pt-20 font-outfit text-3xl font-bold tracking-tight text-white sm:text-7xl"
               >
-                Empowering <span class="text-white">success</span> in numbers
+                Empowering <span class="text-yellow">success</span> in numbers
               </h2>
-              <p class="mt-4 leading-8 text-black px-6 lg:px-8 mx-auto max-w-4xl">
-                We redefine collaboration, innovation, and success. From our unwavering commitment
-                to excellence to our dynamic approach that adapts to your unique needs, discover why
-                working with us is not just a choice, it's a strategic investment in your
-                unparalleled success.
+              <p
+                class="mx-auto mt-4 max-w-4xl px-6 leading-8 text-white lg:px-8"
+              >
+                We redefine collaboration, innovation, and success. From our
+                unwavering commitment to excellence to our dynamic approach that
+                adapts to your unique needs, discover why working with us is not
+                just a choice, it's a strategic investment in your unparalleled
+                success.
               </p>
             </div>
 
             <dl
-              class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-1 lg:grid-cols-3"
+              class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-lg text-center sm:grid-cols-1 lg:grid-cols-3"
             >
-              <div class="flex flex-col bg-black p-10">
-                <dt class="text-sm text-3xl font-semibold leading-6 text-gray-300">
-                  Setisfactionn rate
+              <div class="flex flex-col bg-blue3 p-10">
+                <dt
+                  class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm"
+                >
+                  Setisfaction rate
                 </dt>
-                <dd class="order-first text-8xl font-semibold tracking-tight text-white">97%</dd>
+                <span
+                  class="order-first text-7xl font-semibold tabular-nums tracking-tight text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  x-data="{ shown: false }"
+                  x-intersect="shown = true"
+                  :class="shown && '[--num:97]'"
+                >
+                  <span class="supports-[counter-set]:sr-only">97</span>%
+                </span>
               </div>
-              <div class="flex flex-col bg-black p-8">
-                <dt class="text-sm text-3xl font-semibold leading-6 text-gray-300">
+              <div class="flex flex-col bg-blue3 p-8">
+                <dt
+                  class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm"
+                >
                   Delivered projects
                 </dt>
-                <dd class="order-first text-8xl font-semibold tracking-tight text-white">1000+</dd>
+                <span
+                  class="order-first text-7xl font-semibold tabular-nums tracking-tight text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  x-data="{ shown: false }"
+                  x-intersect="shown = true"
+                  :class="shown && '[--num:1000]'"
+                >
+                  <span class="supports-[counter-set]:sr-only">1000</span>+
+                </span>
               </div>
-              <div class="flex flex-col bg-black p-8">
-                <dt class="text-sm text-3xl font-semibold leading-6 text-gray-300">
+              <div class="flex flex-col bg-blue3 p-8">
+                <dt
+                  class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm"
+                >
                   Years of experience
                 </dt>
-                <dd class="order-first text-8xl font-semibold tracking-tight text-white">10+</dd>
+                <span
+                  class="order-first text-7xl font-semibold tabular-nums tracking-tight text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  x-data="{ shown: false }"
+                  x-intersect="shown = true"
+                  :class="shown && '[--num:10]'"
+                >
+                  <span class="supports-[counter-set]:sr-only">10</span>+
+                </span>
               </div>
             </dl>
           </div>
@@ -420,58 +529,60 @@
       </div>
     </div>
 
-    <div class="mx-auto max-w-4xl pt-22">
+    <div class="mx-auto max-w-4xl pt-24">
       <div class="text-center">
-        <h1 class="font-bold text-4xl tracking-tight text-black sm:text-7xl font-outfit">
+        <h1
+          class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-7xl"
+        >
           Websites powered by Nimbu
         </h1>
       </div>
     </div>
 
     <!-- Swiper -->
-    <div class="pt-20 pb-44 overflow-x-hidden w-full">
+    <div class="w-full overflow-x-hidden pb-44 pt-20">
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img
               src="<%= require('./images/foto1.png') %>"
               alt="Sass"
-              class="hover:scale-105 transition-transform duration-300"
+              class="transition-transform duration-300 hover:scale-105"
             />
           </div>
           <div class="swiper-slide">
             <img
               src="<%= require('./images/foto18.png') %>"
               alt="Sass"
-              class="hover:scale-105 transition-transform duration-300"
+              class="transition-transform duration-300 hover:scale-105"
             />
           </div>
           <div class="swiper-slide">
             <img
               src="<%= require('./images/foto3.png') %>"
               alt="Sass"
-              class="hover:scale-105 transition-transform duration-300"
+              class="transition-transform duration-300 hover:scale-105"
             />
           </div>
           <div class="swiper-slide">
             <img
               src="<%= require('./images/foto4.png') %>"
               alt="Sass"
-              class="hover:scale-105 transition-transform duration-300"
+              class="transition-transform duration-300 hover:scale-105"
             />
           </div>
           <div class="swiper-slide">
             <img
               src="<%= require('./images/foto5.png') %>"
               alt="Sass"
-              class="hover:scale-105 transition-transform duration-300"
+              class="transition-transform duration-300 hover:scale-105"
             />
           </div>
           <div class="swiper-slide">
             <img
               src="<%= require('./images/foto6.png') %>"
               alt="Sass"
-              class="hover:scale-105 transition-transform duration-300"
+              class="transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
@@ -481,42 +592,42 @@
               <img
                 src="<%= require('./images/foto7.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto8.png') %>"
                 alt="Sass"
-                class="hover:scale-110 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-110"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto9.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto10.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto11.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto12.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
           </div>
@@ -527,99 +638,110 @@
               <img
                 src="<%= require('./images/foto13.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto14.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto15.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto16.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto17.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="swiper-slide">
               <img
                 src="<%= require('./images/foto2.png') %>"
                 alt="Sass"
-                class="hover:scale-105 transition-transform duration-300"
+                class="transition-transform duration-300 hover:scale-105"
               />
             </div>
           </div>
         </div>
       </div>
     </div>
-<div class="container_nimbu">
-      <div class="relative isolate overflow-hidden">
-        <div class="mx-auto max-w-full px-12 lg:px-20">
+
+    <div class="container_nimbu pb-52">
+      <div class="relative isolate overflow-hidden px-5 lg:px-20">
+        <div class="mx-auto max-w-full pt-16 sm:pt-44 lg:pt-32">
           <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2 class="font-bold text-4xl tracking-tight text-black sm:text-7xl font-outfit">
+            <h2
+              class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-7xl"
+            >
               Let's <span class="text-yellow">connect</span>
             </h2>
-            <p class="mt-6 text-lg leading-8 text-black font-franklin">
-              Ready to take the next step? Contact us today to explore how our innovative strategies
-              can propel your business forward. Our team is here to turn your vision into a reality.
+            <p class="mt-6 font-franklin text-lg leading-8 text-white">
+              Ready to take the next step? Contact us today to explore how our
+              innovative strategies can propel your business forward. Our team
+              is here to turn your vision into a reality.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="bg-white mx-auto max-w-full px-12 lg:px-20">
+      <div class="mx-auto max-w-full bg-darkblue px-3 lg:px-20">
         <div
           class="mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:mt-20 lg:mx-0 lg:max-w-none lg:gap-4"
         >
-          <div
-            class="rounded-3xl bg-yellow p-6 text-center hover:scale-95 transition-transform duration-300"
-          >
-            <div class="text-base leading-7">
-              <svg
-                class="h-16 w-16 text-green svg-center"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              <h3 class="font-semibold text-4xl text-black font-outfit">Drop us a line</h3>
-              <p class="mt-2 text-black font-franklin">Reach out and let's begin the dialogue</p>
+          <a href="http://mail.google.com" target="_blank">
+            <div
+              class="rounded-lg bg-blue3 p-6 text-center transition-transform duration-300 hover:scale-95"
+            >
+              <div class="text-base leading-7">
+                <svg
+                  class="svg-center size-16 text-white"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <h3 class="font-outfit text-4xl font-semibold text-white">
+                  Drop us a line
+                </h3>
+                <p class="mt-2 font-franklin text-white">
+                  Reach out and let's begin the dialogue
+                </p>
+              </div>
             </div>
-          </div>
-
+          </a>
           <div
             class="mx-auto grid max-w-2xl grid-cols-1 gap-2 lg:max-w-none lg:grid-cols-2 lg:gap-4"
           >
-            <div class="flex gap-x-4 rounded-3xl bg-black p-16 ">
+            <div class="flex gap-x-4 rounded-lg bg-[#0a284a] p-16">
               <div class="text-base leading-7">
-                <h3 class="font-semibold text-4xl text-white font-outfit">Contact with ease</h3>
-                <p class="mt-3 text-white font-franklin">
-                  Your inquiries, ideas, and collaboration opportunities are just a click away.
-                  Let's start the conversation.
+                <h3 class="font-outfit text-4xl font-semibold text-white">
+                  Contact with ease
+                </h3>
+                <p class="mt-3 font-franklin text-white">
+                  Your inquiries, ideas, and collaboration opportunities are
+                  just a click away. Let's start the conversation.
                 </p>
 
                 <form action="#" method="POST" class="mx-auto mt-10">
@@ -627,52 +749,50 @@
                     <div class="sm:col-span-2">
                       <label
                         for="first-name"
-                        class="block text-lg font-semibold leading-6 text-white font-outfit"
+                        class="block font-outfit text-lg font-semibold leading-6 text-white"
                         >Name</label
                       >
-                      <div class="mt-2.5">
+                      <div class="mt-2.5 font-outfit text-lg font-semibold">
                         <input
                           placeholder="Alex Johnson"
                           type="text"
                           name="first-name"
                           id="first-name"
                           autocomplete="given-name"
-                          class="block w-full bg-black rounded-xl border-0 px-3.5 py-5 text-white ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset hover:ring-white focus:ring-white sm:text-sm sm:leading-6 transition-ring duration-300"
+                          class="block w-full rounded-lg border-0 bg-blue px-3.5 py-5 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                         />
                       </div>
                     </div>
-
                     <div class="sm:col-span-2">
                       <label
                         for="email"
-                        class="block text-lg font-semibold leading-6 text-white font-outfit"
+                        class="block font-outfit text-lg font-semibold leading-6 text-white"
                         >Email</label
                       >
-                      <div class="mt-2.5">
+                      <div class="mt-2.5 font-outfit font-semibold">
                         <input
                           placeholder="alexjohnson@gmail.com"
                           type="email"
                           name="email"
                           id="email"
                           autocomplete="email"
-                          class="block w-full bg-black rounded-xl border-0 px-3.5 py-5 text-white ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset hover:ring-white focus:ring-white sm:text-sm sm:leading-6 transition-ring duration-300"
+                          class="block w-full rounded-lg border-0 bg-blue px-3.5 py-5 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                         />
                       </div>
                     </div>
-
                     <div class="sm:col-span-2">
                       <label
                         for="message"
-                        class="block text-lg font-semibold leading-6 text-white font-outfit"
+                        class="block font-outfit text-lg font-semibold leading-6 text-white"
                         >Question</label
                       >
-                      <div class="mt-2.5">
+                      <div class="mt-2.5 font-outfit font-semibold">
                         <input
                           placeholder="How can we help you?"
                           name="message"
                           id="message"
                           rows="4"
-                          class="block w-full bg-black rounded-xl border-0 px-3.5 py-5 text-white ring-1 ring-inset ring-gray-400 placeholder:text-gray-400 focus:ring-2 focus:ring-inset hover:ring-white focus:ring-white sm:text-sm sm:leading-6 transition-ring duration-300"
+                          class="block w-full rounded-lg border-0 bg-blue px-3.5 py-5 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                         />
                       </div>
                     </div>
@@ -680,7 +800,7 @@
                   <div class="mt-10">
                     <button
                       type="submit"
-                      class="block w-40 font-outfit rounded-md px-3.5 py-4 text-center text-lg font-semibold text-white bg-yellow hover:bg-black placeholder:text-gray-400 focus-visible:outline ring-yellow ring-2 hover:ring-yellow focus-visible:outline-2 focus-visible:outline-offset-2 transition-colors duration-300"
+                      class="px-4.5 block w-40 rounded-lg bg-yellow py-4 text-center font-outfit text-lg font-semibold text-white ring-2 ring-yellow transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                     >
                       Let's talk
                     </button>
@@ -688,83 +808,134 @@
                 </form>
               </div>
             </div>
-            <img
-              class="w-full h-auto rounded-3xl"
-              src="<%= require('./images/nimbu_character.png') %>"
-              alt="logo"
-            />
+
+            <div class="flex">
+              <div class="overflow-hidden">
+                <video class="rounded-lg" autoplay muted loop>
+                  <source
+                    class="object-cover"
+                    src="<%= require('./images/nimbu_3d.mp4') %>"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <footer class="bg-white mx-auto max-w-full px-12 lg:px-20">
+    <div
+      class="container_nimbu mx-auto max-w-full bg-darkblue px-3 pb-20 lg:px-20"
+    >
+      <footer class="rounded-lg bg-[#0a284a]" aria-labelledby="footer-heading">
         <div
-          class="mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:mt-20 lg:mx-0 lg:max-w-none lg:gap-4"
+          class="responsive_footer mx-auto max-w-[1540px] px-20 pb-8 sm:pt-20 lg:pt-20"
         >
-          <div class="rounded-3xl bg-black p-6">
-            <div class="mx-auto px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-              <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                <div class="space-y-8">
-                  <img
-                    class="h-7"
-                    src="<%= require('./images/nimbu_logo.png') %>"
-                    alt="Company name"
-                  />
-                  <p class="text-sm leading-6 text-gray-300">
-                    Making the world a better place through constructing elegant hierarchies.
-                  </p>
+          <div class="xl:grid xl:grid-cols-2 xl:gap-8">
+            <div class="mr-40 space-y-8">
+              <a href="#">
+                <img
+                  class="h-8 transition-transform duration-300 hover:scale-95"
+                  src="<%= require('./images/nimbu_logo.png') %>"
+                  alt="Company name"
+                />
+              </a>
+              <p class="text-sm leading-6 text-white">
+                Empower your online presence with Nimbu CMS - where creativity
+                meets functionality seamlessly. manage, and optimize your
+                digital space effortlessly, because with Nimbu, your website is
+                not just built, it's perfected.
+              </p>
+            </div>
+
+            <div class="xl:col-span-2xl:mt-0 footer_text mt-16 grid">
+              <div class="md:grid md:grid-cols-2 md:gap-8"></div>
+              <div class="md:grid md:grid-cols-2 md:gap-8">
+                <div class="text-right">
+                  <h3
+                    class="font-outfit text-lg font-semibold leading-6 text-white"
+                  >
+                    Fields
+                  </h3>
+                  <ul role="list" class="mt-6 space-y-4">
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm leading-6 text-gray-300 hover:text-white"
+                        >Website</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm leading-6 text-gray-300 hover:text-white"
+                        >Commerce</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm leading-6 text-gray-300 hover:text-white"
+                        >Mobile Apps</a
+                      >
+                    </li>
+                  </ul>
                 </div>
-                <div class="mt-16 grid justify-end gap-8 xl:col-span-2 xl:mt-0">
-                  <div class="md:grid md:grid-cols-2 md:gap-12 text-right">
-                    <div>
-                      <h3 class="text-sm font-semibold leading-6 text-white">Fields</h3>
-                      <ul role="list" class="mt-6 space-y-4">
-                        <li>
-                          <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
-                            >Website</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
-                            >Apps</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
-                            >Manage Content</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="mt-10 md:mt-0 text-right">
-                      <h3 class="text-sm font-semibold leading-6 text-white">General</h3>
-                      <ul role="list" class="mt-6 space-y-4">
-                        <li>
-                          <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
-                            >Privacy Policy</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
-                            >Terms of use</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
-                            >Status</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
-                            >Support</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                <div class="mt-10 text-right md:mt-0">
+                  <h3
+                    class="font-outfit text-lg font-semibold leading-6 text-white"
+                  >
+                    General
+                  </h3>
+                  <ul role="list" class="mt-6 space-y-4">
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm leading-6 text-gray-300 hover:text-white"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm leading-6 text-gray-300 hover:text-white"
+                        >Terms of use</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm leading-6 text-gray-300 hover:text-white"
+                        >Status</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm leading-6 text-gray-300 hover:text-white"
+                        >Support</a
+                      >
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div
+            class="flex justify-between border-t border-white/20 pt-8 sm:mt-12 lg:mt-12"
+          >
+            <p class="text-xs leading-5 text-white">
+              &copy; 2024 Zenjoy, Inc. All rights reserved.
+            </p>
+            <a href="https://www.zenjoy.be/" target="_blank">
+              <button
+                class="rounded-lg bg-white px-6 py-2.5 text-sm font-semibold text-black ring-1 ring-white transition-colors duration-300 hover:bg-blue hover:text-white hover:ring-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
+                Zenjoy Website
+              </button>
+            </a>
           </div>
         </div>
       </footer>

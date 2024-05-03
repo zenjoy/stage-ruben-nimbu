@@ -1,6 +1,11 @@
 {
   "root": true,
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": ["tailwindcss"],
   "env": {
     "browser": true,
     "commonjs": true,
@@ -12,5 +17,21 @@
   },
   "parserOptions": {
     "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": ["*.html", "*.blade.php"],
+      "parser": "@angular-eslint/template-parser"
+    }
+  ],
+  "rules": {
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/no-custom-classname": "off",
+    "tailwindcss/no-contradicting-classname": "error"
+  },
+  "settings": {
+    "tailwindcss": {
+      "cssFiles": ["**/dist/*.css", "!**/node_modules", "!**/.*", "!**/public"]
+    }
   }
 }
