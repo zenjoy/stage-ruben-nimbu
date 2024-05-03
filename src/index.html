@@ -139,7 +139,7 @@
             <button
               @click="isOpen = !isOpen"
               type="button"
-              class="group -m-2.5 rounded-full bg-white/10 p-2.5 transition hover:bg-darkblue"
+              class="hover:bg-darkblue group -m-2.5 rounded-full bg-white/10 p-2.5 transition"
             >
               <span class="sr-only">Open main menu</span>
 
@@ -350,7 +350,7 @@
             </p>
             <a
               href="#"
-              class="rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-blue3 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="hover:bg-blue3 rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >Learn More</a
             >
           </div>
@@ -374,7 +374,7 @@
             </p>
             <a
               href="#"
-              class="hover:bg-green rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-green hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >Learn More</a
             >
           </div>
@@ -382,7 +382,188 @@
       </main>
     </section>
 
-    <div class="relative isolate bg-darkblue px-6 pb-16 lg:px-8">
+    <div
+      class="isolate bg-cover"
+      style="
+        background-image: url('<%= require('./images/bg-nimbu-lines2.png') %>');
+      "
+    >
+      <div class="container mx-auto my-24 pt-32 md:px-6">
+        <section class="mb-20 text-center">
+          <div class="flex justify-center">
+            <div class="max-w-[700px] text-center">
+              <h2
+                class="pb-44 font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
+              >
+                All essential items provided. No unnecessary extras included
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="grid gap-x-6 bg-cover md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12"
+          >
+            <div class="pb-20 lg:mb-0">
+              <div
+                class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              >
+                <img
+                  src="<%= require('./images/icon1.png') %>"
+                  alt="icon"
+                  class="size-16"
+                />
+              </div>
+              <h5 class="mb-4 text-lg font-bold text-white">
+                Multiple languages
+              </h5>
+              <p class="text-white">
+                All content can be easily translated and updated in multiple
+                languages.
+              </p>
+            </div>
+
+            <div class="pb-20 lg:mb-0">
+              <div
+                class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              >
+                <img
+                  src="<%= require('./images/icon2.png') %>"
+                  alt="icon"
+                  class="size-16"
+                />
+              </div>
+              <h5 class="mb-4 text-lg font-bold text-white">
+                Multiple Website Management
+              </h5>
+              <p class="text-white">
+                Manage multiple websites and view site statistics from one
+                single application. Easily manager the team accessing the
+                backend.
+              </p>
+            </div>
+
+            <div class="pb-20 md:mb-0">
+              <div
+                class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              >
+                <img
+                  src="<%= require('./images/icon3.png') %>"
+                  alt="icon"
+                  class="size-16"
+                />
+              </div>
+              <h5 class="mb-4 text-lg font-bold text-white">
+                Drag-and-Drop Media Management
+              </h5>
+              <p class="text-white">
+                Add and organize your uploads (images, pdfs, videos) instantly.
+                You can drag images directly from your desktop into your browser
+                window.
+              </p>
+            </div>
+
+            <div class="pb-20 md:mb-0">
+              <div
+                class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              >
+                <img
+                  src="<%= require('./images/icon4.png') %>"
+                  alt="icon"
+                  class="size-16"
+                />
+              </div>
+              <h5 class="mb-4 text-lg font-bold text-white">
+                Secure Shopping Cart
+              </h5>
+              <p class="text-white">
+                All credit card and transaction information is protected by the
+                same level of security used by banks: a 256-bit SSL certificate.
+              </p>
+            </div>
+
+            <div class="pb-20 lg:mb-0">
+              <div
+                class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              >
+                <img
+                  src="<%= require('./images/icon5.png') %>"
+                  alt="icon"
+                  class="size-16"
+                />
+              </div>
+              <h5 class="mb-4 text-lg font-bold text-white">
+                Secured Data Centers
+              </h5>
+              <p class="text-white">
+                Our infrastructure is build upon OVH, based in Roubaix, Northern
+                France. It's currently the number one hosting provider in Europe
+                and their data centers are ISO/IEC 27001 and SOC 1 Type I and
+                SOC 2 Type I certified.
+              </p>
+            </div>
+
+            <div class="pb-20 lg:mb-0">
+              <div
+                class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              >
+                <img
+                  src="<%= require('./images/icon6.png') %>"
+                  alt="icon"
+                  class="size-16"
+                />
+              </div>
+              <h5 class="mb-4 text-lg font-bold text-white">
+                Your Own Domain Name
+              </h5>
+              <p class="text-white">
+                Use your own domain name, or purchase one through Nimbu. Nimbu
+                lets you map your domain transparently over ours, ensuring
+                visitors never see a Nimbu domain when viewing your site.
+              </p>
+            </div>
+
+            <div class="pb-20 md:mb-0">
+              <div
+                class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              >
+                <img
+                  src="<%= require('./images/icon7.png') %>"
+                  alt="icon"
+                  class="size-16"
+                />
+              </div>
+              <h5 class="mb-4 text-lg font-bold text-white">Anti-Spam</h5>
+              <p class="text-white">
+                Nimbu is a paid service that aggressively fights spam. If you
+                are using a free service that is a target for spammers, you
+                potentially run the risk of being falsely grouped with other
+                spam sites.
+              </p>
+            </div>
+
+            <div class="pb-20 md:mb-0">
+              <div
+                class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              >
+                <img
+                  src="<%= require('./images/icon8.png') %>"
+                  alt="icon"
+                  class="size-16"
+                />
+              </div>
+              <h5 class="mb-4 text-lg font-bold text-white">Custom Code</h5>
+              <p class="text-white">
+                All custom code is saved to our scalable grid network. This is
+                not simple shared hosting. Every piece of custom code is cached
+                and placed on our distributed network of systems.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="bg-darkblue relative isolate px-6 pb-16 lg:px-8">
       <div class="mx-auto max-w-2xl pt-32">
         <div class="text-center">
           <h1
@@ -450,7 +631,7 @@
       </div>
     </div>
 
-    <div class="mx-auto max-w-full bg-darkblue px-5 py-24 sm:py-44 lg:px-20">
+    <div class="bg-darkblue mx-auto max-w-full px-5 py-24 sm:py-44 lg:px-20">
       <div class="relative mx-auto max-w-screen-2xl">
         <div
           class="absolute inset-0 z-0 overflow-hidden rounded-lg bg-blue"
@@ -478,7 +659,7 @@
             <dl
               class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-lg text-center sm:grid-cols-1 lg:grid-cols-3"
             >
-              <div class="flex flex-col bg-blue3 p-10">
+              <div class="bg-blue3 flex flex-col p-10">
                 <dt
                   class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm"
                 >
@@ -493,7 +674,7 @@
                   <span class="supports-[counter-set]:sr-only">97</span>%
                 </span>
               </div>
-              <div class="flex flex-col bg-blue3 p-8">
+              <div class="bg-blue3 flex flex-col p-8">
                 <dt
                   class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm"
                 >
@@ -508,7 +689,7 @@
                   <span class="supports-[counter-set]:sr-only">1000</span>+
                 </span>
               </div>
-              <div class="flex flex-col bg-blue3 p-8">
+              <div class="bg-blue3 flex flex-col p-8">
                 <dt
                   class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm"
                 >
@@ -699,13 +880,13 @@
         </div>
       </div>
 
-      <div class="mx-auto max-w-full bg-darkblue px-3 lg:px-20">
+      <div class="bg-darkblue mx-auto max-w-full px-3 lg:px-20">
         <div
           class="mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:mt-20 lg:mx-0 lg:max-w-none lg:gap-4"
         >
           <a href="http://mail.google.com" target="_blank">
             <div
-              class="rounded-lg bg-blue3 p-6 text-center transition-transform duration-300 hover:scale-95"
+              class="bg-blue3 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-95"
             >
               <div class="text-base leading-7">
                 <svg
@@ -826,7 +1007,7 @@
     </div>
 
     <div
-      class="container_nimbu mx-auto max-w-full bg-darkblue px-3 pb-20 lg:px-20"
+      class="container_nimbu bg-darkblue mx-auto max-w-full px-3 pb-20 lg:px-20"
     >
       <footer class="rounded-lg bg-[#0a284a]" aria-labelledby="footer-heading">
         <div
