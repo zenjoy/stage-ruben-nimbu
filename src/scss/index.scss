@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
 body {
@@ -21,9 +22,9 @@ $secondary-color: #84c7d0;
 $tertiary-color: #708d81;
 $white-color: #f7f7f7;
 $black-color: #272727;
-$blue: #0A284A;
-$blue2: #23446A;
-$blue3: #30629B;
+$blue: #0a284a;
+$blue2: #23446a;
+$blue3: #30629b;
 @property --border-angle {
   inherits: false;
   initial-value: 0deg;
@@ -47,10 +48,8 @@ header {
 .element {
   height: 900px;
   max-width: 100%;
-  padding: 50px 10vw;
   object-fit: fill;
 }
-
 
 @media (max-width: 1230px) {
   .element {
@@ -84,9 +83,9 @@ header {
 }
 
 .demo-10 {
-  --color-bg-1: #0A284A;
-  --color-bg-2: #23446A;
-  --color-bg-3: #30629B;
+  --color-bg-1: #0a284a;
+  --color-bg-2: #23446a;
+  --color-bg-3: #30629b;
   --color-bg-4: var(--color-bg-1);
   --color-bg-5: var(--color-bg-2);
   --color-bg-6: var(--color-bg-3);
@@ -302,11 +301,8 @@ header {
   }
 }
 
-
 @property --num {
   syntax: '<integer>';
   initial-value: 0;
   inherits: false;
 }
-
-

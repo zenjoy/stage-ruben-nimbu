@@ -9,14 +9,6 @@
     <!-- TODO: https://realfavicongenerator.net/ -->
     <link rel="stylesheet" href="path/to/fontawesome/css/all.min.css" />
 
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
-    ></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link
@@ -53,49 +45,14 @@
     />
     <meta property="og:url" content="<%= publicUrl %>/" />
     <meta property="og:image" content="<%= publicUrl %>/fb_cover.jpg" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
   </head>
   <body>
-    <!-- <main
-      class="flex min-h-full flex-col items-center justify-center bg-[#e2e8f0] px-6 py-24 sm:py-32 lg:px-8"
-    >
-      <img
-        src="<%= require('./images/webpack-icon.svg') %>"
-        class="h-[36vmin] animate-logo-bounce"
-      />
-      <p class="mt-6 text-[calc(10px+2vmin)] leading-7 text-gray-500 test">
-        Edit <code>src/index.js</code> and save to reload.
-      </p>
-    </main>
-
-             <div class="hidden lg:flex lg:gap-x-12">
-            <a
-              href="#"
-              class="relative text-black hover:text-black transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-yellow before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-yellow after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] text-md font-semibold leading-6 text-gray-900"
-              >Website</a
-            >
-            <a
-              href="#"
-              class="relative text-black hover:text-black transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-yellow before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-yellow after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] text-md font-semibold leading-6 text-gray-900"
-              >E-commerce</a
-            >
-            <a
-              href="#"
-              class="relative text-black hover:text-black transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-yellow before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-yellow after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] text-md font-semibold leading-6 text-gray-900"
-              >Mobile Apps</a
-            >
-          </div>
-
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              class="relative text-black hover:text-black transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-yellow before:origin-center before:h-[2px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:bg-yellow after:origin-center after:h-[2px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%] text-md font-semibold leading-6 text-gray-900"
-              >Pricing <span class="arrow" aria-hidden="true">&rarr;</span></a
-            >
-          </div>
-  -->
-
     <div
-      class="background_main bg-cover"
+      class="background_main bg-cover bg-center"
       style="background-image: url('<%= require('./images/grid.png') %>')"
     >
       <header
@@ -117,21 +74,21 @@
             </a>
           </div>
 
-          <div class="hidden lg:flex lg:gap-x-12">
+          <div class="hidden font-franklin lg:flex lg:gap-x-12">
             <a
               href="#"
-              class="text-md relative font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-500 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-500 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              class="text-md relative rounded-full font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-500 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-500 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
               >Solutions</a
             >
             <a
               href="#"
-              class="text-md relative font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-500 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-500 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
-              >Contact</a
+              class="text-md relative rounded-full font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-500 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-500 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              >Pricing</a
             >
             <a
               href="#"
-              class="text-md relative font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-500 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-500 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
-              >Pricing
+              class="text-md relative rounded-full font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-500 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-500 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              >Contact
             </a>
           </div>
 
@@ -139,7 +96,7 @@
             <button
               @click="isOpen = !isOpen"
               type="button"
-              class="hover:bg-darkblue group -m-2.5 rounded-full bg-white/10 p-2.5 transition"
+              class="group -m-2.5 rounded-full bg-white/10 p-2.5 transition hover:bg-darkblue"
             >
               <span class="sr-only">Open main menu</span>
 
@@ -197,7 +154,7 @@
             </div>
             <div class="mt-6 flow-root pt-5">
               <div class="-my-6">
-                <div class="space-y-2 py-6">
+                <div class="space-y-2 py-6 font-franklin">
                   <a
                     href="#"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
@@ -206,12 +163,12 @@
                   <a
                     href="#"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
-                    >Contact</a
+                    >Pricing</a
                   >
                   <a
                     href="#"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
-                    >Pricing</a
+                    >Contact</a
                   >
                 </div>
               </div>
@@ -226,7 +183,7 @@
             class="text-center transition-transform duration-300 hover:scale-95 sm:mb-6 sm:flex sm:justify-center"
           >
             <div
-              class="relative rounded-lg px-3 py-2 text-sm leading-6 text-white ring-2 ring-white"
+              class="relative rounded-lg px-3 py-2 font-franklin text-sm font-medium leading-6 text-white ring-2 ring-white"
             >
               Announcing our next round of funding.
               <a href="#scroll" class="font-franklin font-semibold"
@@ -244,7 +201,7 @@
                 <span class="text-yellow">App platform</span>
               </span>
             </h1>
-            <p class="mt-6 flex pt-5 text-lg text-white">
+            <p class="mt-6 flex pt-5 font-franklin text-lg text-white">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
               lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
               fugiat aliqua.
@@ -252,7 +209,7 @@
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                class="rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                class="rounded-lg bg-white px-20 py-3.5 font-franklin text-lg font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 >Get started</a
               >
             </div>
@@ -268,8 +225,8 @@
       "
     >
       <div id="scroll">
-        <div class="py-24">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="pb-24 pt-16">
+          <div class="mx-auto px-6 lg:max-w-[1500px] lg:px-8">
             <video
               class="size-full rounded-lg drop-shadow-xl"
               autoplay
@@ -287,7 +244,7 @@
         <div class="relative isolate px-6 lg:px-8">
           <div class="mx-auto max-w-2xl pb-20 pt-32">
             <div class="text-center">
-              <p class="mt-6 text-lg leading-8 text-white">
+              <p class="mt-6 pb-3 text-2xl leading-8 text-white">
                 Let us take care of your infrastructure
               </p>
               <h1
@@ -301,7 +258,7 @@
       </div>
     </div>
 
-    <section class="loading demo-10 pt-72">
+    <section class="loading demo-10 pt-96">
       <main>
         <div class="content content--highlight content--intro"></div>
         <div class="wrap rounded-lg">
@@ -350,7 +307,7 @@
             </p>
             <a
               href="#"
-              class="hover:bg-blue3 rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-blue3 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >Learn More</a
             >
           </div>
@@ -374,7 +331,7 @@
             </p>
             <a
               href="#"
-              class="rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-green hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              class="hover:bg-green rounded-lg bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >Learn More</a
             >
           </div>
@@ -388,20 +345,21 @@
         background-image: url('<%= require('./images/bg-nimbu-lines2.png') %>');
       "
     >
-      <div class="container mx-auto my-24 pt-32 md:px-6">
+      <div class="container mx-auto my-24 pt-40 md:px-6">
         <section class="mb-20 text-center">
           <div class="flex justify-center">
-            <div class="max-w-[700px] text-center">
+            <div class="max-w-7xl text-center">
               <h2
                 class="pb-44 font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
               >
-                All essential items provided. No unnecessary extras included
+                All essential items provided.
+                <span class="text-yellow">No unnecessary</span> extras included
               </h2>
             </div>
           </div>
 
           <div
-            class="grid gap-x-6 bg-cover md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12"
+            class="grid gap-x-6 bg-cover md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12"
           >
             <div class="pb-20 lg:mb-0">
               <div
@@ -413,7 +371,7 @@
                   class="size-16"
                 />
               </div>
-              <h5 class="mb-4 text-lg font-bold text-white">
+              <h5 class="mb-4 font-outfit text-lg font-bold text-white">
                 Multiple languages
               </h5>
               <p class="text-white">
@@ -432,7 +390,7 @@
                   class="size-16"
                 />
               </div>
-              <h5 class="mb-4 text-lg font-bold text-white">
+              <h5 class="mb-4 font-outfit text-lg font-bold text-white">
                 Multiple Website Management
               </h5>
               <p class="text-white">
@@ -452,7 +410,7 @@
                   class="size-16"
                 />
               </div>
-              <h5 class="mb-4 text-lg font-bold text-white">
+              <h5 class="mb-4 font-outfit text-lg font-bold text-white">
                 Drag-and-Drop Media Management
               </h5>
               <p class="text-white">
@@ -472,7 +430,7 @@
                   class="size-16"
                 />
               </div>
-              <h5 class="mb-4 text-lg font-bold text-white">
+              <h5 class="mb-4 font-outfit text-lg font-bold text-white">
                 Secure Shopping Cart
               </h5>
               <p class="text-white">
@@ -491,7 +449,7 @@
                   class="size-16"
                 />
               </div>
-              <h5 class="mb-4 text-lg font-bold text-white">
+              <h5 class="mb-4 font-outfit text-lg font-bold text-white">
                 Secured Data Centers
               </h5>
               <p class="text-white">
@@ -512,7 +470,7 @@
                   class="size-16"
                 />
               </div>
-              <h5 class="mb-4 text-lg font-bold text-white">
+              <h5 class="mb-4 font-outfit text-lg font-bold text-white">
                 Your Own Domain Name
               </h5>
               <p class="text-white">
@@ -532,7 +490,9 @@
                   class="size-16"
                 />
               </div>
-              <h5 class="mb-4 text-lg font-bold text-white">Anti-Spam</h5>
+              <h5 class="mb-4 font-outfit text-lg font-bold text-white">
+                Anti-Spam
+              </h5>
               <p class="text-white">
                 Nimbu is a paid service that aggressively fights spam. If you
                 are using a free service that is a target for spammers, you
@@ -551,7 +511,9 @@
                   class="size-16"
                 />
               </div>
-              <h5 class="mb-4 text-lg font-bold text-white">Custom Code</h5>
+              <h5 class="mb-4 font-outfit text-lg font-bold text-white">
+                Custom Code
+              </h5>
               <p class="text-white">
                 All custom code is saved to our scalable grid network. This is
                 not simple shared hosting. Every piece of custom code is cached
@@ -563,7 +525,7 @@
       </div>
     </div>
 
-    <div class="bg-darkblue relative isolate px-6 pb-16 lg:px-8">
+    <div class="relative isolate bg-darkblue px-6 pb-16 lg:px-8">
       <div class="mx-auto max-w-2xl pt-32">
         <div class="text-center">
           <h1
@@ -631,7 +593,7 @@
       </div>
     </div>
 
-    <div class="bg-darkblue mx-auto max-w-full px-5 py-24 sm:py-44 lg:px-20">
+    <div class="mx-auto max-w-full bg-darkblue px-5 py-24 sm:py-44 lg:px-20">
       <div class="relative mx-auto max-w-screen-2xl">
         <div
           class="absolute inset-0 z-0 overflow-hidden rounded-lg bg-blue"
@@ -641,12 +603,12 @@
           <div class="mx-auto max-w-2xl lg:max-w-none">
             <div class="text-center">
               <h2
-                class="pb-10 pt-20 font-outfit text-3xl font-bold tracking-tight text-white sm:text-7xl"
+                class="pb-10 pt-20 font-outfit text-4xl font-bold tracking-tight text-white sm:text-7xl"
               >
                 Empowering <span class="text-yellow">success</span> in numbers
               </h2>
               <p
-                class="mx-auto mt-4 max-w-4xl px-6 leading-8 text-white lg:px-8"
+                class="mx-auto mt-4 max-w-4xl px-6 leading-8 text-white lg:px-8 lg:text-xl"
               >
                 We redefine collaboration, innovation, and success. From our
                 unwavering commitment to excellence to our dynamic approach that
@@ -659,9 +621,9 @@
             <dl
               class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-lg text-center sm:grid-cols-1 lg:grid-cols-3"
             >
-              <div class="bg-blue3 flex flex-col p-10">
+              <div class="flex flex-col bg-blue3 p-10">
                 <dt
-                  class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm"
+                  class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm lg:text-3xl"
                 >
                   Setisfaction rate
                 </dt>
@@ -674,9 +636,9 @@
                   <span class="supports-[counter-set]:sr-only">97</span>%
                 </span>
               </div>
-              <div class="bg-blue3 flex flex-col p-8">
+              <div class="flex flex-col bg-blue3 p-8">
                 <dt
-                  class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm"
+                  class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm lg:text-3xl"
                 >
                   Delivered projects
                 </dt>
@@ -689,9 +651,9 @@
                   <span class="supports-[counter-set]:sr-only">1000</span>+
                 </span>
               </div>
-              <div class="bg-blue3 flex flex-col p-8">
+              <div class="flex flex-col bg-blue3 p-8">
                 <dt
-                  class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm"
+                  class="pt-5 text-4xl font-semibold leading-6 text-white sm:text-sm lg:text-3xl"
                 >
                   Years of experience
                 </dt>
@@ -880,13 +842,13 @@
         </div>
       </div>
 
-      <div class="bg-darkblue mx-auto max-w-full px-3 lg:px-20">
+      <div class="mx-auto max-w-full bg-darkblue px-3 lg:px-20">
         <div
           class="mx-auto grid max-w-2xl grid-cols-1 gap-4 sm:mt-20 lg:mx-0 lg:max-w-none lg:gap-4"
         >
           <a href="http://mail.google.com" target="_blank">
             <div
-              class="bg-blue3 rounded-lg p-6 text-center transition-transform duration-300 hover:scale-95"
+              class="rounded-lg bg-blue3 p-6 text-center transition-transform duration-300 hover:scale-95"
             >
               <div class="text-base leading-7">
                 <svg
@@ -1007,7 +969,7 @@
     </div>
 
     <div
-      class="container_nimbu bg-darkblue mx-auto max-w-full px-3 pb-20 lg:px-20"
+      class="container_nimbu mx-auto max-w-full bg-darkblue px-3 pb-20 lg:px-20"
     >
       <footer class="rounded-lg bg-[#0a284a]" aria-labelledby="footer-heading">
         <div
