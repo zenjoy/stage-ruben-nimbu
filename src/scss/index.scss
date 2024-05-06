@@ -83,9 +83,9 @@ header {
 }
 
 .demo-10 {
-  --color-bg-1: #0a284a;
-  --color-bg-2: #23446a;
-  --color-bg-3: #30629b;
+  --color-bg-1: linear-gradient(to left top, #0a284a, #0f2d50, #143256, #19385c, #1d3d62, #204269, #23466f, #264b76, #28517f, #2b5688, #2d5c92, #30629b);
+  --color-bg-2: linear-gradient(to right top, #0a284a, #0f2d50, #143256, #19385c, #1d3d62, #204269, #23466f, #264b76, #28517f, #2b5688, #2d5c92, #30629b);
+  --color-bg-3: linear-gradient(to left top, #0a284a, #0f2d50, #143256, #19385c, #1d3d62, #204269, #23466f, #264b76, #28517f, #2b5688, #2d5c92, #30629b);;
   --color-bg-4: var(--color-bg-1);
   --color-bg-5: var(--color-bg-2);
   --color-bg-6: var(--color-bg-3);
@@ -97,7 +97,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px 10px 0 0;
+  border-radius: 13px;
 }
 
 .content--sticky {
