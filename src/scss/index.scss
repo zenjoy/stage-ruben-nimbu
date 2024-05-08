@@ -97,7 +97,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 13px;
 }
 
 .content--sticky {
@@ -287,6 +286,11 @@ header {
 .container_nimbu {
   width: 100%;
   max-width: 1700px;
+  margin: 0 auto;
+}
+.container2{
+  width: 100%;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
