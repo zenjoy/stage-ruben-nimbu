@@ -53,7 +53,7 @@
   <body>
     <div
       class="background_main bg-cover bg-center"
-      style="background-image: url('<%= require('./images/grid.png') %>')"
+      style="background-image: url('<%= require('./images/Grid.svg') %>')"
     >
       <header
         x-data="{ isOpen: false }"
@@ -76,17 +76,17 @@
 
           <div class="hidden font-franklin lg:flex lg:gap-x-12">
             <a
-              href="#"
+              href="#solutions"
               class="text-md relative rounded-full font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
               >Solutions</a
             >
             <a
-              href="#"
+              href="#pricing"
               class="text-md relative rounded-full font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
               >Pricing</a
             >
             <a
-              href="#"
+              href="#contact"
               class="text-md relative rounded-full font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
               >Contact
             </a>
@@ -159,17 +159,17 @@
               <div class="-my-6">
                 <div class="space-y-2 py-6 font-franklin">
                   <a
-                    href="#"
+                    href="#solutions"
                     class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
                     >Solutions</a
                   >
                   <a
-                    href="#"
+                    href="#pricing"
                     class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
                     >Pricing</a
                   >
                   <a
-                    href="#"
+                    href="#contact"
                     class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
                     >Contact</a
                   >
@@ -215,10 +215,10 @@
     <div
       class="element relative isolate bg-cover"
       style="
-        background-image: url('<%= require('./images/bg-nimbu-lines.png') %>');
+        background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
       "
     >
-      <div id="scroll">
+      <div id="scroll" class="pt-10">
         <div class="pb-24">
           <div class="mx-auto px-6 lg:max-w-[1500px] lg:px-8">
             <video
@@ -234,97 +234,169 @@
             </video>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="relative isolate bg-darkblue px-6 pb-10 pt-5 lg:px-8">
-          <div class="mx-auto w-full max-w-[1500px] px-4 py-24 md:px-6">
-            <div class="text-center">
-              <div
-                x-data="{}"
-                x-init="$nextTick(() => {
+    <div class="relative isolate bg-darkblue px-6 pb-10 pt-5 lg:px-8">
+      <div class="mx-auto w-full max-w-[1500px] px-4 py-24 md:px-6">
+        <div class="text-center">
+          <div
+            x-data="{}"
+            x-init="$nextTick(() => {
                         let ul = $refs.logos;
                         ul.insertAdjacentHTML('afterend', ul.outerHTML);
                         ul.nextSibling.setAttribute('aria-hidden', 'true');
                     })"
-                class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
-              >
-                <ul
-                  x-ref="logos"
-                  class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8"
-                >
-                  <li>
-                    <img
-                      src="<%= require('./images/facebook.svg') %>"
-                      alt="Facebook"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="<%= require('./images/disney.svg') %>"
-                      alt="Disney"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="<%= require('./images/airbnb.svg') %>"
-                      alt="Airbnb"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="<%= require('./images/apple.svg') %>"
-                      alt="Apple"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="<%= require('./images/spark.svg') %>"
-                      alt="Spark"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="<%= require('./images/samsung.svg') %>"
-                      alt="Samsung"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="<%= require('./images/quora.svg') %>"
-                      alt="Quora"
-                    />
-                  </li>
-                  <li>
-                    <img src="<%= require('./images/sass.svg') %>" alt="Sass" />
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+            class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+          >
+            <ul
+              x-ref="logos"
+              class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8"
+            >
+              <li>
+                <img
+                  src="<%= require('./images/alegria_logo_white.png') %>"
+                  alt="alegria"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/artevelde_logo_white.png') %>"
+                  alt="artevelde"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/awel_logo_white.png') %>"
+                  alt="awel"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/bitos_logo_white.png') %>"
+                  alt="bitos"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/clbOnline_logo_white.png') %>"
+                  alt="clbOnline"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/comfortEnergy_logo_white.png') %>"
+                  alt="comfortEnergy"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/ecopower_logo_white.png') %>"
+                  alt="ecopower"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/elsyca_logo_white.png') %>"
+                  alt="elsyca"
+                  class="h-10 object-contain"
+                />
+              </li>
 
-        <div class="px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl py-20">
-            <div class="text-center">
-              <p class="mt-6 pb-3 text-2xl leading-8 text-white">
-                Let us take care of your infrastructure
-              </p>
-              <h1
-                class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
-              >
-                Focus on what <span class="text-yellow">you love</span>
-              </h1>
-            </div>
+              <li>
+                <img
+                  src="<%= require('./images/hammer_logo_white.png') %>"
+                  alt="hammer"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/konings_logo_white.png') %>"
+                  alt="konings"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/kuleuven_logo_white.png') %>"
+                  alt="kuleuven"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/rodekruis_logo_white.png') %>"
+                  alt="rodekruis"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/ugent_logo_white.png') %>"
+                  alt="ugent"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/vlaanderenOnderwijs_logo_white.png') %>"
+                  alt="vlaanderenOnderwijs"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/vub_logo_white.png') %>"
+                  alt="ecopower"
+                  class="h-10 object-contain"
+                />
+              </li>
+              <li>
+                <img
+                  src="<%= require('./images/zelfmoordlijn_logo_white.png') %>"
+                  alt="elsyca"
+                  class="h-10 object-contain"
+                />
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="loading demo-10 mt-64 pt-96">
+    <div class="px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl pt-20">
+        <div class="text-center">
+          <p class="mt-6 pb-3 text-2xl leading-8 text-white">
+            Let us take care of your infrastructure
+          </p>
+          <h1
+            class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
+          >
+            Focus on what <span class="text-yellow">you love</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <section id="solutions" class="loading demo-10">
       <main>
-        <div class="content content--highlight content--intro"></div>
         <div class="wrap rounded-xl">
-          <div class="content content--sticky content--half bg-1">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="content backColor content--sticky content--half bg-cover bg-center"
+            style="
+              background-image: url('<%= require('./images/pattern.svg') %>');
+            "
+          >
+            <div class="mx-auto max-w-6xl px-6 lg:px-8">
               <video
                 class="size-full rounded-xl drop-shadow-xl"
                 autoplay
@@ -338,17 +410,22 @@
               </video>
             </div>
             <h2 class="content__title">Building websites</h2>
-            <p class="content__text content__text--narrow text-meta">
-              The algorithm's workings are shrouded in complexity.
-            </p>
-            <a
-              href="#"
-              class="rounded-xl bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-blue hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              >Learn More</a
+            <p
+              class="content__text backColor content__text--narrow text-meta w-[670px]"
             >
+              Creating your website with Nimbu is a simple, intuitive process.
+              Just add and arrange your content anywhere you want. Or dive in
+              the code and create stunning complex web applications that are
+              easy to maintain.
+            </p>
           </div>
-          <div class="content content--sticky content--half bg-2">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="content backColor content--sticky content--half bg-cover bg-center"
+            style="
+              background-image: url('<%= require('./images/pattern.svg') %>');
+            "
+          >
+            <div class="mx-auto max-w-6xl px-6 lg:px-8">
               <video
                 class="size-full rounded-xl drop-shadow-xl"
                 autoplay
@@ -362,18 +439,20 @@
               </video>
             </div>
             <h2 class="content__title">Building apps</h2>
-            <p class="content__text content__text--narrow text-meta">
-              Enshrining the principles of conformity and reinforcing the status
-              quo.
+            <p class="content__text content__text--narrow text-meta w-[670px]">
+              Nimbu as a backend can power your app's content, data storage,
+              user authentication and more. Focus on creating great user
+              experiences and no longer worry about server maintenance and
+              complex infrastructures.
             </p>
-            <a
-              href="#"
-              class="rounded-xl bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:bg-blue3 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              >Learn More</a
-            >
           </div>
-          <div class="content content--sticky content--half bg-3">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="content backColor content--sticky content--half bg-cover bg-center"
+            style="
+              background-image: url('<%= require('./images/pattern.svg') %>');
+            "
+          >
+            <div class="mx-auto max-w-6xl px-6 lg:px-8">
               <video
                 class="size-full rounded-xl drop-shadow-xl"
                 autoplay
@@ -386,21 +465,19 @@
                 />
               </video>
             </div>
-            <h2 class="content__title">E-commerce</h2>
-            <p class="content__text content__text--narrow text-meta">
-              The elusive entities, lacking human form, operate in the shadows.
+            <h2 class="content__title">Ecommerce</h2>
+            <p class="content__text content__text--narrow text-meta w-[670px]">
+              Nimbu provides a secure e-commerce platform with multiple payment
+              options, streamlined order management, and efficient sales
+              recovery. Flexible shipping and tax rates, along with Exact Online
+              integration, simplify operations and accounting tasks.
             </p>
-            <a
-              href="#"
-              class="hover:bg-green rounded-xl bg-white px-20 py-3.5 text-sm font-semibold text-black ring-2 ring-white transition-colors duration-300 hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              >Learn More</a
-            >
           </div>
         </div>
       </main>
     </section>
 
-    <div class="relative isolate overflow-hidden px-5 pt-28 lg:px-24">
+    <div class="relative isolate overflow-hidden px-5 lg:px-24">
       <div class="mx-auto bg-darkblue bg-cover px-5">
         <div class="relative mx-auto max-w-screen-2xl">
           <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
@@ -653,9 +730,9 @@
     </div>
 
     <div
-      class="relative isolate overflow-hidden bg-cover px-5 pb-32 pt-32 lg:px-24"
+      class="relative isolate overflow-hidden bg-cover px-5 py-32 lg:px-24"
       style="
-        background-image: url('<%= require('./images/bg-nimbu-lines2.png') %>');
+        background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
       "
     >
       <div class="mx-auto bg-cover px-5">
@@ -882,7 +959,10 @@
       </div>
     </div>
 
-    <main class="relative flex flex-col justify-center overflow-hidden">
+    <main
+      id="pricing"
+      class="relative flex flex-col justify-center overflow-hidden"
+    >
       <div class="text-center">
         <h1
           class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
@@ -1259,7 +1339,7 @@
       </div>
     </main>
 
-    <div class="py-32 sm:py-32">
+    <div id="contact" class="py-32 sm:py-32">
       <div class="relative isolate pb-24">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div

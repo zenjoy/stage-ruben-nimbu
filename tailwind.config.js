@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'infinite-scroll': 'infinite-scroll 15s linear infinite',
-        'infinite-scroll2': 'infinite-scroll 55s linear infinite',
+        'infinite-scroll': 'infinite-scroll 35s linear infinite',
       },
       keyframes: {
         'infinite-scroll': {

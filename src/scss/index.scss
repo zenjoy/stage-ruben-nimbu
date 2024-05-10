@@ -76,19 +76,14 @@ header {
   --color-link-hover: #000;
   --color-bg-1: #9d9d9d;
   --color-bg-2: #c7c7c7;
-  --color-bg-3: var(--color-bg-1);
-  --color-bg-4: var(--color-bg-2);
-  --color-bg-5: var(--color-bg-1);
-  --color-bg-6: var(--color-bg-2);
 }
-
+.backColor {
+  background-color: #031222;
+}
 .demo-10 {
-  --color-bg-1: linear-gradient(to left top, #0a284a, #0f2d50, #143256, #19385c, #1d3d62, #204269, #23466f, #264b76, #28517f, #2b5688, #2d5c92, #30629b);
-  --color-bg-2: linear-gradient(to right top, #0a284a, #0f2d50, #143256, #19385c, #1d3d62, #204269, #23466f, #264b76, #28517f, #2b5688, #2d5c92, #30629b);
-  --color-bg-3: linear-gradient(to left top, #0a284a, #0f2d50, #143256, #19385c, #1d3d62, #204269, #23466f, #264b76, #28517f, #2b5688, #2d5c92, #30629b);;
-  --color-bg-4: var(--color-bg-1);
-  --color-bg-5: var(--color-bg-2);
-  --color-bg-6: var(--color-bg-3);
+  --color-bg-1: #031222;
+  --color-bg-2: #031222;
+  --color-bg-3: #031222;
 }
 
 .content {
@@ -146,11 +141,12 @@ header {
   letter-spacing: -0.025em;
   text-transform: uppercase;
   line-height: 1;
-  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-size: clamp(2rem, 6vw, 3rem);
   margin: 0;
   font-weight: bold;
   font-family: $font-outfit;
   color: #f7f7f7;
+  padding-top: 60px;
 }
 
 .content__text {
