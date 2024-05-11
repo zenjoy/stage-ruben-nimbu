@@ -511,21 +511,27 @@
                 >
                   Interested? I bet you are!
                 </h2>
-                <p class="mt-6 text-lg leading-8 text-gray-300">
-                  Ac euismod vel sit maecenas id pellentesque eu sed
-                  consectetur. Malesuada adipiscing sagittis vel nulla.
-                </p>
+                <div class="pt-10 sm:col-span-2">
+                  <div class="mt-2.5 font-outfit font-semibold">
+                    <input
+                      placeholder="E-mail"
+                      type="email"
+                      name="email"
+                      id="email"
+                      autocomplete="email"
+                      class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-5 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                    />
+                  </div>
+                </div>
                 <div
                   class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start"
                 >
-                  <a
-                    href="#"
-                    class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                    >Get started</a
+                  <button
+                    type="submit"
+                    class="px-4.5 block w-40 rounded-xl bg-yellow py-3 text-center font-outfit text-lg font-semibold text-white ring-2 ring-yellow transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   >
-                  <a href="#" class="text-sm font-semibold leading-6 text-white"
-                    >Learn more <span aria-hidden="true">→</span></a
-                  >
+                    Let's talk
+                  </button>
                 </div>
               </div>
               <div class="relative mt-16 h-80 lg:mt-8">
@@ -1343,19 +1349,8 @@
       <div class="relative isolate pb-24">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div
-            class="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20"
+            class="mx-auto flex max-w-2xl flex-col gap-16 bg-blue px-6 py-16 ring-1 ring-white/10 sm:rounded-xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20"
           >
-            <video
-              class="size-full flex-none rounded-xl lg:h-full lg:max-w-lg"
-              autoplay
-              muted
-              loop
-            >
-              <source
-                src="<%= require('./images/nimbu_3d_big.mp4') %>"
-                type="video/mp4"
-              />
-            </video>
             <div class="w-full flex-auto">
               <h2
                 class="font-outfit text-5xl font-bold tracking-tight text-white"
@@ -1430,125 +1425,91 @@
                 </div>
               </form>
             </div>
+            <video
+              class="size-full flex-none rounded-xl lg:h-full lg:max-w-lg"
+              autoplay
+              muted
+              loop
+            >
+              <source
+                src="<%= require('./images/nimbu_3d_big.mp4') %>"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
       </div>
     </div>
 
-    <div
-      class="container_nimbu mx-auto max-w-full bg-darkblue px-3 pb-20 lg:px-20"
-    >
-      <footer class="rounded-xl bg-[#0a284a]" aria-labelledby="footer-heading">
-        <div
-          class="responsive_footer mx-auto max-w-[1540px] px-20 pb-8 sm:pt-20 lg:pt-20"
+    <div class="relative isolate pb-24">
+      <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <footer
+          class="rounded-xl bg-[#0a284a]"
+          aria-labelledby="footer-heading"
         >
-          <div class="xl:grid xl:grid-cols-2 xl:gap-8">
-            <div class="mr-40 space-y-8">
-              <a href="#">
-                <img
-                  class="h-8 transition-transform duration-300 hover:scale-95"
-                  src="<%= require('./images/nimbu_logo.png') %>"
-                  alt="Company name"
-                />
-              </a>
-              <p class="text-sm leading-6 text-white">
-                Empower your online presence with Nimbu CMS - where creativity
-                meets functionality seamlessly. manage, and optimize your
-                digital space effortlessly, because with Nimbu, your website is
-                not just built, it's perfected.
-              </p>
-            </div>
-
-            <div class="xl:col-span-2xl:mt-0 footer_text mt-16 grid">
-              <div class="md:grid md:grid-cols-2 md:gap-8"></div>
-              <div class="md:grid md:grid-cols-2 md:gap-8">
-                <div class="text-right">
-                  <h3
-                    class="font-outfit text-lg font-semibold leading-6 text-white"
-                  >
-                    Fields
-                  </h3>
-                  <ul role="list" class="mt-6 space-y-4">
-                    <li>
-                      <a
-                        href="#"
-                        class="text-sm leading-6 text-gray-300 hover:text-white"
-                        >Website</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-sm leading-6 text-gray-300 hover:text-white"
-                        >Commerce</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-sm leading-6 text-gray-300 hover:text-white"
-                        >Mobile Apps</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-                <div class="mt-10 text-right md:mt-0">
-                  <h3
-                    class="font-outfit text-lg font-semibold leading-6 text-white"
-                  >
-                    General
-                  </h3>
-                  <ul role="list" class="mt-6 space-y-4">
-                    <li>
-                      <a
-                        href="#"
-                        class="text-sm leading-6 text-gray-300 hover:text-white"
-                        >Privacy Policy</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-sm leading-6 text-gray-300 hover:text-white"
-                        >Terms of use</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-sm leading-6 text-gray-300 hover:text-white"
-                        >Status</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="text-sm leading-6 text-gray-300 hover:text-white"
-                        >Support</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div
-            class="flex justify-between border-t border-white/20 pt-8 sm:mt-12 lg:mt-12"
+            class="responsive_footer mx-auto max-w-[1540px] px-20 pb-8 sm:pt-20 lg:pt-20"
           >
-            <p class="text-xs leading-5 text-white">
-              &copy; 2024 Zenjoy, Inc. All rights reserved.
-            </p>
-            <a href="https://www.zenjoy.be/" target="_blank">
-              <button
-                class="rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black ring-1 ring-white transition-colors duration-300 hover:bg-blue hover:text-white hover:ring-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              >
-                Zenjoy Website
-              </button>
-            </a>
+            <div class="xl:grid xl:grid-cols-2 xl:gap-8">
+              <div class="mr-40">
+                <a href="#">
+                  <img
+                    class="h-8 transition-transform duration-300 hover:scale-95"
+                    src="<%= require('./images/nimbu_logo.png') %>"
+                    alt="Company name"
+                  />
+                </a>
+              </div>
+
+              <ul class="flex justify-end gap-8">
+                <li>
+                  <a
+                    href="#"
+                    class="text-sm leading-6 text-gray-300 hover:text-white"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-sm leading-6 text-gray-300 hover:text-white"
+                    >Terms of use</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-sm leading-6 text-gray-300 hover:text-white"
+                    >Status</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-sm leading-6 text-gray-300 hover:text-white"
+                    >Support</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="flex justify-between border-t border-white/10 pt-8 sm:mt-12 lg:mt-12"
+            >
+              <p class="text-xs leading-5 text-white">
+                &copy; 2024 Zenjoy, Inc. All rights reserved.
+              </p>
+              <a href="https://www.zenjoy.be/" target="_blank">
+                <button
+                  class="rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-black ring-1 ring-white transition-colors duration-300 hover:bg-blue hover:text-white hover:ring-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                >
+                  Zenjoy Website
+                </button>
+              </a>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
