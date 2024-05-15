@@ -20,7 +20,7 @@ document.querySelectorAll('.swiper').forEach((swiper, index) => {
         breakpoints: {
             640: {
                 slidesPerView: 2,
-                spaceBetween: 10,
+                spaceBetween: 15,
                 slidesOffsetBefore: index % 2 == 0 ? 0 : 100, 
             },
             768: {
@@ -30,7 +30,7 @@ document.querySelectorAll('.swiper').forEach((swiper, index) => {
             },
             1024: {
                 slidesPerView: 4,
-                spaceBetween: 25,
+                spaceBetween: 30,
                 slidesOffsetBefore: index % 2 == 0 ? 0 : 100, 
             },
         },
