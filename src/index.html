@@ -484,7 +484,25 @@
             <div
               class="relative isolate overflow-hidden rounded-xl bg-blue px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
             >
-           
+              <svg
+                viewBox="0 0 1024 1024"
+                class="absolute left-1/2 top-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="512"
+                  cy="512"
+                  r="512"
+                  fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                  fill-opacity="0.7"
+                />
+                <defs>
+                  <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                    <stop stop-color="#7775D6" />
+                    <stop offset="1" stop-color="#30629b" />
+                  </radialGradient>
+                </defs>
+              </svg>
               <div
                 class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left"
               >
@@ -501,7 +519,7 @@
                       name="email"
                       id="email"
                       autocomplete="email"
-                      class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-5 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                      class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -510,7 +528,7 @@
                 >
                   <button
                     type="submit"
-                    class="px-4.5 block w-40 rounded-xl bg-yellow py-3 text-center font-outfit text-lg font-semibold text-white ring-2 ring-yellow transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    class="px-4.5 block w-40 rounded-xl bg-yellow py-2.5 text-center font-outfit text-lg font-semibold text-white ring-2 ring-yellow transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   >
                     Get updates
                   </button>
@@ -518,7 +536,7 @@
               </div>
               <div class="relative mt-16 h-80 lg:mt-8">
                 <img
-                  class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5"
+                  class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 transition-transform duration-300 hover:scale-105"
                   src="<%= require('./images/dashboard.png') %>"
                   alt="App screenshot"
                   width="1824"
@@ -539,7 +557,7 @@
               class="max-w-3xl pb-36 font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
             >
               All essential items provided with
-              <span class="text-yellow">No unnecessary</span> extras included
+              <span class="text-yellow">no unnecessary</span> extras included
             </h2>
           </div>
         </div>
@@ -710,7 +728,7 @@
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a
             href="#"
-            class="rounded-xl bg-yellow px-24 py-4 font-franklin text-lg font-semibold text-darkblue ring-2 ring-yellow transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            class="rounded-xl bg-yellow px-10 py-4 font-franklin text-lg font-semibold text-darkblue ring-2 ring-yellow transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >Download the full feature list</a
           >
         </div>
@@ -806,7 +824,7 @@
       </div>
     </div>
     <!-- Swiper -->
-    <div class="w-full overflow-x-hidden pb-44 pt-20">
+    <div class="w-full overflow-x-hidden pb-40 pt-20">
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -949,16 +967,16 @@
 
     <main
       id="pricing"
-      class="relative flex flex-col justify-center overflow-hidden"
+      class="relative flex flex-col justify-center overflow-hidden pt-20"
     >
       <div class="text-center">
         <h1
           class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
         >
-          Pricing
+          Nibmu CMS Pricing
         </h1>
       </div>
-      <div class="mx-auto w-full max-w-7xl px-4 py-24 md:px-6">
+      <div class="mx-auto w-full max-w-7xl px-4 pb-28 pt-10 md:px-6">
         <!-- Pricing table component -->
         <div x-data="{ isAnnual: true }">
           <!-- Pricing toggle -->
@@ -971,12 +989,12 @@
                 aria-hidden="true"
               >
                 <span
-                  class="absolute inset-0 w-1/2 rounded-full bg-indigo-500 shadow-sm shadow-indigo-950/10 transition-transform duration-150 ease-in-out"
+                  class="absolute inset-0 w-1/2 rounded-full bg-blue2 shadow-sm shadow-indigo-950/10 transition-transform duration-150 ease-in-out"
                   :class="isAnnual ? 'translate-x-0' : 'translate-x-full'"
                 ></span>
               </span>
               <button
-                class="relative h-8 flex-1 rounded-full text-sm font-medium transition-colors duration-150 ease-in-out focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600"
+                class="relative h-8 flex-1 rounded-full font-franklin text-sm font-medium transition-colors duration-150 ease-in-out focus-visible:outline-none focus-visible:ring focus-visible:ring-blue dark:focus-visible:ring-blue"
                 :class="isAnnual ? 'text-white' : 'text-slate-500 dark:text-slate-400'"
                 @click="isAnnual = true"
                 :aria-pressed="isAnnual"
@@ -1004,38 +1022,40 @@
             <!-- Pricing tab 1 -->
             <div class="h-full">
               <div
-                class="dark:border- relative flex h-full flex-col rounded-2xl bg-white p-6 shadow shadow-slate-950/5 dark:bg-blue"
+                class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-6 shadow shadow-slate-950/5 transition-transform duration-300 hover:scale-105 dark:bg-blue"
               >
                 <div class="mb-5">
                   <div
-                    class="mb-1 font-semibold text-slate-900 dark:text-slate-200"
+                    class="mb-1 font-franklin font-semibold text-slate-900 dark:text-slate-200"
                   >
                     Essential
                   </div>
                   <div class="mb-2 inline-flex items-baseline">
                     <span
                       class="text-3xl font-bold text-slate-900 dark:text-slate-200"
-                      >$</span
+                      >€</span
                     >
                     <span
-                      class="text-4xl font-bold text-slate-900 dark:text-slate-200"
+                      class="font-outfit text-4xl font-bold text-white dark:text-slate-200"
                       x-text="isAnnual ? '29' : '35'"
                     ></span>
-                    <span class="font-medium text-slate-500">/mo</span>
+                    <span class="font-franklin font-medium text-slate-200"
+                      >/mo</span
+                    >
                   </div>
-                  <div class="mb-5 text-sm text-slate-500">
+                  <div class="mb-5 font-franklin text-sm text-white">
                     There are many variations available, but the majority have
                     suffered.
                   </div>
                   <a
-                    class="inline-flex w-full justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 transition-colors duration-150 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600"
-                    href="#0"
+                    class="inline-flex w-full justify-center whitespace-nowrap rounded-lg bg-yellow px-3.5 py-2.5 font-franklin text-sm font-medium text-darkblue transition-colors duration-300 hover:bg-white focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600"
+                    href="#contact"
                   >
                     Purchase Plan
                   </a>
                 </div>
                 <div
-                  class="mb-3 font-medium text-slate-900 dark:text-slate-200"
+                  class="mb-3 font-franklin font-medium text-slate-900 dark:text-slate-200"
                 >
                   Includes:
                 </div>
@@ -1052,7 +1072,7 @@
                         d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
                       />
                     </svg>
-                    <span>Unlimited placeholder texts</span>
+                    <span class="font-franklin text-white">Unlimited placeholder texts</span>
                   </li>
                   <li class="flex items-center">
                     <svg
@@ -1064,7 +1084,7 @@
                         d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
                       />
                     </svg>
-                    <span>Consectetur adipiscing elit</span>
+                    <span class="font-franklin text-white">Consectetur adipiscing elit</span>
                   </li>
                   <li class="flex items-center">
                     <svg
@@ -1076,7 +1096,7 @@
                         d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
                       />
                     </svg>
-                    <span>Excepteur sint occaecat cupidatat</span>
+                    <span class="font-franklin text-white">Excepteur sint occaecat cupidatat</span>
                   </li>
                   <li class="flex items-center">
                     <svg
@@ -1088,7 +1108,7 @@
                         d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"
                       />
                     </svg>
-                    <span>Officia deserunt mollit anim</span>
+                    <span class="font-franklin text-white">Officia deserunt mollit anim</span>
                   </li>
                 </ul>
               </div>
@@ -1097,50 +1117,50 @@
             <!-- Pricing tab 2 -->
             <div class="dark h-full">
               <div
-                class="dark:border- relative flex h-full flex-col rounded-2xl bg-white p-6 shadow shadow-slate-950/5 dark:bg-blue"
+                class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-6 shadow shadow-slate-950/5 transition-transform duration-300 hover:scale-105 dark:bg-blue"
               >
                 <div class="absolute right-0 top-0 -mt-4 mr-6">
                   <div
-                    class="inline-flex items-center rounded-full bg-emerald-500 px-3 py-1.5 text-xs font-semibold text-white shadow-sm shadow-slate-950/5"
+                    class="inline-flex items-center rounded-full bg-yellow px-3 py-1.5 font-franklin text-xs font-semibold text-white shadow-sm shadow-slate-950/5"
                   >
                     Most Popular
                   </div>
                 </div>
                 <div class="mb-5">
                   <div
-                    class="mb-1 font-semibold text-slate-900 dark:text-slate-200"
+                    class="mb-1 font-franklin font-semibold text-slate-900 dark:text-slate-200"
                   >
                     Perform
                   </div>
                   <div class="mb-2 inline-flex items-baseline">
                     <span
                       class="text-3xl font-bold text-slate-900 dark:text-slate-200"
-                      >$</span
+                      >€</span
                     >
                     <span
-                      class="text-4xl font-bold text-slate-900 dark:text-slate-200"
+                      class="font-outfit text-4xl font-bold text-slate-900 dark:text-slate-200"
                       x-text="isAnnual ? '49' : '55'"
                     ></span>
-                    <span class="font-medium text-slate-500">/mo</span>
+                    <span class="font-medium text-slate-200">/mo</span>
                   </div>
-                  <div class="mb-5 text-sm text-slate-500">
+                  <div class="mb-5 font-franklin text-sm text-white">
                     There are many variations available, but the majority have
                     suffered.
                   </div>
                   <a
-                    class="inline-flex w-full justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 transition-colors duration-150 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600"
-                    href="#0"
-                  >
-                    Purchase Plan
-                  </a>
+                  class="inline-flex w-full justify-center whitespace-nowrap rounded-lg bg-yellow px-3.5 py-2.5 font-franklin text-sm font-medium text-darkblue transition-colors duration-300 hover:bg-white focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600"
+                  href="#contact"
+                >
+                  Purchase Plan
+                </a>
                 </div>
                 <div
-                  class="mb-3 font-medium text-slate-900 dark:text-slate-200"
+                  class="mb-3 font-franklin font-medium text-slate-900 dark:text-slate-200"
                 >
                   Includes:
                 </div>
                 <ul
-                  class="grow space-y-3 text-sm text-slate-600 dark:text-slate-400"
+                  class="grow space-y-3 font-franklin text-sm text-slate-600 dark:text-slate-400"
                 >
                   <li class="flex items-center">
                     <svg
@@ -1209,35 +1229,35 @@
             <!-- Pricing tab 3 -->
             <div class="h-full">
               <div
-                class="dark:border- relative flex h-full flex-col rounded-2xl bg-white p-6 shadow shadow-slate-950/5 dark:bg-blue"
+                class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-6 shadow shadow-slate-950/5 transition-transform duration-300 hover:scale-105 dark:bg-blue"
               >
                 <div class="mb-5">
                   <div
-                    class="mb-1 font-semibold text-slate-900 dark:text-slate-200"
+                    class="mb-1 font-franklin font-semibold text-slate-900 dark:text-slate-200"
                   >
                     Enterprise
                   </div>
                   <div class="mb-2 inline-flex items-baseline">
                     <span
                       class="text-3xl font-bold text-slate-900 dark:text-slate-200"
-                      >$</span
+                      >€</span
                     >
                     <span
-                      class="text-4xl font-bold text-slate-900 dark:text-slate-200"
+                      class="font-outfit text-4xl font-bold text-slate-900 dark:text-slate-200"
                       x-text="isAnnual ? '79' : '85'"
                     ></span>
-                    <span class="font-medium text-slate-500">/mo</span>
+                    <span class="font-medium text-slate-200">/mo</span>
                   </div>
-                  <div class="mb-5 text-sm text-slate-500">
+                  <div class="mb-5 text-sm text-white">
                     There are many variations available, but the majority have
                     suffered.
                   </div>
                   <a
-                    class="inline-flex w-full justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 transition-colors duration-150 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600"
-                    href="#0"
-                  >
-                    Purchase Plan
-                  </a>
+                  class="inline-flex w-full justify-center whitespace-nowrap rounded-lg bg-yellow px-3.5 py-2.5 font-franklin text-sm font-medium text-darkblue transition-colors duration-300 hover:bg-white focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600"
+                  href="#contact"
+                >
+                  Purchase Plan
+                </a>
                 </div>
                 <div
                   class="mb-3 font-medium text-slate-900 dark:text-slate-200"
@@ -1331,7 +1351,7 @@
       <div class="relative isolate pb-24">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div
-            class="mx-auto flex max-w-2xl flex-col gap-16 bg-blue px-6 py-16 ring-1 ring-white/10 sm:rounded-xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20"
+            class="mx-auto flex max-w-2xl flex-col gap-16 bg-blue px-6 py-16 sm:rounded-xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20"
           >
             <div class="w-full flex-auto">
               <h2
@@ -1359,7 +1379,7 @@
                         name="first-name"
                         id="first-name"
                         autocomplete="given-name"
-                        class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-5 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                        class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
@@ -1376,7 +1396,7 @@
                         name="email"
                         id="email"
                         autocomplete="email"
-                        class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-5 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                        class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
@@ -1392,7 +1412,7 @@
                         name="message"
                         id="message"
                         rows="4"
-                        class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-5 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                        class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
@@ -1400,7 +1420,7 @@
                 <div class="mt-[35px]">
                   <button
                     type="submit"
-                    class="px-4.5 block w-40 rounded-xl bg-yellow py-3 text-center font-outfit text-lg font-semibold text-white ring-2 ring-yellow transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    class="block w-40 rounded-xl bg-yellow px-3.5 py-2.5 text-center font-outfit text-lg font-semibold text-white ring-2 ring-yellow transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   >
                     Let's talk
                   </button>
