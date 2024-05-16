@@ -60,7 +60,7 @@
         class="navbar-expand-lg absolute inset-x-0 top-0 z-50"
       >
         <nav
-          class="flex items-center justify-between p-6 lg:px-6"
+          class="flex items-center justify-between p-10 lg:px-6"
           aria-label="Global"
         >
           <div class="flex lg:flex-1">
@@ -120,9 +120,9 @@
         >
           <div class="fixed inset-0 z-50"></div>
           <div
-            class="transition-background fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white bg-cover p-6 duration-300 sm:max-w-lg sm:ring-gray-900/10"
+            class="transition-background fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-yellow bg-cover p-10 duration-300 sm:max-w-lg sm:ring-gray-900/10"
             style="
-              background-image: url('<%= require('./images/bg-nimbu-lines.png') %>');
+              background-image: url('<%= require('./images/bg-nimbu-linesWhite.svg') %>');
             "
           >
             <div class="flex items-center justify-between">
@@ -137,7 +137,7 @@
               <button
                 @click="isOpen = !isOpen"
                 type="button"
-                class="group -m-2.5 rounded-full p-2.5 transition hover:bg-white/10"
+                class="group -m-2.5 rounded-full bg-white/15 p-2.5 transition hover:bg-white/10"
               >
                 <span class="sr-only">Close menu</span>
 
@@ -180,7 +180,7 @@
         </div>
       </header>
 
-      <div class="animate-fade-up relative isolate bg-cover px-6 lg:px-8">
+      <div class="relative isolate animate-fade-up bg-cover px-6 lg:px-8">
         <div class="mx-auto max-w-4xl pb-48 pt-56">
           <div
             class="text-center transition-transform duration-300 hover:scale-95 sm:mb-6 sm:flex sm:justify-center"
@@ -218,7 +218,7 @@
         background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
       "
     >
-      <div id="scroll" class="animate-fade-up animate-delay-[300ms] pt-10">
+      <div id="scroll" class="animate-fade-up pt-10 animate-delay-[300ms]">
         <div class="pb-24">
           <div class="mx-auto px-6 lg:max-w-[1500px] lg:px-8">
             <video class="size-full rounded-xl" autoplay muted loop>
@@ -393,7 +393,7 @@
           >
             <div class="mx-auto max-w-6xl px-6 lg:px-8">
               <video
-                class="size-full rounded-xl hover:shadow-2xl hover:shadow-yellow/30"
+                class="size-full rounded-xl transition-shadow duration-200 hover:shadow-2xl hover:shadow-yellow/30"
                 autoplay
                 muted
                 loop
@@ -422,7 +422,7 @@
           >
             <div class="mx-auto max-w-6xl px-6 lg:px-8">
               <video
-                class="size-full rounded-xl hover:shadow-2xl hover:shadow-yellow/30"
+                class="size-full rounded-xl transition-shadow duration-200 hover:shadow-2xl hover:shadow-yellow/30"
                 autoplay
                 muted
                 loop
@@ -449,7 +449,7 @@
           >
             <div class="mx-auto max-w-6xl px-6 lg:px-8">
               <video
-                class="size-full rounded-xl hover:shadow-2xl hover:shadow-yellow/30"
+                class="size-full rounded-xl transition-shadow duration-200 hover:shadow-2xl hover:shadow-yellow/30"
                 autoplay
                 muted
                 loop
@@ -548,7 +548,7 @@
       </div>
     </div>
 
-    <div class="container2 mx-auto my-24 px-4 pt-36 md:px-6">
+    <div class="mx-auto my-24 px-4 pb-10 pt-36 md:px-6">
       <section class="mb-20 text-center">
         <div class="flex justify-center">
           <div class="max-w-7xl text-center">
@@ -562,14 +562,12 @@
         </div>
 
         <div
-          class="grid gap-x-6 bg-cover md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12"
+          class="container2 grid gap-x-6 bg-cover md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12"
         >
           <div class="pb-20 lg:mb-0">
-            <div
-              class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
-            >
+            <div class="text-primary mb-2 inline-block p-4">
               <img
-                src="<%= require('./images/icon1.png') %>"
+                src="<%= require('./images/icon1.svg') %>"
                 alt="icon"
                 class="size-16"
               />
@@ -577,7 +575,7 @@
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Multiple languages
             </h5>
-            <p class="text-white">
+            <p class="text-white/80">
               All content can be easily translated and updated in multiple
               languages.
             </p>
@@ -585,10 +583,10 @@
 
           <div class="pb-20 lg:mb-0">
             <div
-              class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
-                src="<%= require('./images/icon2.png') %>"
+                src="<%= require('./images/icon2.svg') %>"
                 alt="icon"
                 class="size-16"
               />
@@ -596,7 +594,7 @@
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Multiple Website Management
             </h5>
-            <p class="text-white">
+            <p class="text-white/80">
               Manage multiple websites and view site statistics from one single
               application. Easily manager the team accessing the backend.
             </p>
@@ -604,10 +602,10 @@
 
           <div class="pb-20 md:mb-0">
             <div
-              class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
-                src="<%= require('./images/icon3.png') %>"
+                src="<%= require('./images/icon3.svg') %>"
                 alt="icon"
                 class="size-16"
               />
@@ -615,7 +613,7 @@
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Drag-and-Drop Media Management
             </h5>
-            <p class="text-white">
+            <p class="text-white/80">
               Add and organize your uploads (images, pdfs, videos) instantly.
               You can drag images directly from your desktop into your browser
               window.
@@ -624,10 +622,10 @@
 
           <div class="pb-20 md:mb-0">
             <div
-              class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
-                src="<%= require('./images/icon4.png') %>"
+                src="<%= require('./images/icon4.svg') %>"
                 alt="icon"
                 class="size-16"
               />
@@ -635,7 +633,7 @@
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Secure Shopping Cart
             </h5>
-            <p class="text-white">
+            <p class="text-white/80">
               All credit card and transaction information is protected by the
               same level of security used by banks: a 256-bit SSL certificate.
             </p>
@@ -643,10 +641,10 @@
 
           <div class="pb-20 lg:mb-0">
             <div
-              class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
-                src="<%= require('./images/icon5.png') %>"
+                src="<%= require('./images/icon5.svg') %>"
                 alt="icon"
                 class="size-16"
               />
@@ -654,7 +652,7 @@
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Secured Data Centers
             </h5>
-            <p class="text-white">
+            <p class="text-white/80">
               Our infrastructure is build upon OVH, based in Roubaix, Northern
               France. It's currently the number one hosting provider in Europe
               and their data centers are ISO/IEC 27001 and SOC 1 Type I and SOC
@@ -664,10 +662,10 @@
 
           <div class="pb-20 lg:mb-0">
             <div
-              class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
-                src="<%= require('./images/icon6.png') %>"
+                src="<%= require('./images/icon6.svg') %>"
                 alt="icon"
                 class="size-16"
               />
@@ -675,7 +673,7 @@
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Your Own Domain Name
             </h5>
-            <p class="text-white">
+            <p class="text-white/80">
               Use your own domain name, or purchase one through Nimbu. Nimbu
               lets you map your domain transparently over ours, ensuring
               visitors never see a Nimbu domain when viewing your site.
@@ -684,10 +682,10 @@
 
           <div class="pb-20 md:mb-0">
             <div
-              class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
-                src="<%= require('./images/icon7.png') %>"
+                src="<%= require('./images/icon7.svg') %>"
                 alt="icon"
                 class="size-16"
               />
@@ -695,7 +693,7 @@
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Anti-Spam
             </h5>
-            <p class="text-white">
+            <p class="text-white/80">
               Nimbu is a paid service that aggressively fights spam. If you are
               using a free service that is a target for spammers, you
               potentially run the risk of being falsely grouped with other spam
@@ -705,10 +703,10 @@
 
           <div class="pb-20 md:mb-0">
             <div
-              class="bg-primary-100 text-primary mb-6 inline-block rounded-full p-4 shadow-sm"
+              class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
-                src="<%= require('./images/icon8.png') %>"
+                src="<%= require('./images/icon8.svg') %>"
                 alt="icon"
                 class="size-16"
               />
@@ -716,7 +714,7 @@
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Custom Code
             </h5>
-            <p class="text-white">
+            <p class="text-white/80">
               All custom code is saved to our scalable grid network. This is not
               simple shared hosting. Every piece of custom code is cached and
               placed on our distributed network of systems.
@@ -727,7 +725,7 @@
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a
             href="#"
-            class="rounded-xl bg-yellow px-8 py-2.5 font-franklin text-lg font-semibold text-darkblue ring-2 ring-yellow transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            class="rounded-xl bg-yellow px-8 py-2.5 font-franklin text-lg font-semibold text-blue ring-2 ring-yellow transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >Download the full feature list</a
           >
         </div>
@@ -1097,19 +1095,19 @@
                 </span>
                 <button
                   class="relative h-8 flex-1 rounded-xl font-franklin text-sm font-medium transition-colors duration-150 ease-in-out focus-visible:outline-none focus-visible:ring focus-visible:ring-blue dark:focus-visible:ring-blue"
-                  :class="isAnnual ? 'text-white dark:text-white' : 'text-slate-500'"
+                  :class="isAnnual ? 'text-yellow dark:text-yellow' : 'text-slate-500'"
                   @click="isAnnual = true"
                   :aria-pressed="isAnnual"
                 >
                   Yearly
                   <span
-                    :class="isAnnual ? 'text-indigo-200' : 'text-slate-400 dark:text-slate-500'"
+                    :class="isAnnual ? 'text-white/80' : 'text-slate-400 dark:text-slate-500'"
                     >-20%</span
                   >
                 </button>
                 <button
                   class="relative h-8 flex-1 rounded-full text-sm font-medium transition-colors duration-150 ease-in-out focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600"
-                  :class="isAnnual ? 'text-slate-500 dark:text-slate-400' : 'text-white'"
+                  :class="isAnnual ? 'text-slate-500 dark:text-slate-400' : 'text-yellow'"
                   @click="isAnnual = false"
                   :aria-pressed="isAnnual"
                 >
@@ -1124,7 +1122,7 @@
               <!-- Pricing tab 1 -->
               <div class="h-full">
                 <div
-                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/30 dark:bg-blue"
+                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/25 dark:bg-blue"
                 >
                   <div class="mb-5">
                     <div
@@ -1224,7 +1222,7 @@
               <!-- Pricing tab 2 -->
               <div class="dark h-full">
                 <div
-                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/30 dark:bg-blue"
+                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/25 dark:bg-blue"
                 >
                   <div class="absolute right-0 top-0 -mt-4 mr-6">
                     <div
@@ -1346,7 +1344,7 @@
               <!-- Pricing tab 3 -->
               <div class="h-full">
                 <div
-                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/30 dark:bg-blue"
+                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/25 dark:bg-blue"
                 >
                   <div class="mb-5">
                     <div
