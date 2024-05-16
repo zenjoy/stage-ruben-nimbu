@@ -77,17 +77,17 @@
           <div class="hidden font-franklin lg:flex lg:gap-x-12">
             <a
               href="#solutions"
-              class="text-md relative rounded-full font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              class="text-md relative rounded-full font-semibold leading-8 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
               >Solutions</a
             >
             <a
               href="#pricing"
-              class="text-md relative rounded-full font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              class="text-md relative rounded-full font-semibold leading-8 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
               >Pricing</a
             >
             <a
               href="#contact"
-              class="text-md relative rounded-full font-semibold leading-6 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              class="text-md relative rounded-full font-semibold leading-8 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
               >Contact
             </a>
           </div>
@@ -232,173 +232,6 @@
       </div>
     </div>
 
-    <div class="relative isolate bg-darkblue px-6 pb-10 pt-5 lg:px-8">
-      <div class="mx-auto w-full max-w-[1500px] px-4 py-24 md:px-6">
-        <div class="text-center">
-          <div
-            x-data="{}"
-            x-init="$nextTick(() => {
-                        let ul = $refs.logos;
-                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
-                        ul.nextSibling.setAttribute('aria-hidden', 'true');
-                    })"
-            class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
-          >
-            <ul
-              x-ref="logos"
-              class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-6"
-            >
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                  <img
-                    src="<%= require('./images/alegria_logo_white.png') %>"
-                    alt="alegria"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/artevelde_logo_white.png') %>"
-                  alt="artevelde"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/awel_logo_white.png') %>"
-                  alt="awel"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/bitos_logo_white.png') %>"
-                  alt="bitos"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/clbOnline_logo_white.png') %>"
-                  alt="clbOnline"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/comfortEnergy_logo_white.png') %>"
-                  alt="comfortEnergy"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/ecopower_logo_white.png') %>"
-                  alt="ecopower"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/elsyca_logo_white.png') %>"
-                  alt="elsyca"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/hammer_logo_white.png') %>"
-                  alt="hammer"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/konings_logo_white.png') %>"
-                  alt="konings"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/kuleuven_logo_white.png') %>"
-                  alt="kuleuven"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/rodekruis_logo_white.png') %>"
-                  alt="rodekruis"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/ugent_logo_white.png') %>"
-                  alt="ugent"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/vlaanderenOnderwijs_logo_white.png') %>"
-                  alt="vlaanderenOnderwijs"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/vub_logo_white.png') %>"
-                  alt="ecopower"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-              <li>
-                <div class="inline-block rounded-xl bg-blue p-4">
-                <img
-                  src="<%= require('./images/zelfmoordlijn_logo_white.png') %>"
-                  alt="elsyca"
-                  class="h-10 object-contain"
-                />
-              </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="px-6 lg:px-8">
       <div class="mx-auto max-w-2xl pt-20">
         <div class="text-center">
@@ -504,6 +337,216 @@
       </main>
     </section>
 
+    <div class="relative isolate bg-darkblue px-6 pt-5 lg:px-8">
+      <div class="px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl pt-20">
+          <div class="text-center">
+            <h1
+              class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
+            >
+              Our trusted <span class="text-yellow">clients</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto w-full max-w-[1500px] px-4 py-24 md:px-6">
+        <div class="text-center">
+          <div
+            x-data="{}"
+            x-init="$nextTick(() => {
+                        let ul = $refs.logos;
+                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                        ul.nextSibling.setAttribute('aria-hidden', 'true');
+                    })"
+            class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+          >
+            <ul
+              x-ref="logos"
+              class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-6"
+            >
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+                >
+                  <img
+                    src="<%= require('./images/alegria_logo_white.png') %>"
+                    alt="alegria"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+                >
+                  <img
+                    src="<%= require('./images/artevelde_logo_white.png') %>"
+                    alt="artevelde"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+                >
+                  <img
+                    src="<%= require('./images/awel_logo_white.png') %>"
+                    alt="awel"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+                >
+                  <img
+                    src="<%= require('./images/bitos_logo_white.png') %>"
+                    alt="bitos"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+                >
+                  <img
+                    src="<%= require('./images/clbOnline_logo_white.png') %>"
+                    alt="clbOnline"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+                >
+                  <img
+                    src="<%= require('./images/comfortEnergy_logo_white.png') %>"
+                    alt="comfortEnergy"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+                >
+                  <img
+                    src="<%= require('./images/ecopower_logo_white.png') %>"
+                    alt="ecopower"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+                >
+                  <img
+                    src="<%= require('./images/elsyca_logo_white.png') %>"
+                    alt="elsyca"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+                >
+                  <img
+                    src="<%= require('./images/hammer_logo_white.png') %>"
+                    alt="hammer"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+                >
+                  <img
+                    src="<%= require('./images/konings_logo_white.png') %>"
+                    alt="konings"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+                >
+                  <img
+                    src="<%= require('./images/kuleuven_logo_white.png') %>"
+                    alt="kuleuven"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+                >
+                  <img
+                    src="<%= require('./images/rodekruis_logo_white.png') %>"
+                    alt="rodekruis"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+                >
+                  <img
+                    src="<%= require('./images/ugent_logo_white.png') %>"
+                    alt="ugent"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+                >
+                  <img
+                    src="<%= require('./images/vlaanderenOnderwijs_logo_white.png') %>"
+                    alt="vlaanderenOnderwijs"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+                >
+                  <img
+                    src="<%= require('./images/vub_logo_white.png') %>"
+                    alt="ecopower"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+              <li>
+                <div
+                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+                >
+                  <img
+                    src="<%= require('./images/zelfmoordlijn_logo_white.png') %>"
+                    alt="elsyca"
+                    class="h-10 object-contain"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="relative isolate overflow-hidden px-4 md:px-6 lg:px-24">
       <div class="mx-auto bg-darkblue bg-cover">
         <div class="relative mx-auto max-w-screen-2xl">
@@ -580,7 +623,7 @@
       </div>
     </div>
 
-    <div class="mx-auto my-24 px-4 pb-10 pt-36 md:px-6">
+    <div class="mx-auto my-24 px-4 py-10 md:px-6">
       <section class="mb-20 text-center">
         <div class="flex justify-center">
           <div class="max-w-7xl text-center">
@@ -601,7 +644,7 @@
               <img
                 src="<%= require('./images/icon1.svg') %>"
                 alt="icon"
-                class="size-16"
+                class="size-14"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -620,7 +663,7 @@
               <img
                 src="<%= require('./images/icon2.svg') %>"
                 alt="icon"
-                class="size-16"
+                class="size-14"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -639,7 +682,7 @@
               <img
                 src="<%= require('./images/icon3.svg') %>"
                 alt="icon"
-                class="size-16"
+                class="size-14"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -659,7 +702,7 @@
               <img
                 src="<%= require('./images/icon4.svg') %>"
                 alt="icon"
-                class="size-16"
+                class="size-14"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -678,7 +721,7 @@
               <img
                 src="<%= require('./images/icon5.svg') %>"
                 alt="icon"
-                class="size-16"
+                class="size-14"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -699,7 +742,7 @@
               <img
                 src="<%= require('./images/icon6.svg') %>"
                 alt="icon"
-                class="size-16"
+                class="size-14"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -719,7 +762,7 @@
               <img
                 src="<%= require('./images/icon7.svg') %>"
                 alt="icon"
-                class="size-16"
+                class="size-14"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -740,7 +783,7 @@
               <img
                 src="<%= require('./images/icon8.svg') %>"
                 alt="icon"
-                class="size-16"
+                class="size-14"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -757,7 +800,7 @@
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a
             href="#"
-            class="rounded-xl bg-yellow px-8 py-2.5 font-franklin text-lg font-semibold text-blue ring-2 ring-yellow transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            class="rounded-xl bg-yellow px-8 py-2.5 font-franklin text-lg font-semibold text-darkblue ring-2 ring-yellow transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >Download the full feature list</a
           >
         </div>
