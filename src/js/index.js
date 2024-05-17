@@ -10,7 +10,7 @@ Alpine.start();
 document.querySelectorAll('.swiper').forEach((swiper, index) => {
     new Swiper(swiper, {
         modules: [Autoplay],
-        spaceBetween: 10,
+        spaceBetween: 15,
         loop: true,
         autoplay: {
             delay: 3000,
@@ -25,12 +25,12 @@ document.querySelectorAll('.swiper').forEach((swiper, index) => {
             },
             768: {
                 slidesPerView: 3,
-                spaceBetween: 25,
+                spaceBetween: 20,
                 slidesOffsetBefore: index % 2 == 0 ? 0 : 100, 
             },
             1024: {
                 slidesPerView: 4,
-                spaceBetween: 30,
+                spaceBetween: 20,
                 slidesOffsetBefore: index % 2 == 0 ? 0 : 100, 
             },
         },

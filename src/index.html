@@ -550,7 +550,7 @@
     <div class="relative isolate overflow-hidden px-4 md:px-6 lg:px-24">
       <div class="mx-auto bg-darkblue bg-cover">
         <div class="relative mx-auto max-w-screen-2xl">
-          <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+          <div class="mx-auto max-w-7xl py-24 sm:py-32">
             <div
               class="relative isolate overflow-hidden rounded-xl bg-blue px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
             >
@@ -623,7 +623,7 @@
       </div>
     </div>
 
-    <div class="mx-auto my-24 px-4 py-10 md:px-6">
+    <div class="mx-auto my-24 px-4 pt-10 md:px-6">
       <section class="mb-20 text-center">
         <div class="flex justify-center">
           <div class="max-w-7xl text-center">
@@ -976,7 +976,7 @@
             </a>
           </div>
         </div>
-        <div class="swiper mt-8">
+        <div class="swiper mt-6">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a
@@ -1000,7 +1000,7 @@
                 <img
                   src="<%= require('./images/foto8.png') %>"
                   alt="swiep"
-                  class="transition-transform duration-300 hover:scale-110"
+                  class="transition-transform duration-300 hover:scale-105"
                 />
               </a>
             </div>
@@ -1058,7 +1058,7 @@
             </div>
           </div>
         </div>
-        <div class="swiper mt-8">
+        <div class="swiper mt-6">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a
@@ -1652,25 +1652,23 @@
 
     <div class="relative isolate px-4 pb-24 md:px-6">
       <div class="mx-auto max-w-7xl">
-        <footer
-          class="rounded-xl bg-[#0a284a]"
-          aria-labelledby="footer-heading"
-        >
+        <footer class="rounded-xl bg-blue" aria-labelledby="footer-heading">
           <div
-            class="responsive_footer mx-auto max-w-[1540px] px-20 pb-8 sm:pt-20 lg:pt-20"
+            class="responsive_footer mx-auto max-w-[1540px] px-6 py-8 sm:px-8 sm:pt-20 lg:px-20 lg:pt-20"
           >
-            <div class="xl:grid xl:grid-cols-2 xl:gap-8">
-              <div class="mr-40">
+            <div
+              class="flex flex-col justify-center xl:flex-row xl:items-center xl:justify-between"
+            >
+              <div class="mb-8 flex flex-wrap justify-center xl:mb-0">
                 <a href="#">
                   <img
                     class="h-8 transition-transform duration-300 hover:scale-95"
                     src="<%= require('./images/nimbu_logo.png') %>"
-                    alt="Company name"
+                    alt="Logo Nimbu"
                   />
                 </a>
               </div>
-
-              <ul class="flex justify-end gap-8">
+              <ul class="flex flex-wrap justify-center gap-4 xl:gap-8">
                 <li>
                   <a
                     href="#"
@@ -1703,18 +1701,20 @@
             </div>
 
             <div
-              class="flex justify-between border-t border-white/10 pt-8 sm:mt-12 lg:mt-12"
+              class="mt-8 flex flex-col border-t border-white/10 pt-8 sm:flex-row sm:justify-between"
             >
-              <p class="text-xs leading-5 text-white">
+              <p class="text-center text-xs leading-5 text-white sm:text-left">
                 &copy; 2024 Zenjoy, Inc. All rights reserved.
               </p>
-              <a href="https://www.zenjoy.be/" target="_blank">
-                <button
-                  class="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black ring-1 ring-white transition-colors duration-300 hover:bg-blue hover:text-white hover:ring-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-                >
-                  Zenjoy Website
-                </button>
-              </a>
+              <div class="mt-4 text-center sm:mt-0 sm:text-right">
+                <a href="https://www.zenjoy.be/" target="_blank">
+                  <button
+                    class="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black ring-1 ring-white transition-colors duration-300 hover:bg-blue hover:text-white hover:ring-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                  >
+                    Zenjoy Website
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </footer>
