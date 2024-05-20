@@ -73,7 +73,6 @@
               />
             </a>
           </div>
-
           <div class="hidden font-franklin lg:flex lg:gap-x-12">
             <a
               href="#solutions"
@@ -88,10 +87,9 @@
             <a
               href="#contact"
               class="text-md relative rounded-full font-semibold leading-8 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
-              >Contact
-            </a>
+              >Contact</a
+            >
           </div>
-
           <div class="flex lg:hidden">
             <button
               @click="isOpen = !isOpen"
@@ -99,7 +97,6 @@
               class="group -m-2.5 rounded-full bg-white/10 p-2.5 transition hover:bg-white/5"
             >
               <span class="sr-only">Open main menu</span>
-
               <svg
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -110,7 +107,6 @@
             </button>
           </div>
         </nav>
-
         <div
           x-show="isOpen"
           @click.away="isOpen = false"
@@ -140,7 +136,6 @@
                 class="group -m-2.5 rounded-full bg-white/15 p-2.5 transition hover:bg-white/10"
               >
                 <span class="sr-only">Close menu</span>
-
                 <svg
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -159,16 +154,19 @@
               <div class="-my-6">
                 <div class="space-y-2 py-6 font-franklin">
                   <a
+                    @click="isOpen = false"
                     href="#solutions"
                     class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
                     >Solutions</a
                   >
                   <a
+                    @click="isOpen = false"
                     href="#pricing"
                     class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
                     >Pricing</a
                   >
                   <a
+                    @click="isOpen = false"
                     href="#contact"
                     class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
                     >Contact</a
@@ -232,18 +230,21 @@
       </div>
     </div>
 
-    <div class="px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl pt-20">
-        <div class="text-center">
-          <p class="mt-6 pb-3 text-2xl leading-8 text-white">
-            Let us take care of your infrastructure
-          </p>
-          <h1
-            class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
-          >
-            Focus on what <span class="text-yellow">you love</span>
-          </h1>
-        </div>
+    <div
+      x-data="{ hasAnimated: false, show: false }"
+      x-intersect.once="show = true; hasAnimated = true"
+      :class="{ 'animate-fade-up': show }"
+      class="mx-auto max-w-2xl animate-fade-up pt-20 animate-duration-[2000ms]"
+    >
+      <div class="text-center">
+        <p class="mt-6 pb-3 text-2xl leading-8 text-white">
+          Let us take care of your infrastructure
+        </p>
+        <h1
+          class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
+        >
+          Focus on what <span class="text-yellow">you love</span>
+        </h1>
       </div>
     </div>
 
@@ -251,7 +252,10 @@
       <main>
         <div class="wrap rounded-xl">
           <div
-            class="content backColor content--sticky content--half bg-cover bg-center"
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-up': show }"
+            class="content backColor content--sticky content--half animate-fade-up bg-cover bg-center animate-delay-[300ms] animate-duration-[2000ms]"
             style="
               background-image: url('<%= require('./images/pattern.svg') %>');
             "
@@ -337,9 +341,14 @@
       </main>
     </section>
 
-    <div class="relative isolate bg-darkblue px-6 pt-5 lg:px-8">
+    <div
+      x-data="{ hasAnimated: false, show: false }"
+      x-intersect.once="show = true; hasAnimated = true"
+      :class="{ 'animate-fade-up': show }"
+      class="relative isolate animate-fade-up bg-darkblue px-6 pt-5 animate-duration-[2000ms] lg:px-8"
+    >
       <div class="px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl pt-20">
+        <div class="mx-auto max-w-2xl pt-16">
           <div class="text-center">
             <h1
               class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
@@ -349,208 +358,218 @@
           </div>
         </div>
       </div>
-      <div class="mx-auto w-full max-w-[1500px] px-4 py-24 md:px-6">
-        <div class="text-center">
-          <div
-            x-data="{}"
-            x-init="$nextTick(() => {
+    </div>
+    <div
+      x-data="{ hasAnimated: false, show: false }"
+      x-intersect.once="show = true; hasAnimated = true"
+      :class="{ 'animate-fade-up': show }"
+      class="mx-auto w-full max-w-[1500px] animate-fade-up px-4 py-24 animate-duration-[2000ms] md:px-6"
+    >
+      <div class="text-center">
+        <div
+          x-data="{}"
+          x-init="$nextTick(() => {
                         let ul = $refs.logos;
                         ul.insertAdjacentHTML('afterend', ul.outerHTML);
                         ul.nextSibling.setAttribute('aria-hidden', 'true');
                     })"
-            class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+          class="inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+        >
+          <ul
+            x-ref="logos"
+            class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-6"
           >
-            <ul
-              x-ref="logos"
-              class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-6"
-            >
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
-                >
-                  <img
-                    src="<%= require('./images/alegria_logo_white.png') %>"
-                    alt="alegria"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
-                >
-                  <img
-                    src="<%= require('./images/artevelde_logo_white.png') %>"
-                    alt="artevelde"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
-                >
-                  <img
-                    src="<%= require('./images/awel_logo_white.png') %>"
-                    alt="awel"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
-                >
-                  <img
-                    src="<%= require('./images/bitos_logo_white.png') %>"
-                    alt="bitos"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
-                >
-                  <img
-                    src="<%= require('./images/clbOnline_logo_white.png') %>"
-                    alt="clbOnline"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
-                >
-                  <img
-                    src="<%= require('./images/comfortEnergy_logo_white.png') %>"
-                    alt="comfortEnergy"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
-                >
-                  <img
-                    src="<%= require('./images/ecopower_logo_white.png') %>"
-                    alt="ecopower"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
-                >
-                  <img
-                    src="<%= require('./images/elsyca_logo_white.png') %>"
-                    alt="elsyca"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+              >
+                <img
+                  src="<%= require('./images/alegria_logo_white.png') %>"
+                  alt="alegria"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+              >
+                <img
+                  src="<%= require('./images/artevelde_logo_white.png') %>"
+                  alt="artevelde"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+              >
+                <img
+                  src="<%= require('./images/awel_logo_white.png') %>"
+                  alt="awel"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+              >
+                <img
+                  src="<%= require('./images/bitos_logo_white.png') %>"
+                  alt="bitos"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+              >
+                <img
+                  src="<%= require('./images/clbOnline_logo_white.png') %>"
+                  alt="clbOnline"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+              >
+                <img
+                  src="<%= require('./images/comfortEnergy_logo_white.png') %>"
+                  alt="comfortEnergy"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+              >
+                <img
+                  src="<%= require('./images/ecopower_logo_white.png') %>"
+                  alt="ecopower"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+              >
+                <img
+                  src="<%= require('./images/elsyca_logo_white.png') %>"
+                  alt="elsyca"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
 
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
-                >
-                  <img
-                    src="<%= require('./images/hammer_logo_white.png') %>"
-                    alt="hammer"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
-                >
-                  <img
-                    src="<%= require('./images/konings_logo_white.png') %>"
-                    alt="konings"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
-                >
-                  <img
-                    src="<%= require('./images/kuleuven_logo_white.png') %>"
-                    alt="kuleuven"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
-                >
-                  <img
-                    src="<%= require('./images/rodekruis_logo_white.png') %>"
-                    alt="rodekruis"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
-                >
-                  <img
-                    src="<%= require('./images/ugent_logo_white.png') %>"
-                    alt="ugent"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
-                >
-                  <img
-                    src="<%= require('./images/vlaanderenOnderwijs_logo_white.png') %>"
-                    alt="vlaanderenOnderwijs"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
-                >
-                  <img
-                    src="<%= require('./images/vub_logo_white.png') %>"
-                    alt="ecopower"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-              <li>
-                <div
-                  class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
-                >
-                  <img
-                    src="<%= require('./images/zelfmoordlijn_logo_white.png') %>"
-                    alt="elsyca"
-                    class="h-10 object-contain"
-                  />
-                </div>
-              </li>
-            </ul>
-          </div>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+              >
+                <img
+                  src="<%= require('./images/hammer_logo_white.png') %>"
+                  alt="hammer"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+              >
+                <img
+                  src="<%= require('./images/konings_logo_white.png') %>"
+                  alt="konings"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+              >
+                <img
+                  src="<%= require('./images/kuleuven_logo_white.png') %>"
+                  alt="kuleuven"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+              >
+                <img
+                  src="<%= require('./images/rodekruis_logo_white.png') %>"
+                  alt="rodekruis"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+              >
+                <img
+                  src="<%= require('./images/ugent_logo_white.png') %>"
+                  alt="ugent"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+              >
+                <img
+                  src="<%= require('./images/vlaanderenOnderwijs_logo_white.png') %>"
+                  alt="vlaanderenOnderwijs"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-blue"
+              >
+                <img
+                  src="<%= require('./images/vub_logo_white.png') %>"
+                  alt="ecopower"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+            <li>
+              <div
+                class="transition-bg inline-block rounded-xl p-4 duration-300 hover:bg-yellow"
+              >
+                <img
+                  src="<%= require('./images/zelfmoordlijn_logo_white.png') %>"
+                  alt="elsyca"
+                  class="h-10 object-contain"
+                />
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="relative isolate overflow-hidden px-4 md:px-6 lg:px-24">
+    <div
+      x-data="{ hasAnimated: false, show: false }"
+      x-intersect.once="show = true; hasAnimated = true"
+      :class="{ 'animate-fade-up': show }"
+      class="relative isolate animate-fade-up overflow-hidden px-4 animate-delay-[500ms] animate-duration-[2000ms] md:px-6 lg:px-24"
+    >
       <div class="mx-auto bg-darkblue bg-cover">
         <div class="relative mx-auto max-w-screen-2xl">
-          <div class="mx-auto max-w-7xl py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl py-16 sm:py-24">
             <div
               class="relative isolate overflow-hidden rounded-xl bg-blue px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
             >
@@ -626,9 +645,14 @@
     <div class="mx-auto my-24 px-4 pt-10 md:px-6">
       <section class="mb-20 text-center">
         <div class="flex justify-center">
-          <div class="max-w-7xl text-center">
+          <div
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-up': show }"
+            class="max-w-7xl animate-fade-up text-center animate-delay-[300ms] animate-duration-[2000ms]"
+          >
             <h2
-              class="max-w-4xl pb-20 font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
+              class="max-w-4xl animate-fade-up pb-20 font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
             >
               All essential items provided with
               <span class="text-yellow">no unnecessary</span> extras included
@@ -637,14 +661,19 @@
         </div>
 
         <div
-          class="container2 grid gap-x-6 bg-cover md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12"
+          class="container2 p-x-6 grid bg-cover pb-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12"
         >
-          <div class="pb-20 lg:mb-0">
+          <div
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-right': show }"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 hover:bg-blue lg:mb-0"
+          >
             <div class="text-primary mb-2 inline-block p-4">
               <img
                 src="<%= require('./images/icon1.svg') %>"
                 alt="icon"
-                class="size-14"
+                class="size-12"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -656,72 +685,91 @@
             </p>
           </div>
 
-          <div class="pb-20 lg:mb-0">
+          <div
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-right': show }"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] hover:bg-blue lg:mb-0"
+          >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
                 src="<%= require('./images/icon2.svg') %>"
                 alt="icon"
-                class="size-14"
+                class="size-12"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Multiple Website Management
             </h5>
             <p class="text-white/80">
-              Manage multiple websites and view site statistics from one single
-              application. Easily manager the team accessing the backend.
+              Manage multiple websites, view site stats, and control backend
+              access from one application.
             </p>
           </div>
 
-          <div class="pb-20 md:mb-0">
+          <div
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-right': show }"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] hover:bg-blue md:mb-0"
+          >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
                 src="<%= require('./images/icon3.svg') %>"
                 alt="icon"
-                class="size-14"
+                class="size-12"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Drag-and-Drop Media Management
             </h5>
             <p class="text-white/80">
-              Add and organize your uploads (images, pdfs, videos) instantly.
-              You can drag images directly from your desktop into your browser
-              window.
+              Add and organize uploads instantly by dragging files from your
+              desktop into the browser.
             </p>
           </div>
 
-          <div class="pb-20 md:mb-0">
+          <div
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-right': show }"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] hover:bg-blue md:mb-0"
+          >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
                 src="<%= require('./images/icon4.svg') %>"
                 alt="icon"
-                class="size-14"
+                class="size-12"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Secure Shopping Cart
             </h5>
             <p class="text-white/80">
-              All credit card and transaction information is protected by the
-              same level of security used by banks: a 256-bit SSL certificate.
+              Credit card and transaction info is secured with a 256-bit SSL
+              certificate, the same level used by banks.
             </p>
           </div>
 
-          <div class="pb-20 lg:mb-0">
+          <div
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-left': show }"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 hover:bg-blue lg:mb-0"
+          >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
                 src="<%= require('./images/icon5.svg') %>"
                 alt="icon"
-                class="size-14"
+                class="size-12"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
@@ -729,75 +777,89 @@
             </h5>
             <p class="text-white/80">
               Our infrastructure is build upon OVH, based in Roubaix, Northern
-              France. It's currently the number one hosting provider in Europe
-              and their data centers are ISO/IEC 27001 and SOC 1 Type I and SOC
-              2 Type I certified.
+              France. It's currently the number one hosting provider in Europe.
             </p>
           </div>
 
-          <div class="pb-20 lg:mb-0">
+          <div
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-left': show }"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] hover:bg-blue lg:mb-0"
+          >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
                 src="<%= require('./images/icon6.svg') %>"
                 alt="icon"
-                class="size-14"
+                class="size-12"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Your Own Domain Name
             </h5>
             <p class="text-white/80">
-              Use your own domain name, or purchase one through Nimbu. Nimbu
-              lets you map your domain transparently over ours, ensuring
-              visitors never see a Nimbu domain when viewing your site.
+              Use your own domain or buy one through Nimbu. Nimbu ensures
+              visitors only see your domain.
             </p>
           </div>
 
-          <div class="pb-20 md:mb-0">
+          <div
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-left': show }"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] hover:bg-blue md:mb-0"
+          >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
                 src="<%= require('./images/icon7.svg') %>"
                 alt="icon"
-                class="size-14"
+                class="size-12"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Anti-Spam
             </h5>
             <p class="text-white/80">
-              Nimbu is a paid service that aggressively fights spam. If you are
-              using a free service that is a target for spammers, you
-              potentially run the risk of being falsely grouped with other spam
-              sites.
+              Nimbu, a paid service, fights spam aggressively. Free services
+              targeted by spammers risk being falsely identified as spam sites.
             </p>
           </div>
 
-          <div class="pb-20 md:mb-0">
+          <div
+            x-data="{ hasAnimated: false, show: false }"
+            x-intersect.once="show = true; hasAnimated = true"
+            :class="{ 'animate-fade-left': show }"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] hover:bg-blue md:mb-0"
+          >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
             >
               <img
                 src="<%= require('./images/icon8.svg') %>"
                 alt="icon"
-                class="size-14"
+                class="size-12"
               />
             </div>
             <h5 class="mb-4 font-outfit text-lg font-bold text-white">
               Custom Code
             </h5>
             <p class="text-white/80">
-              All custom code is saved to our scalable grid network. This is not
-              simple shared hosting. Every piece of custom code is cached and
-              placed on our distributed network of systems.
+              All custom code is saved to our scalable, distributed network, not
+              simple shared hosting. Every piece is cached across our systems.
             </p>
           </div>
         </div>
 
-        <div class="mt-10 flex items-center justify-center gap-x-6">
+        <div
+          x-data="{ hasAnimated: false, show: false }"
+          x-intersect.once="show = true; hasAnimated = true"
+          :class="{ 'animate-fade': show }"
+          class="mt-10 flex animate-fade items-center justify-center gap-x-6 animate-delay-[500ms]"
+        >
           <a
             href="#"
             class="rounded-xl bg-yellow px-8 py-2.5 font-franklin text-lg font-semibold text-darkblue ring-2 ring-yellow transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
@@ -808,7 +870,10 @@
     </div>
 
     <div
-      class="relative isolate overflow-hidden bg-cover py-32 lg:px-24"
+      x-data="{ hasAnimated: false, show: false }"
+      x-intersect.once="show = true; hasAnimated = true"
+      :class="{ 'animate-fade': show }"
+      class="relative isolate animate-fade overflow-hidden bg-cover py-32 animate-delay-[500ms] lg:px-24"
       style="
         background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
       "
