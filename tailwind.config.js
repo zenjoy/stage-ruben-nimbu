@@ -3,14 +3,19 @@ module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
-      animation: {
-        'infinite-scroll': 'infinite-scroll 40s linear infinite',
-      },
       keyframes: {
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
+        'infinite-scroll-1': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
+        'infinite-scroll-2': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        'infinite-scroll-1': 'infinite-scroll-1 40s linear infinite',
+        'infinite-scroll-2': 'infinite-scroll-2 6s linear infinite',
       },
       colors: {
         yellow: '#FDB833',

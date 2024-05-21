@@ -377,7 +377,7 @@
         >
           <ul
             x-ref="logos"
-            class="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-6"
+            class="flex animate-infinite-scroll-1 items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-6"
           >
             <li>
               <div
@@ -565,7 +565,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-up': show }"
-      class="relative isolate animate-fade-up overflow-hidden px-4 animate-delay-[500ms] animate-duration-[2000ms] md:px-6 lg:px-24"
+      class="relative isolate mb-20 animate-fade-up overflow-hidden px-4 animate-delay-[500ms] animate-duration-[2000ms] md:px-6 lg:px-24"
     >
       <div class="mx-auto bg-darkblue bg-cover">
         <div class="relative mx-auto max-w-screen-2xl">
@@ -642,7 +642,49 @@
       </div>
     </div>
 
-    <div class="mx-auto my-24 px-4 pt-10 md:px-6">
+    <main
+      class="relative flex flex-col justify-center overflow-hidden bg-white"
+    >
+      <!-- CTA animation -->
+      <section class="relative z-0">
+        <div class="mx-auto w-full max-w-5xl px-4 py-48 md:px-6">
+          <div
+            class="group flex flex-col items-center justify-center space-y-4 text-center text-3xl font-semibold text-slate-900 before:absolute before:inset-0 before:-z-10 before:transition-colors before:duration-500 hover:before:bg-darkblue sm:text-4xl md:text-5xl lg:flex-row lg:space-x-6 lg:space-y-0"
+          >
+            <!-- Button -->
+            <span
+              class="relative flex items-center justify-center overflow-hidden rounded-xl bg-slate-200 p-0.5 transition duration-500 before:absolute before:w-1/2 before:animate-[spin_3s_linear_infinite] before:bg-[linear-gradient(90deg,_theme(colors.indigo.500/0)_0%,_theme(colors.indigo.500)_35%,_theme(colors.indigo.200)_50%,_theme(colors.indigo.500)_65%,_theme(colors.indigo.500/0)_100%)] before:pb-[100%] before:opacity-0 group-hover:bg-slate-800 group-hover:before:opacity-100"
+            >
+              <span class="relative whitespace-nowrap">
+                <!-- Default content -->
+                <span
+                  class="z-10 block rounded-xl bg-gradient-to-r from-slate-200 to-slate-100 px-8 py-6 text-darkblue transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                  >Build the UI you need</span
+                >
+                <!-- Hover content -->
+                <span
+                  class="absolute inset-0 z-10 inline-flex items-center overflow-hidden whitespace-nowrap rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 opacity-0 transition-opacity duration-500 before:animate-infinite-scroll-2 before:bg-gradient-to-r before:from-indigo-500 before:to-indigo-300 before:bg-clip-text before:px-2 before:text-transparent before:content-['Create_beautiful_websites'] after:animate-infinite-scroll-2 after:bg-gradient-to-r after:from-indigo-500 after:to-indigo-300 after:bg-clip-text after:px-2 after:text-transparent after:content-['Create_beautiful_websites'] group-hover:opacity-100"
+                  aria-hidden="true"
+                ></span>
+              </span>
+            </span>
+
+            <div
+              class="transition-colors duration-500 ease-in-out group-hover:text-white"
+            >
+              with
+              <span
+                class="transition-colors duration-500 ease-in-out group-hover:text-yellow"
+              >
+                Nimbu
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="mx-auto my-24 px-4 pt-20 md:px-6">
       <section class="mb-20 text-center">
         <div class="flex justify-center">
           <div
@@ -667,7 +709,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-right': show }"
-            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 hover:bg-blue lg:mb-0"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-duration-[2000ms] hover:bg-blue lg:mb-0"
           >
             <div class="text-primary mb-2 inline-block p-4">
               <img
@@ -689,7 +731,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-right': show }"
-            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] hover:bg-blue lg:mb-0"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] animate-duration-[2000ms] hover:bg-blue lg:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -713,7 +755,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-right': show }"
-            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] hover:bg-blue md:mb-0"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] animate-duration-[2000ms] hover:bg-blue md:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -737,7 +779,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-right': show }"
-            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] hover:bg-blue md:mb-0"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] animate-duration-[2000ms] hover:bg-blue md:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -761,7 +803,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-left': show }"
-            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 hover:bg-blue lg:mb-0"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-duration-[2000ms] hover:bg-blue lg:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -785,7 +827,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-left': show }"
-            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] hover:bg-blue lg:mb-0"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] animate-duration-[2000ms] hover:bg-blue lg:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -809,7 +851,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-left': show }"
-            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] hover:bg-blue md:mb-0"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] animate-duration-[2000ms] hover:bg-blue md:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -833,7 +875,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-left': show }"
-            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] hover:bg-blue md:mb-0"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] animate-duration-[2000ms] hover:bg-blue md:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -858,7 +900,7 @@
           x-data="{ hasAnimated: false, show: false }"
           x-intersect.once="show = true; hasAnimated = true"
           :class="{ 'animate-fade': show }"
-          class="mt-10 flex animate-fade items-center justify-center gap-x-6 animate-delay-[500ms]"
+          class="mt-10 flex animate-fade items-center justify-center gap-x-6 animate-delay-[500ms] animate-duration-[2000ms]"
         >
           <a
             href="#"
@@ -873,7 +915,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade': show }"
-      class="relative isolate animate-fade overflow-hidden bg-cover py-32 animate-delay-[500ms] lg:px-24"
+      class="relative isolate animate-fade overflow-hidden bg-cover py-32 animate-delay-[500ms] animate-duration-[2000ms] lg:px-24"
       style="
         background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
       "
@@ -949,7 +991,12 @@
         </div>
       </div>
     </div>
-    <div class="mx-auto max-w-4xl pt-24">
+    <div
+      x-data="{ hasAnimated: false, show: false }"
+      x-intersect.once="show = true; hasAnimated = true"
+      :class="{ 'animate-fade': show }"
+      class="mx-auto max-w-4xl animate-fade pt-24"
+    >
       <div class="text-center">
         <h1
           class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-7xl"
@@ -1630,7 +1677,7 @@
                 >
                   Let's <span class="text-yellow">connect</span>
                 </h2>
-                <p class="text-md text-md mt-6 font-franklin text-white">
+                <p class="text-md mt-6 font-franklin text-white">
                   Ready to take the next step? Contact us today to explore how
                   our innovative strategies can propel your business forward.
                   Our team is here to turn your vision into a reality.
