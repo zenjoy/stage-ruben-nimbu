@@ -267,7 +267,7 @@
                 loop
               >
                 <source
-                  src="<%= require('./images/dashboard_video_test.mp4') %>"
+                  src="<%= require('./images/video1.mp4') %>"
                   type="video/mp4"
                 />
               </video>
@@ -296,12 +296,12 @@
                 loop
               >
                 <source
-                  src="<%= require('./images/dashboard_video_test.mp4') %>"
+                  src="<%= require('./images/video2.mp4') %>"
                   type="video/mp4"
                 />
               </video>
             </div>
-            <h2 class="content__title">Building apps</h2>
+            <h2 class="content__title">Channels</h2>
             <p class="content__text content__text--narrow text-meta w-[600px]">
               Nimbu as a backend can power your app's content, data storage,
               user authentication and more. Focus on creating great user
@@ -323,7 +323,7 @@
                 loop
               >
                 <source
-                  src="<%= require('./images/dashboard_video_test.mp4') %>"
+                  src="<%= require('./images/video3.mp4') %>"
                   type="video/mp4"
                 />
               </video>
@@ -361,8 +361,8 @@
     <div
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
-      :class="{ 'animate-fade-up': show }"
-      class="mx-auto w-full max-w-[1500px] animate-fade-up px-4 py-24 animate-duration-[1200ms] md:px-6"
+      :class="{ 'animate-fade': show }"
+      class="mx-auto w-full max-w-[1500px] animate-fade px-4 py-24 animate-delay-300 animate-duration-[1200ms] md:px-6"
     >
       <div class="text-center">
         <div
@@ -648,8 +648,8 @@
       <section
         x-data="{ hasAnimated: false, show: false }"
         x-intersect.once="show = true; hasAnimated = true"
-        :class="{ 'animate-fade-up': show }"
-        class="relative z-0 animate-fade-up animate-delay-[300ms] animate-duration-[1200ms]"
+        :class="{ 'animate-fade-right': show }"
+        class="relative z-0 animate-fade-right animate-delay-[300ms] animate-duration-[1200ms]"
       >
         <div
           style="
@@ -910,8 +910,8 @@
         <div
           x-data="{ hasAnimated: false, show: false }"
           x-intersect.once="show = true; hasAnimated = true"
-          :class="{ 'animate-fade': show }"
-          class="mt-10 flex animate-fade items-center justify-center gap-x-6 animate-delay-[300ms] animate-duration-[1200ms]"
+          :class="{ 'animate-fade-up': show }"
+          class="mt-10 flex animate-fade-up items-center justify-center gap-x-6 animate-delay-[300ms] animate-duration-[1200ms]"
         >
           <a
             href="#"
@@ -1005,8 +1005,8 @@
     <div
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
-      :class="{ 'animate-fade': show }"
-      class="mx-auto max-w-4xl animate-fade pt-24"
+      :class="{ 'animate-fade-up': show }"
+      class="mx-auto max-w-4xl animate-fade-up pt-24 animate-delay-[300ms] animate-duration-[1200ms]"
     >
       <div class="text-center">
         <h1
@@ -1266,7 +1266,12 @@
       id="pricing"
       class="relative flex flex-col justify-center overflow-hidden pt-20"
     >
-      <div class="text-center">
+      <div
+        x-data="{ hasAnimated: false, show: false }"
+        x-intersect.once="show = true; hasAnimated = true"
+        :class="{ 'animate-fade-up': show }"
+        class="animate-fade-up text-center animate-delay-[100ms] animate-duration-[1200ms]"
+      >
         <h1
           class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
         >
@@ -1278,7 +1283,12 @@
           <!-- Pricing table component -->
           <div x-data="{ isAnnual: true }">
             <!-- Pricing toggle -->
-            <div class="m-auto mb-8 flex max-w-56 justify-center lg:mb-16">
+            <div
+              x-data="{ hasAnimated: false, show: false }"
+              x-intersect.once="show = true; hasAnimated = true"
+              :class="{ 'animate-fade': show }"
+              class="m-auto mb-8 flex max-w-56 justify-center animate-delay-[200ms] animate-duration-[1200ms] lg:mb-16"
+            >
               <div
                 class="relative flex w-full rounded-xl bg-white p-1 dark:bg-blue"
               >
@@ -1318,7 +1328,12 @@
               class="mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3"
             >
               <!-- Pricing tab 1 -->
-              <div class="h-full">
+              <div
+                x-data="{ hasAnimated: false, show: false }"
+                x-intersect.once="show = true; hasAnimated = true"
+                :class="{ 'animate-fade-right': show }"
+                class="h-full animate-fade-right animate-delay-[100ms] animate-duration-[1200ms]"
+              >
                 <div
                   class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/25 dark:bg-blue"
                 >
@@ -1418,7 +1433,12 @@
               </div>
 
               <!-- Pricing tab 2 -->
-              <div class="dark h-full">
+              <div
+                x-data="{ hasAnimated: false, show: false }"
+                x-intersect.once="show = true; hasAnimated = true"
+                :class="{ 'animate-fade': show }"
+                class="dark h-full animate-fade animate-delay-[300ms] animate-duration-[1200ms]"
+              >
                 <div
                   class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/25 dark:bg-blue"
                 >
@@ -1540,7 +1560,12 @@
               </div>
 
               <!-- Pricing tab 3 -->
-              <div class="h-full">
+              <div
+                x-data="{ hasAnimated: false, show: false }"
+                x-intersect.once="show = true; hasAnimated = true"
+                :class="{ 'animate-fade-left': show }"
+                class="h-full animate-fade-left animate-delay-[500ms] animate-duration-[1200ms]"
+              >
                 <div
                   class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/25 dark:bg-blue"
                 >
@@ -1676,7 +1701,12 @@
     </main>
 
     <div id="contact" class="py-32 sm:py-32">
-      <div class="px-4 md:px-6">
+      <div
+        x-data="{ hasAnimated: false, show: false }"
+        x-intersect.once="show = true; hasAnimated = true"
+        :class="{ 'animate-fade-up': show }"
+        class="animate-fade-up px-4 animate-delay-[100ms] animate-duration-[1200ms] md:px-6"
+      >
         <div class="relative isolate pb-24">
           <div class="mx-auto max-w-7xl">
             <div
@@ -1757,7 +1787,10 @@
                 </form>
               </div>
               <video
-                class="size-full flex-none rounded-xl lg:h-full lg:max-w-lg"
+                x-data="{ hasAnimated: false, show: false }"
+                x-intersect.once="show = true; hasAnimated = true"
+                :class="{ 'animate-fade-left': show }"
+                class="size-full flex-none animate-fade-left rounded-xl animate-delay-[500ms] animate-duration-[1200ms] lg:h-full lg:max-w-lg"
                 autoplay
                 muted
                 loop
@@ -1773,7 +1806,12 @@
       </div>
     </div>
 
-    <div class="relative isolate px-4 pb-24 md:px-6">
+    <div
+      x-data="{ hasAnimated: false, show: false }"
+      x-intersect.once="show = true; hasAnimated = true"
+      :class="{ 'animate-fade-up': show }"
+      class="relative isolate animate-fade-up px-4 pb-24 pt-28 animate-delay-[300ms] md:px-6"
+    >
       <div class="mx-auto max-w-7xl">
         <footer class="rounded-xl bg-blue" aria-labelledby="footer-heading">
           <div
