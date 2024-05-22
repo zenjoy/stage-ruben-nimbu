@@ -4,7 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-
 html,
 body {
   @apply h-full;
@@ -49,6 +48,11 @@ header {
   height: 900px;
   max-width: 100%;
   object-fit: fill;
+}
+.element2 {
+  background-position-y: 60%;
+  max-width: 100%;
+
 }
 
 @media (max-width: 1230px) {
@@ -284,7 +288,7 @@ header {
   max-width: 1700px;
   margin: 0 auto;
 }
-.container2{
+.container2 {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;

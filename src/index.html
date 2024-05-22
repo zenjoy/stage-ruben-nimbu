@@ -643,41 +643,53 @@
     </div>
 
     <main
-      class="relative flex flex-col justify-center overflow-hidden bg-white"
+      class="relative flex flex-col justify-center overflow-hidden rounded-xl bg-white"
     >
       <!-- CTA animation -->
-      <section class="relative z-0">
-        <div class="mx-auto w-full max-w-5xl px-4 py-48 md:px-6">
-          <div
-            class="group flex flex-col items-center justify-center space-y-4 text-center text-3xl font-semibold text-slate-900 before:absolute before:inset-0 before:-z-10 before:transition-colors before:duration-500 hover:before:bg-darkblue sm:text-4xl md:text-5xl lg:flex-row lg:space-x-6 lg:space-y-0"
-          >
-            <!-- Button -->
-            <span
-              class="relative flex items-center justify-center overflow-hidden rounded-xl bg-slate-200 p-0.5 transition duration-500 before:absolute before:w-1/2 before:animate-[spin_3s_linear_infinite] before:bg-[linear-gradient(90deg,_theme(colors.indigo.500/0)_0%,_theme(colors.indigo.500)_35%,_theme(colors.indigo.200)_50%,_theme(colors.indigo.500)_65%,_theme(colors.indigo.500/0)_100%)] before:pb-[100%] before:opacity-0 group-hover:bg-slate-800 group-hover:before:opacity-100"
-            >
-              <span class="relative whitespace-nowrap">
-                <!-- Default content -->
-                <span
-                  class="z-10 block rounded-xl bg-gradient-to-r from-slate-200 to-slate-100 px-8 py-6 text-darkblue transition-opacity duration-500 ease-in-out group-hover:opacity-0"
-                  >Build the UI you need</span
-                >
-                <!-- Hover content -->
-                <span
-                  class="absolute inset-0 z-10 inline-flex items-center overflow-hidden whitespace-nowrap rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 opacity-0 transition-opacity duration-500 before:animate-infinite-scroll-2 before:bg-gradient-to-r before:from-indigo-500 before:to-indigo-300 before:bg-clip-text before:px-2 before:text-transparent before:content-['Create_beautiful_websites'] after:animate-infinite-scroll-2 after:bg-gradient-to-r after:from-indigo-500 after:to-indigo-300 after:bg-clip-text after:px-2 after:text-transparent after:content-['Create_beautiful_websites'] group-hover:opacity-100"
-                  aria-hidden="true"
-                ></span>
-              </span>
-            </span>
-
+      <section
+        x-data="{ hasAnimated: false, show: false }"
+        x-intersect.once="show = true; hasAnimated = true"
+        :class="{ 'animate-fade-up': show }"
+        class="relative z-0 animate-fade-up animate-delay-[300ms] animate-duration-[2000ms]"
+      >
+        <div
+          style="
+            background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
+          "
+          class="max-w-8xl element2 bg-cover py-16"
+        >
+          <div class="mx-auto w-full max-w-5xl bg-cover px-4 py-48 md:px-6">
             <div
-              class="transition-colors duration-500 ease-in-out group-hover:text-white"
+              class="group flex flex-col items-center justify-center space-y-4 text-center font-outfit text-3xl font-semibold text-slate-900 before:absolute before:inset-0 before:-z-10 before:transition-colors before:duration-500 hover:before:bg-darkblue sm:text-4xl md:text-5xl lg:flex-row lg:space-x-6 lg:space-y-0"
             >
-              with
+              <!-- Button -->
               <span
-                class="transition-colors duration-500 ease-in-out group-hover:text-yellow"
+                class="relative flex items-center justify-center overflow-hidden rounded-xl bg-slate-200 p-0.5 transition duration-500 before:absolute before:w-1/2 before:animate-[spin_3s_linear_infinite] before:bg-[linear-gradient(90deg,_theme(colors.blue)_0%,_theme(colors.blue3)_35%,_theme(colors.white)_50%,_theme(colors.blue3)_65%,_theme(colors.blue)_100%)] before:pb-[100%] before:opacity-0 group-hover:bg-darkblue group-hover:before:opacity-100"
               >
-                Nimbu
+                <span class="relative whitespace-nowrap">
+                  <!-- Default content -->
+                  <span
+                    class="z-10 block rounded-xl bg-gradient-to-r from-slate-200 to-slate-100 px-8 py-6 text-darkblue transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+                    >Build the UI you need</span
+                  >
+                  <!-- Hover content -->
+                  <span
+                    class="absolute inset-0 z-10 inline-flex items-center overflow-hidden whitespace-nowrap rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 opacity-0 transition-opacity duration-500 before:animate-infinite-scroll-2 before:bg-gradient-to-r before:from-gray-100 before:to-gray-300 before:bg-clip-text before:px-2 before:text-transparent before:content-['Create_beautiful_websites'] after:animate-infinite-scroll-2 after:bg-gradient-to-r after:from-gray-100 after:to-gray-300 after:bg-clip-text after:px-2 after:text-transparent after:content-['Create_beautiful_websites'] group-hover:opacity-100"
+                    aria-hidden="true"
+                  ></span>
+                </span>
               </span>
+
+              <div
+                class="transition-colors duration-500 ease-in-out group-hover:text-white"
+              >
+                with
+                <span
+                  class="transition-colors duration-500 ease-in-out group-hover:text-yellow"
+                >
+                  Nimbu
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -900,7 +912,7 @@
           x-data="{ hasAnimated: false, show: false }"
           x-intersect.once="show = true; hasAnimated = true"
           :class="{ 'animate-fade': show }"
-          class="mt-10 flex animate-fade items-center justify-center gap-x-6 animate-delay-[500ms] animate-duration-[2000ms]"
+          class="mt-10 flex animate-fade items-center justify-center gap-x-6 animate-delay-[300ms] animate-duration-[2000ms]"
         >
           <a
             href="#"
