@@ -1,6 +1,6 @@
-const { merge } = require('webpack-merge');
-const webpackCommonConfig = require('./webpack.config.common');
-const paths = require('./paths');
+const { merge } = require('webpack-merge')
+const webpackCommonConfig = require('./webpack.config.common')
+const paths = require('./paths')
 
 module.exports = merge(webpackCommonConfig, {
   mode: 'development',
@@ -11,6 +11,12 @@ module.exports = merge(webpackCommonConfig, {
     liveReload: false,
     watchFiles: [`${paths.src}/*.html`, `${paths.src}/images/**.*`],
     port: process.env.PORT || 8080,
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/$/, to: '/index.html' },
+        { from: /^\/privacy$/, to: '/privacy.html' },
+      ],
+    },
   },
   module: {
     rules: [
@@ -32,4 +38,4 @@ module.exports = merge(webpackCommonConfig, {
   },
   /* Additional plugins configuration */
   plugins: [],
-});
+})

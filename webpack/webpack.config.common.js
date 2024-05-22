@@ -1,20 +1,21 @@
-const CopyPlugin = require('copy-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // import and configure dotenv
-require('dotenv-defaults').config();
+require('dotenv-defaults').config()
 
-const paths = require('./paths');
-const pages = require('./pages');
+const paths = require('./paths')
+const pages = require('./pages')
 
-let publicUrl = process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : '/';
+let publicUrl =
+  process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : '/'
 if (!publicUrl) {
-  publicUrl = '/';
+  publicUrl = '/'
 } else if (!publicUrl.endsWith('/')) {
   // ensure last slash exists
-  publicUrl = publicUrl + '/';
+  publicUrl = publicUrl + '/'
 }
 
 module.exports = {
@@ -58,6 +59,7 @@ module.exports = {
           templateParameters: {
             publicUrl: publicUrl.slice(0, -1),
           },
+          filename: page.file,
           title: page.title,
         })
     )
@@ -76,4 +78,4 @@ module.exports = {
       }),
       new Dotenv(),
     ]),
-};
+}

@@ -46,14 +46,17 @@
       src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
     ></script>
   </head>
-  <body>
+  <body class="backgroundIndex">
     <div
       class="background_main bg-cover bg-center"
       style="background-image: url('<%= require('./images/Grid.svg') %>')"
     >
       <header
+        x-data="{ hasAnimated: false, show: false }"
+        x-intersect.once="show = true; hasAnimated = true"
+        :class="{ 'animate-fade-down': show }"
         x-data="{ isOpen: false }"
-        class="navbar-expand-lg absolute inset-x-0 top-0 z-50"
+        class="navbar-expand-lg absolute inset-x-0 top-0 z-50 animate-fade-down animate-delay-500 animate-duration-[1200ms]"
       >
         <nav
           class="flex items-center justify-between p-10 lg:px-6"
@@ -72,17 +75,17 @@
           <div class="hidden font-franklin lg:flex lg:gap-x-12">
             <a
               href="#solutions"
-              class="text-md relative rounded-full font-semibold leading-8 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              class="text-md relative rounded-full font-semibold leading-8 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-1/2 before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-1/2 after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-1/2 hover:after:w-1/2"
               >Solutions</a
             >
             <a
               href="#pricing"
-              class="text-md relative rounded-full font-semibold leading-8 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              class="text-md relative rounded-full font-semibold leading-8 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-1/2 before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-1/2 after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-1/2 hover:after:w-1/2"
               >Pricing</a
             >
             <a
               href="#contact"
-              class="text-md relative rounded-full font-semibold leading-8 text-gray-900 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-[50%] before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-[50%] after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-[50%] hover:after:w-[50%]"
+              class="text-md relative rounded-full font-semibold leading-8 text-white transition-all ease-in-out before:absolute before:bottom-0 before:left-1/2 before:h-[2px] before:w-0 before:origin-center before:bg-yellow before:transition-[width] before:duration-300 before:ease-in-out after:absolute after:bottom-0 after:right-1/2 after:h-[2px] after:w-0 after:origin-center after:bg-yellow after:transition-[width] after:duration-300 after:ease-in-out hover:text-white hover:before:w-1/2 hover:after:w-1/2"
               >Contact</a
             >
           </div>
@@ -217,7 +220,7 @@
           <div class="mx-auto px-6 lg:max-w-[1500px] lg:px-8">
             <video class="size-full rounded-xl" autoplay muted loop>
               <source
-                src="<%= require('./images/dashboard_video_test.mp4') %>"
+                src="<%= require('./images/video1.mp4') %>"
                 type="video/mp4"
               />
             </video>
@@ -230,10 +233,10 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-up': show }"
-      class="mx-auto max-w-2xl animate-fade-up pt-20 animate-duration-[2000ms]"
+      class="mx-auto max-w-2xl animate-fade-up pt-20 animate-duration-[1200ms]"
     >
       <div class="text-center">
-        <p class="mt-6 pb-3 text-2xl leading-8 text-white">
+        <p class="mt-48 pb-3 text-lg leading-8 text-white lg:text-2xl">
           Let us take care of your infrastructure
         </p>
         <h1
@@ -251,7 +254,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-up': show }"
-            class="content backColor content--sticky content--half animate-fade-up bg-cover bg-center animate-delay-[300ms] animate-duration-[2000ms]"
+            class="content backColor content--sticky content--half animate-fade-up bg-cover bg-center animate-delay-[300ms] animate-duration-[1200ms]"
             style="
               background-image: url('<%= require('./images/pattern.svg') %>');
             "
@@ -341,7 +344,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-up': show }"
-      class="relative isolate animate-fade-up bg-darkblue px-6 pt-5 animate-duration-[2000ms] lg:px-8"
+      class="relative isolate animate-fade-up bg-darkblue px-6 pt-5 animate-duration-[1200ms] lg:px-8"
     >
       <div class="px-6 lg:px-8">
         <div class="mx-auto max-w-2xl pt-16">
@@ -359,7 +362,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-up': show }"
-      class="mx-auto w-full max-w-[1500px] animate-fade-up px-4 py-24 animate-duration-[2000ms] md:px-6"
+      class="mx-auto w-full max-w-[1500px] animate-fade-up px-4 py-24 animate-duration-[1200ms] md:px-6"
     >
       <div class="text-center">
         <div
@@ -561,7 +564,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-up': show }"
-      class="relative isolate mb-20 animate-fade-up overflow-hidden px-4 animate-delay-[500ms] animate-duration-[2000ms] md:px-6 lg:px-24"
+      class="relative isolate mb-20 animate-fade-up overflow-hidden px-4 animate-delay-[500ms] animate-duration-[1200ms] md:px-6 lg:px-24"
     >
       <div class="mx-auto bg-darkblue bg-cover">
         <div class="relative mx-auto max-w-screen-2xl">
@@ -646,7 +649,7 @@
         x-data="{ hasAnimated: false, show: false }"
         x-intersect.once="show = true; hasAnimated = true"
         :class="{ 'animate-fade-up': show }"
-        class="relative z-0 animate-fade-up animate-delay-[300ms] animate-duration-[2000ms]"
+        class="relative z-0 animate-fade-up animate-delay-[300ms] animate-duration-[1200ms]"
       >
         <div
           style="
@@ -699,7 +702,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-up': show }"
-            class="max-w-7xl animate-fade-up text-center animate-delay-[300ms] animate-duration-[2000ms]"
+            class="max-w-7xl animate-fade-up text-center animate-delay-[300ms] animate-duration-[1200ms]"
           >
             <h2
               class="max-w-4xl animate-fade-up pb-20 font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
@@ -717,7 +720,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-right': show }"
-            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-duration-[2000ms] hover:bg-blue lg:mb-0"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-duration-[1200ms] hover:bg-blue lg:mb-0"
           >
             <div class="text-primary mb-2 inline-block p-4">
               <img
@@ -739,7 +742,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-right': show }"
-            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] animate-duration-[2000ms] hover:bg-blue lg:mb-0"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] animate-duration-[1200ms] hover:bg-blue lg:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -763,7 +766,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-right': show }"
-            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] animate-duration-[2000ms] hover:bg-blue md:mb-0"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] animate-duration-[1200ms] hover:bg-blue md:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -787,7 +790,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-right': show }"
-            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] animate-duration-[2000ms] hover:bg-blue md:mb-0"
+            class="animate-fade-right rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] animate-duration-[1200ms] hover:bg-blue md:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -811,7 +814,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-left': show }"
-            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-duration-[2000ms] hover:bg-blue lg:mb-0"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-duration-[1200ms] hover:bg-blue lg:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -835,7 +838,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-left': show }"
-            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] animate-duration-[2000ms] hover:bg-blue lg:mb-0"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[200ms] animate-duration-[1200ms] hover:bg-blue lg:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -859,7 +862,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-left': show }"
-            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] animate-duration-[2000ms] hover:bg-blue md:mb-0"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[300ms] animate-duration-[1200ms] hover:bg-blue md:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -883,7 +886,7 @@
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
             :class="{ 'animate-fade-left': show }"
-            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] animate-duration-[2000ms] hover:bg-blue md:mb-0"
+            class="mt-6 animate-fade-left rounded-xl p-3 py-8 transition-colors duration-150 animate-delay-[400ms] animate-duration-[1200ms] hover:bg-blue md:mb-0"
           >
             <div
               class="bg-primary-100 text-primary mb-2 inline-block rounded-full p-4"
@@ -908,7 +911,7 @@
           x-data="{ hasAnimated: false, show: false }"
           x-intersect.once="show = true; hasAnimated = true"
           :class="{ 'animate-fade': show }"
-          class="mt-10 flex animate-fade items-center justify-center gap-x-6 animate-delay-[300ms] animate-duration-[2000ms]"
+          class="mt-10 flex animate-fade items-center justify-center gap-x-6 animate-delay-[300ms] animate-duration-[1200ms]"
         >
           <a
             href="#"
@@ -923,7 +926,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade': show }"
-      class="relative isolate animate-fade overflow-hidden bg-cover py-32 animate-delay-[500ms] animate-duration-[2000ms] lg:px-24"
+      class="relative isolate animate-fade overflow-hidden bg-cover py-32 animate-delay-[500ms] animate-duration-[1200ms] lg:px-24"
       style="
         background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
       "
@@ -1791,7 +1794,7 @@
               <ul class="flex flex-wrap justify-center gap-4 xl:gap-8">
                 <li>
                   <a
-                    href="privacy.html"
+                    href="/privacy"
                     class="text-sm leading-6 text-gray-300 hover:text-white"
                     >Privacy Policy</a
                   >

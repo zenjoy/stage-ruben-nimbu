@@ -7,7 +7,6 @@
 html,
 body {
   @apply h-full;
-  background: #031222;
   scroll-behavior: smooth;
 }
 
@@ -48,11 +47,20 @@ header {
   height: 900px;
   max-width: 100%;
   object-fit: fill;
+  background-repeat: no-repeat;
 }
 .element2 {
   background-position-y: 60%;
   max-width: 100%;
-
+  background-repeat: no-repeat;
+}
+.backgroundIndex {
+  background-color: #031222;
+}
+.backgroundPolicy {
+  background-color: #f7f7f7;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 @media (max-width: 1230px) {
