@@ -47,12 +47,7 @@
     ></script>
   </head>
 
-  <body
-    style="
-      background-image: url('<%= require('./images/bg-nimbu-element.svg') %>');
-    "
-    class="backgroundPolicy bg-cover"
-  >
+  <body>
     <header
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
@@ -77,23 +72,33 @@
     </header>
 
     <div
-      x-data="{ hasAnimated: false, show: false }"
-      x-intersect.once="show = true; hasAnimated = true"
-      :class="{ 'animate-fade-up': show }"
-      class="mx-auto max-w-2xl animate-fade-up pt-52 animate-duration-[1200ms]"
+      style="
+        background-image: url('<%= require('./images/bg-nimbu-element.svg') %>');
+      "
+      class="backgroundPolicy w-full"
     >
-      <div class="text-center">
-        <h1
-          class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
-        >
-          Nimbu <span class="text-yellow"> Privacy Policy</span>
-        </h1>
-        <p class="mt-6 pb-20 text-lg leading-8 text-white lg:text-2xl">
-          All things concerning our privacy policy
-        </p>
+      <div
+        x-data="{ hasAnimated: false, show: false }"
+        x-intersect.once="show = true; hasAnimated = true"
+        :class="{ 'animate-fade-up': show, 'sm:max-w-full': true, 'md:max-w-2xl': true, 'lg:max-w-4xl': true }"
+        class="mx-auto animate-fade-up pt-52 animate-duration-[1200ms]"
+      >
+        <div class="text-center">
+          <h1
+            class="responsiveText font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
+          >
+            Nimbu
+            <span class="text-yellow"> Terms and Conditions</span>
+          </h1>
+          <p
+            class="responsiveText2 mt-6 pb-20 text-lg leading-8 text-white lg:text-2xl"
+          >
+            The Terms and Conditions to signing up for Nimbu
+          </p>
+        </div>
       </div>
     </div>
-
+    
     <div
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"

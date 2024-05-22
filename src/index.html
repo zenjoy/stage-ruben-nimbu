@@ -655,7 +655,7 @@
           style="
             background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
           "
-          class="max-w-8xl element2 bg-cover py-16"
+          class="max-w-8xl element2 bg-cover py-24"
         >
           <div class="mx-auto w-full max-w-5xl bg-cover px-4 py-48 md:px-6">
             <div
@@ -1809,8 +1809,8 @@
     <div
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
-      :class="{ 'animate-fade-up': show }"
-      class="relative isolate animate-fade-up px-4 pb-24 pt-28 animate-delay-[300ms] md:px-6"
+      :class="{ 'animate-fade': show }"
+      class="relative isolate animate-fade px-4 pb-24 pt-28 animate-delay-[500ms] animate-duration-[1500ms] md:px-6"
     >
       <div class="mx-auto max-w-7xl">
         <footer class="rounded-xl bg-blue" aria-labelledby="footer-heading">
@@ -1839,9 +1839,9 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/terms"
                     class="text-sm leading-6 text-gray-300 hover:text-white"
-                    >Terms of use</a
+                    >Terms and Conditions</a
                   >
                 </li>
                 <li>

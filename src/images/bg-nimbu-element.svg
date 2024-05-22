@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 657">
   <defs>
     <style>
       .cls-1 {
@@ -19,10 +19,10 @@
       }
     </style>
     <clipPath id="clippath">
-      <rect class="cls-2" x="-.5" width="1920" height="609"/>
+      <rect class="cls-2" x="-.5" width="1920" height="721"/>
     </clipPath>
   </defs>
   <g class="cls-1">
-    <path class="cls-3" d="M-389.28,420.43c839.84,240.42,1749.55,147.46,2479.37-238.01l31.64-541.74-914.66-58.02C494.97-462.49-133.27-110.27-389.28,420.43Z"/>
+    <path class="cls-3" d="M-389.28,497.75c839.84,284.63,1749.55,174.58,2479.37-281.78l31.64-641.37-914.66-68.69C494.97-547.54-133.27-130.55-389.28,497.75Z"/>
   </g>
 </svg>
