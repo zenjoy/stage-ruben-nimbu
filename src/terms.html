@@ -47,12 +47,11 @@
     ></script>
   </head>
 
-  <body>
+  <body class="bg-white">
     <header
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-down': show }"
-      x-data="{ isOpen: false }"
       class="navbar-expand-lg max-w-8xl absolute inset-x-0 top-0 z-50 animate-fade-down bg-cover animate-delay-500 animate-duration-[1200ms]"
     >
       <nav
@@ -85,29 +84,31 @@
       >
         <div class="text-center">
           <h1
-            class="responsiveText font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
+            class="responsiveText font-outfit text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-7xl"
           >
             Nimbu
             <span class="text-yellow"> Terms and Conditions</span>
           </h1>
           <p
-            class="responsiveText2 mt-6 pb-20 text-lg leading-8 text-white lg:text-2xl"
+            class="responsiveText2 mt-6 pb-20 text-lg leading-8 text-white lg:text-3xl"
           >
             The Terms and Conditions to signing up for Nimbu
           </p>
         </div>
       </div>
     </div>
-    
+
     <div
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-up': show }"
       class="animate-fade-up animate-delay-[300ms] animate-duration-[1200ms]"
     >
-      <div class="mx-auto max-w-5xl px-4 pt-20 sm:pt-40 md:pt-60">
+      <div class="md:pt-38 mx-auto max-w-5xl px-4 pt-20 sm:pt-20">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             Welcome to Nimbu. Nimbu cares about online privacy and takes the
             security of your information very seriously. This policy covers the
             collection and usage of your personal information. Please read it
@@ -136,7 +137,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             INFORMATION COLLECTION AND USE BY NIMBU.
           </h1>
@@ -145,7 +146,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             Nimbu collects user submitted information such as name and email
             address to send notifications to those users relating to, without
             limitation, the Nimbu service, special events, contests and special
@@ -175,7 +178,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             USE OF COOKIES.
           </h1>
@@ -184,7 +187,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             Like most companies, Nimbu uses cookies to store user preferences
             and to record session information for various purposes, including,
             without limitation, market research to help us determine how best to
@@ -212,7 +217,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             SHARING / DISCLOSURE.
           </h1>
@@ -221,7 +226,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             From time to time, Nimbu or a Nimbu Partner may sponsor a promotion,
             sweepstakes, or contest on the Nimbu Websites. In such cases users
             may be asked to provide personal information including name, email
@@ -260,7 +267,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             LINKS TO THIRD-PARTY WEBSITES.
           </h1>
@@ -269,7 +276,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             Nimbu contains links to third party websites. Nimbu is not
             responsible for the privacy policies and/or practices of or on other
             websites. When linking to another website, a user should read the
@@ -282,7 +291,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             SHARING / DISCLOSURE.
           </h1>
@@ -291,7 +300,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             Nimbu may send email messages which use or otherwise contain a
             "click-through URL" that is linked to content on the Nimbu Websites.
             When the "click-through URL" is clicked on or otherwise activated,
@@ -310,7 +321,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             CONCERNING CONTENT YOU ADD TO NIMBU.
           </h1>
@@ -319,7 +330,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             Any content that you add, upload, post, publish, or otherwise
             disseminate through the Products and Services offered by Nimbu
             should be considered fully accessible by the public and not private.
@@ -333,7 +346,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             EMAIL PREFERENCES / OPTING-OUT.
           </h1>
@@ -342,7 +355,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             Occasionally, Nimbu may send email regarding news, promotions,
             surveys, updates, or offers related to Nimbu. Users who no longer
             wish to receive these emails may choose not to by simply opting-out.
@@ -356,7 +371,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             COMPLIANCE WITH LAW.
           </h1>
@@ -365,7 +380,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             Nimbu may preserve any Content contained on or about its web
             server(s) and may also disclose such Content if required to do so by
             law or in the good faith that preservation or disclosure is
@@ -381,7 +398,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             DATA TRANSMISSION.
           </h1>
@@ -390,7 +407,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             You acknowledge and agree that the technical processing and
             transmission of the Products and Services, including any of your
             Content, may involve (a) transmissions over various networks; and
@@ -403,7 +422,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             SECURITY.
           </h1>
@@ -412,7 +431,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             Nimbu Accounts are secured by user-created (as applicable)
             passwords. Nimbu takes precautions to ensure that account
             information is kept private through reasonable measures such as
@@ -436,7 +457,7 @@
       <div class="mx-auto max-w-5xl px-4 pt-20">
         <div class="text-start">
           <h1
-            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-4xl"
+            class="font-outfit text-2xl font-bold tracking-tight text-blue3 sm:text-3xl md:text-4xl"
           >
             AMENDMENTS AND CHANGES TO THIS PRIVACY POLICY.
           </h1>
@@ -445,7 +466,9 @@
 
       <div class="mx-auto max-w-5xl px-4">
         <div class="text-start">
-          <p class="mt-6 pb-3 text-base leading-7 text-darkblue sm:text-lg">
+          <p
+            class="sm:text-md mt-6 pb-3 text-base text-darkblue sm:leading-5 md:text-lg md:leading-7 lg:text-xl"
+          >
             From time to time, Nimbu may make changes to this Privacy Policy. If
             we make changes, we will post them on this URL to make users aware
             of what the changes are so users will always be aware of what
@@ -465,7 +488,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade': show }"
-      class="relative isolate animate-fade px-4 pb-24 pt-28 animate-delay-[500ms] animate-duration-[1500ms] md:px-6"
+      class="relative isolate animate-fade px-4 pb-24 pt-28 animate-delay-[400ms] animate-duration-[1200ms] md:px-6"
     >
       <div class="mx-auto max-w-7xl">
         <footer class="rounded-xl bg-blue" aria-labelledby="footer-heading">

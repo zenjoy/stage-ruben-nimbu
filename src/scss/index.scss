@@ -54,9 +54,6 @@ header {
   max-width: 100%;
   background-repeat: no-repeat;
 }
-.backgroundIndex {
-  background-color: #031222;
-}
 .backgroundPolicy {
   background-color: #f7f7f7;
   background-repeat: no-repeat;
@@ -65,11 +62,7 @@ header {
   padding-bottom: 7.5rem;
   width: 100%;
 }
-@media (max-width: 640px) {
-  .responsiveText2 {
-    padding-bottom: 150px;
-  }
-}
+
 @media (max-width: 1230px) {
   .element {
     height: 600px;

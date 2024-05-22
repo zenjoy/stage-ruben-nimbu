@@ -46,20 +46,17 @@
       src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
     ></script>
   </head>
-  <body class="backgroundIndex">
+  <body class="bg-darkblue">
     <div
       class="background_main bg-cover bg-center"
       style="background-image: url('<%= require('./images/Grid.svg') %>')"
     >
       <header
-        x-data="{ hasAnimated: false, show: false }"
-        x-intersect.once="show = true; hasAnimated = true"
-        :class="{ 'animate-fade-down': show }"
         x-data="{ isOpen: false }"
-        class="navbar-expand-lg absolute inset-x-0 top-0 z-50 animate-fade-down animate-delay-500 animate-duration-[1200ms]"
+        class="navbar-expand-lg absolute inset-x-0 top-0 z-50"
       >
         <nav
-          class="flex items-center justify-between p-10 lg:px-6"
+          class="flex animate-fade-down items-center justify-between p-10 animate-delay-500 animate-duration-[1200ms] lg:px-6"
           aria-label="Global"
         >
           <div class="flex lg:flex-1">
@@ -218,12 +215,19 @@
       <div id="scroll" class="animate-fade-up pt-10 animate-delay-[300ms]">
         <div class="pb-24">
           <div class="mx-auto px-6 lg:max-w-[1500px] lg:px-8">
-            <video class="size-full rounded-xl" autoplay muted loop>
-              <source
-                src="<%= require('./images/video1.mp4') %>"
-                type="video/mp4"
-              />
-            </video>
+            <div class="flex items-center justify-center">
+              <video
+                class="h-auto max-h-[780px] rounded-xl"
+                autoplay
+                muted
+                loop
+              >
+                <source
+                  src="<%= require('./images/video1.mp4') %>"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </div>
         </div>
       </div>
@@ -236,7 +240,7 @@
       class="mx-auto max-w-2xl animate-fade-up pt-20 animate-duration-[1200ms]"
     >
       <div class="text-center">
-        <p class="mt-48 pb-3 text-lg leading-8 text-white lg:text-2xl">
+        <p class="mt-28 pb-3 text-lg leading-8 text-white lg:text-2xl">
           Let us take care of your infrastructure
         </p>
         <h1
@@ -655,7 +659,7 @@
           style="
             background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
           "
-          class="max-w-8xl element2 bg-cover py-24"
+          class="max-w-8xl element2 bg-cover py-10"
         >
           <div class="mx-auto w-full max-w-5xl bg-cover px-4 py-48 md:px-6">
             <div
@@ -1810,7 +1814,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade': show }"
-      class="relative isolate animate-fade px-4 pb-24 pt-28 animate-delay-[500ms] animate-duration-[1500ms] md:px-6"
+      class="relative isolate animate-fade px-4 pb-24 pt-28 animate-delay-[400ms] animate-duration-[1200ms] md:px-6"
     >
       <div class="mx-auto max-w-7xl">
         <footer class="rounded-xl bg-blue" aria-labelledby="footer-heading">
