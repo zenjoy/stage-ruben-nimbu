@@ -318,3 +318,19 @@ header {
   initial-value: 0;
   inherits: false;
 }
+
+ol.custom-list {
+  list-style: none;
+  counter-reset: list-counter;
+  padding-left: 0;
+}
+ol.custom-list li {
+  counter-increment: list-counter;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+ol.custom-list li::before {
+  content: counter(list-counter) '.';
+  flex: 0 0 2em;
+}
