@@ -48,7 +48,7 @@
   </head>
   <body class="bg-darkblue">
     <div
-      class="background_main bg-cover bg-center"
+      class="background_main z-10 bg-cover bg-center"
       style="background-image: url('<%= require('./images/Grid.svg') %>')"
     >
       <header
@@ -174,7 +174,7 @@
         </div>
       </header>
 
-      <div class="relative isolate animate-fade-up bg-cover px-6 lg:px-8">
+      <div class="animate-fade-upbg-cover relative isolate px-6 lg:px-8">
         <div class="mx-auto max-w-4xl pb-48 pt-56">
           <div
             class="text-center transition-transform duration-300 hover:scale-95 sm:mb-6 sm:flex sm:justify-center"
@@ -1704,7 +1704,7 @@
       </div>
     </main>
 
-    <div id="contact" class="py-32 sm:py-32">
+    <div id="contact" class="pt-32 sm:pt-32">
       <div
         x-data="{ hasAnimated: false, show: false }"
         x-intersect.once="show = true; hasAnimated = true"
@@ -1794,13 +1794,13 @@
                 x-data="{ hasAnimated: false, show: false }"
                 x-intersect.once="show = true; hasAnimated = true"
                 :class="{ 'animate-fade-left': show }"
-                class="size-full flex-none animate-fade-left rounded-xl animate-delay-[500ms] animate-duration-[1200ms] lg:h-full lg:max-w-lg"
+                class="size-full flex-none animate-fade-left rounded-xl animate-delay-[600ms] animate-duration-[1400ms] lg:h-full lg:max-w-lg"
                 autoplay
                 muted
                 loop
               >
                 <source
-                  src="<%= require('./images/nimbu_3d_big.mp4') %>"
+                  src="<%= require('./images/nimbu_3d_2.mp4') %>"
                   type="video/mp4"
                 />
               </video>
@@ -1814,7 +1814,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade': show }"
-      class="relative isolate animate-fade px-4 pb-24 pt-28 animate-delay-[400ms] animate-duration-[1200ms] md:px-6"
+      class="relative isolate animate-fade px-4 pb-24 pt-32 animate-delay-[400ms] animate-duration-[1200ms] md:px-6"
     >
       <div class="mx-auto max-w-7xl">
         <footer class="rounded-xl bg-blue" aria-labelledby="footer-heading">

@@ -28,7 +28,13 @@ $blue3: #30629b;
   initial-value: 0deg;
   syntax: '<angle>';
 }
-
+.gradientColor {
+  background: linear-gradient(
+    189deg,
+    rgba(3, 18, 34, 1) 39%,
+    rgba(253, 184, 51, 1) 100%
+  );
+}
 .arrow,
 .titleColor,
 .primary {
