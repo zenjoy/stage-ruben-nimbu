@@ -4,6 +4,9 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
+        border: {
+          to: { '--border-angle': '360deg' },
+        },
         'infinite-scroll-1': {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
@@ -16,6 +19,7 @@ module.exports = {
       animation: {
         'infinite-scroll-1': 'infinite-scroll-1 40s linear infinite',
         'infinite-scroll-2': 'infinite-scroll-2 6s linear infinite',
+        border: 'border 10s linear infinite',
       },
       colors: {
         yellow: '#FDB833',
@@ -26,6 +30,11 @@ module.exports = {
         lightblue: '#CDE5FF',
         black: '#031222',
         white: '#F7F7F7',
+        pink: '#fe8bbb',
+        lightyellow: '#f9c151',
+        lightyellow2: '#fee3ac',
+        lightyellow3: '#ffe9be9c',
+        gray: '#323c48',
       },
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],

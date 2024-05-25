@@ -20,7 +20,7 @@ $secondary-color: #84c7d0;
 $tertiary-color: #708d81;
 $white-color: #f7f7f7;
 $black-color: #272727;
-$blue: #0a284a;
+$blue: #031222;
 $blue2: #23446a;
 $blue3: #30629b;
 @property --border-angle {
@@ -28,13 +28,7 @@ $blue3: #30629b;
   initial-value: 0deg;
   syntax: '<angle>';
 }
-.gradientColor {
-  background: linear-gradient(
-    189deg,
-    rgba(3, 18, 34, 1) 39%,
-    rgba(253, 184, 51, 1) 100%
-  );
-}
+
 .arrow,
 .titleColor,
 .primary {
@@ -340,3 +334,4 @@ ol.custom-list li::before {
   content: counter(list-counter) '.';
   flex: 0 0 2em;
 }
+

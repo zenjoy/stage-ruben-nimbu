@@ -205,29 +205,26 @@
         </div>
       </div>
     </div>
-
     <div
-      class="element relative isolate bg-cover"
-      style="
-        background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
-      "
-    >
+      class="top-50 absolute size-full [filter:blur(180px)] dark:[background-image:linear-gradient(to_bottom,#4E6B8D,transparent_50%)]"
+    ></div>
+    <div class="element relative isolate bg-cover">
       <div id="scroll" class="animate-fade-up pt-10 animate-delay-[300ms]">
         <div class="pb-24">
-          <div class="mx-auto px-6 lg:max-w-[1500px] lg:px-8">
-            <div class="flex items-center justify-center">
-              <video
-                class="h-auto max-h-[780px] rounded-xl"
-                autoplay
-                muted
-                loop
-              >
-                <source
-                  src="<%= require('./images/video1.mp4') %>"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
+          <div
+            class="relative mx-auto flex items-center justify-center rounded-xl lg:max-w-[1245px]"
+          >
+            <video
+              class="animate-border relative h-auto max-h-[780px] rounded-xl border-[2px] border-transparent animate-delay-[300ms] [background:linear-gradient(45deg,#031222,theme(colors.slate.800)_50%,#031222)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray)_80%,_theme(colors.lightyellow3)_86%,_theme(colors.lightyellow2)_90%,_theme(colors.lightyellow)_94%,_theme(colors.yellow))_border-box]"
+              autoplay
+              muted
+              loop
+            >
+              <source
+                src="<%= require('./images/video1.mp4') %>"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </div>
       </div>
@@ -646,8 +643,46 @@
     </div>
 
     <main
-      class="relative flex flex-col justify-center overflow-hidden rounded-xl bg-white"
+      class="relative flex flex-col justify-center overflow-hidden rounded-xl"
     >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 185"
+        class="draw-svg-path bottom-50 absolute"
+      >
+        <defs>
+          <style>
+            .cls-1 {
+              opacity: 0.35;
+            }
+
+            .cls-1,
+            .cls-2 {
+              stroke-width: 2px;
+            }
+
+            .cls-1,
+            .cls-2,
+            .cls-3 {
+              fill: none;
+              stroke: #fdb833;
+              stroke-miterlimit: 10;
+            }
+
+            .cls-3 {
+              stroke-width: 3px;
+            }
+          </style>
+        </defs>
+        <path
+          class="cls-2 svg-path"
+          d="M0,5c252.63,145.73,446.12,159.77,577,145,125.8-14.2,181.1-53.59,319-74,223.86-33.13,416.51,20.61,544,71"
+        />
+        <path
+          class="cls-1 svg-path"
+          d="M0,109c173.37-31.25,388.26-54.12,634-45,128.06,4.75,227.74,35.72,426,47,161.51,9.19,293.94,4.95,380,0"
+        />
+      </svg>
       <!-- CTA animation -->
       <section
         x-data="{ hasAnimated: false, show: false }"
@@ -655,15 +690,10 @@
         :class="{ 'animate-fade-right': show }"
         class="relative z-0 animate-fade-right animate-delay-[300ms] animate-duration-[1200ms]"
       >
-        <div
-          style="
-            background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
-          "
-          class="max-w-8xl element2 bg-cover py-20"
-        >
+        <div class="max-w-8xl py-28">
           <div class="mx-auto w-full max-w-5xl bg-cover px-4 py-48 md:px-6">
             <div
-              class="group flex flex-col items-center justify-center space-y-4 text-center font-outfit text-3xl font-semibold text-slate-900 before:absolute before:inset-0 before:-z-10 before:transition-colors before:duration-500 hover:before:bg-darkblue sm:text-4xl md:text-5xl lg:flex-row lg:space-x-6 lg:space-y-0"
+              class="group flex flex-col items-center justify-center space-y-4 text-center font-outfit text-3xl font-semibold text-slate-900 before:absolute before:inset-0 before:-z-10 before:transition-colors before:duration-500 sm:text-4xl md:text-5xl lg:flex-row lg:space-x-6 lg:space-y-0"
             >
               <!-- Button -->
               <span
@@ -677,14 +707,14 @@
                   >
                   <!-- Hover content -->
                   <span
-                    class="absolute inset-0 z-10 inline-flex items-center overflow-hidden whitespace-nowrap rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 opacity-0 transition-opacity duration-500 before:animate-infinite-scroll-2 before:bg-gradient-to-r before:from-gray-100 before:to-gray-300 before:bg-clip-text before:px-2 before:text-transparent before:content-['Create_beautiful_websites'] after:animate-infinite-scroll-2 after:bg-gradient-to-r after:from-gray-100 after:to-gray-300 after:bg-clip-text after:px-2 after:text-transparent after:content-['Create_beautiful_websites'] group-hover:opacity-100"
+                    class="absolute inset-0 z-10 inline-flex items-center overflow-hidden whitespace-nowrap rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 opacity-0 transition-opacity duration-500 before:animate-infinite-scroll-2 before:bg-gradient-to-r before:from-white before:to-white before:bg-clip-text before:px-2 before:text-transparent before:content-['Create_beautiful_websites'] after:animate-infinite-scroll-2 after:bg-gradient-to-r after:from-white after:to-white after:bg-clip-text after:px-2 after:text-white after:content-['Create_beautiful_websites'] group-hover:opacity-100"
                     aria-hidden="true"
                   ></span>
                 </span>
               </span>
 
               <div
-                class="transition-colors duration-500 ease-in-out group-hover:text-white"
+                class="text-white transition-colors duration-500 ease-in-out"
               >
                 with
                 <span
@@ -1339,7 +1369,7 @@
                 class="h-full animate-fade-right animate-delay-[100ms] animate-duration-[1200ms]"
               >
                 <div
-                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/25 dark:bg-blue"
+                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 dark:bg-blue"
                 >
                   <div class="mb-5">
                     <div
@@ -1444,7 +1474,7 @@
                 class="dark h-full animate-fade animate-delay-[300ms] animate-duration-[1200ms]"
               >
                 <div
-                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/25 dark:bg-blue"
+                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 shadow-2xl shadow-yellow/25 transition-transform duration-300 hover:scale-105 dark:bg-blue"
                 >
                   <div class="absolute right-0 top-0 -mt-4 mr-6">
                     <div
@@ -1571,7 +1601,7 @@
                 class="h-full animate-fade-left animate-delay-[500ms] animate-duration-[1200ms]"
               >
                 <div
-                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow/25 dark:bg-blue"
+                  class="dark:border- relative flex h-full flex-col rounded-xl bg-white p-8 transition-transform duration-300 hover:scale-105 dark:bg-blue"
                 >
                   <div class="mb-5">
                     <div

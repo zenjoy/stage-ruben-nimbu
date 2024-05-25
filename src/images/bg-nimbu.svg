@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 185">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .35;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #fdb833;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+    <path class="cls-2" d="M0,5c252.63,145.73,446.12,159.77,577,145,125.8-14.2,181.1-53.59,319-74,223.86-33.13,416.51,20.61,544,71"/>
+    <path class="cls-1" d="M0,109c173.37-31.25,388.26-54.12,634-45,128.06,4.75,227.74,35.72,426,47,161.51,9.19,293.94,4.95,380,0"/>
+</svg>
