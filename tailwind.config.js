@@ -19,12 +19,12 @@ module.exports = {
       animation: {
         'infinite-scroll-1': 'infinite-scroll-1 40s linear infinite',
         'infinite-scroll-2': 'infinite-scroll-2 6s linear infinite',
-        border: 'border 10s linear infinite',
+        border: 'border 16s linear infinite',
       },
       colors: {
         yellow: '#FDB833',
         blue: '#0A284A',
-        darkblue: '#031222',
+        darkblue: '#020c17',
         blue2: '#133F70',
         blue3: '#23446A',
         lightblue: '#CDE5FF',
@@ -34,7 +34,7 @@ module.exports = {
         lightyellow: '#f9c151',
         lightyellow2: '#fee3ac',
         lightyellow3: '#ffe9be9c',
-        gray: '#323c48',
+        grayLine: '#323c48',
       },
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],

@@ -112,7 +112,7 @@
         >
           <div class="fixed inset-0 z-50"></div>
           <div
-            class="transition-background fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-yellow bg-cover p-10 duration-300 sm:max-w-lg sm:ring-gray-900/10"
+            class="transition-background sm:ring-gray-900/10 fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-yellow bg-cover p-10 duration-300 sm:max-w-lg"
             style="
               background-image: url('<%= require('./images/bg-nimbu-linesWhite.svg') %>');
             "
@@ -152,19 +152,19 @@
                   <a
                     @click="isOpen = false"
                     href="#solutions"
-                    class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
+                    class="text-gray-900 hover:bg-gray-50 -mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 transition duration-300"
                     >Solutions</a
                   >
                   <a
                     @click="isOpen = false"
                     href="#pricing"
-                    class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
+                    class="text-gray-900 hover:bg-gray-50 -mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 transition duration-300"
                     >Pricing</a
                   >
                   <a
                     @click="isOpen = false"
                     href="#contact"
-                    class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
+                    class="text-gray-900 hover:bg-gray-50 -mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 transition duration-300"
                     >Contact</a
                   >
                 </div>
@@ -175,7 +175,7 @@
       </header>
 
       <div class="animate-fade-upbg-cover relative isolate px-6 lg:px-8">
-        <div class="mx-auto max-w-4xl pb-48 pt-56">
+        <div class="mx-auto max-w-4xl pb-36 pt-56">
           <div
             class="text-center transition-transform duration-300 hover:scale-95 sm:mb-6 sm:flex sm:justify-center"
           ></div>
@@ -206,22 +206,25 @@
       </div>
     </div>
     <div
-      class="top-50 absolute size-full [filter:blur(180px)] dark:[background-image:linear-gradient(to_bottom,#4E6B8D,transparent_50%)]"
+      x-data="{ hasAnimated: false, show: false }"
+      x-intersect.once="show = true; hasAnimated = true"
+      :class="{ 'animate-fade-up': show }"
+      class="top-50 animate-delay-800 absolute size-full animate-fade-up animate-duration-[1400ms] [filter:blur(180px)] dark:[background-image:linear-gradient(to_bottom,#74aef0,transparent_50%)]"
     ></div>
     <div class="element relative isolate bg-cover">
       <div id="scroll" class="animate-fade-up pt-10 animate-delay-[300ms]">
         <div class="pb-24">
           <div
-            class="relative mx-auto flex items-center justify-center rounded-xl lg:max-w-[1245px]"
+            class="relative mx-auto flex items-center justify-center rounded-xl"
           >
             <video
-              class="animate-border relative h-auto max-h-[780px] rounded-xl border-[2px] border-transparent animate-delay-[300ms] [background:linear-gradient(45deg,#031222,theme(colors.slate.800)_50%,#031222)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.gray)_80%,_theme(colors.lightyellow3)_86%,_theme(colors.lightyellow2)_90%,_theme(colors.lightyellow)_94%,_theme(colors.yellow))_border-box]"
+              class="relative h-auto max-h-[780px] animate-border rounded-xl border-[2px] border-transparent animate-delay-[300ms] [background:linear-gradient(45deg,#031222,theme(colors.slate.800)_50%,#031222)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.grayLine)_80%,_theme(colors.lightyellow3)_86%,_theme(colors.lightyellow2)_90%,_theme(colors.lightyellow)_94%,_theme(colors.yellow))_border-box]"
               autoplay
               muted
               loop
             >
               <source
-                src="<%= require('./images/video1.mp4') %>"
+                src="<%= require('./images/nimbu_promoVideo.mp4') %>"
                 type="video/mp4"
               />
             </video>
@@ -304,10 +307,10 @@
             </div>
             <h2 class="content__title">Channels</h2>
             <p class="content__text content__text--narrow text-meta w-[600px]">
-              Nimbu as a backend can power your app's content, data storage,
-              user authentication and more. Focus on creating great user
-              experiences and no longer worry about server maintenance and
-              complex infrastructures.
+              Using channels helps provide a more personalized user experience.
+              You can segment your audience and deliver content that is most
+              relevant to their interests and preferences, increasing engagement
+              and satisfaction.
             </p>
           </div>
           <div
@@ -612,7 +615,7 @@
                       name="email"
                       id="email"
                       autocomplete="email"
-                      class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                      class="ring-gray-300 block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -621,7 +624,7 @@
                 >
                   <button
                     type="submit"
-                    class="px-4.5 block w-40 rounded-xl bg-yellow py-2.5 text-center font-outfit text-lg font-semibold text-white ring-2 ring-yellow transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:text-white hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    class="px-4.5 placeholder:text-gray-400 block w-40 rounded-xl bg-yellow py-2.5 text-center font-outfit text-lg font-semibold text-white ring-2 ring-yellow transition-colors duration-300 hover:bg-blue hover:text-white hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   >
                     Get updates
                   </button>
@@ -1772,7 +1775,7 @@
                           name="first-name"
                           id="first-name"
                           autocomplete="given-name"
-                          class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                          class="ring-gray-300 block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                         />
                       </div>
                     </div>
@@ -1789,7 +1792,7 @@
                           name="email"
                           id="email"
                           autocomplete="email"
-                          class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                          class="ring-gray-300 block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                         />
                       </div>
                     </div>
@@ -1805,7 +1808,7 @@
                           name="message"
                           id="message"
                           rows="4"
-                          class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                          class="ring-gray-300 block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
                         />
                       </div>
                     </div>
@@ -1813,7 +1816,7 @@
                   <div class="mt-[35px]">
                     <button
                       type="submit"
-                      class="block w-40 rounded-xl bg-yellow px-3.5 py-2.5 text-center font-outfit text-lg font-semibold text-blue ring-2 ring-yellow transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:text-white hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                      class="placeholder:text-gray-400 block w-40 rounded-xl bg-yellow px-3.5 py-2.5 text-center font-outfit text-lg font-semibold text-blue ring-2 ring-yellow transition-colors duration-300 hover:bg-blue hover:text-white hover:ring-yellow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                     >
                       Let's talk
                     </button>
@@ -1867,14 +1870,14 @@
                 <li>
                   <a
                     href="/privacy"
-                    class="text-sm leading-6 text-gray-300 hover:text-white"
+                    class="text-gray-300 text-sm leading-6 hover:text-white"
                     >Privacy Policy</a
                   >
                 </li>
                 <li>
                   <a
                     href="/terms"
-                    class="text-sm leading-6 text-gray-300 hover:text-white"
+                    class="text-gray-300 text-sm leading-6 hover:text-white"
                     >Terms and Conditions</a
                   >
                 </li>
@@ -1882,14 +1885,14 @@
                   <a
                     href="https://status.zenjoy.be"
                     target="_blank"
-                    class="text-sm leading-6 text-gray-300 hover:text-white"
+                    class="text-gray-300 text-sm leading-6 hover:text-white"
                     >Status</a
                   >
                 </li>
                 <li>
                   <a
                     href="mailto:support@nimbu.be"
-                    class="text-sm leading-6 text-gray-300 hover:text-white"
+                    class="text-gray-300 text-sm leading-6 hover:text-white"
                     >Support</a
                   >
                 </li>

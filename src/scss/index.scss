@@ -19,8 +19,8 @@ $primariy-color: #fdb833;
 $secondary-color: #84c7d0;
 $tertiary-color: #708d81;
 $white-color: #f7f7f7;
-$black-color: #272727;
-$blue: #031222;
+$black-color: #74aef0;
+$blue: #020e1b;
 $blue2: #23446a;
 $blue3: #30629b;
 @property --border-angle {
@@ -90,12 +90,12 @@ header {
   --color-bg-2: #c7c7c7;
 }
 .backColor {
-  background-color: #031222;
+  background-color: #020c17;
 }
 .demo-10 {
-  --color-bg-1: #031222;
-  --color-bg-2: #031222;
-  --color-bg-3: #031222;
+  --color-bg-1: #020c17;
+  --color-bg-2: #020c17;
+  --color-bg-3: #020c17;
 }
 
 .content {
