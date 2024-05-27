@@ -114,6 +114,7 @@ header {
   --offset: 0px;
   top: var(--offset);
   height: calc(100vh - var(--offset));
+  border-radius: 20px;
 }
 
 .content--half {
