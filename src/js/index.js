@@ -55,7 +55,7 @@ function drawSvgOnScroll(svg, line, _event) {
   const svgPosition = svg.getBoundingClientRect().top
   const pixelsScrolled = svgPosition * -1 + windowHeight
 
-  let speed = 1.1
+  let speed = 1
 
   const onePercent = (windowHeight / 100) * speed
   let percentageScrolled = pixelsScrolled / onePercent

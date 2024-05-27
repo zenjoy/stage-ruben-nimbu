@@ -19,7 +19,7 @@ module.exports = {
       animation: {
         'infinite-scroll-1': 'infinite-scroll-1 40s linear infinite',
         'infinite-scroll-2': 'infinite-scroll-2 6s linear infinite',
-        border: 'border 16s linear infinite',
+        border: 'border 14s linear infinite',
       },
       colors: {
         yellow: '#FDB833',

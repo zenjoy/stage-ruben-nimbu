@@ -56,7 +56,7 @@
         class="navbar-expand-lg absolute inset-x-0 top-0 z-50"
       >
         <nav
-          class="flex animate-fade-down items-center justify-between p-10 animate-delay-500 animate-duration-[1200ms] lg:px-6"
+          class="mx-10 flex animate-fade-down items-center justify-between p-10 animate-delay-500 animate-duration-[1200ms]"
           aria-label="Global"
         >
           <div class="flex lg:flex-1">
@@ -64,7 +64,7 @@
               <span class="sr-only">Your Company</span>
               <img
                 class="h-7 w-auto transition-transform duration-300 hover:scale-95"
-                src="<%= require('./images/nimbu_logo.png') %>"
+                src="<%= require('./images/nimbu_logo_white.png') %>"
                 alt="logo"
               />
             </a>
@@ -174,8 +174,8 @@
         </div>
       </header>
 
-      <div class="animate-fade-upbg-cover relative isolate px-6 lg:px-8">
-        <div class="mx-auto max-w-4xl pb-36 pt-56">
+      <div class="relative isolate z-30 animate-fade-up bg-cover px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl pb-36 pt-48">
           <div
             class="text-center transition-transform duration-300 hover:scale-95 sm:mb-6 sm:flex sm:justify-center"
           ></div>
@@ -205,12 +205,14 @@
         </div>
       </div>
     </div>
-    <div
-      x-data="{ hasAnimated: false, show: false }"
-      x-intersect.once="show = true; hasAnimated = true"
-      :class="{ 'animate-fade-up': show }"
-      class="top-50 animate-delay-800 absolute size-full animate-fade-up animate-duration-[1400ms] [filter:blur(180px)] dark:[background-image:linear-gradient(to_bottom,#74aef0,transparent_50%)]"
-    ></div>
+    <div class="align-center flex w-full justify-center">
+      <div
+        x-data="{ hasAnimated: false, show: false }"
+        x-intersect.once="show = true; hasAnimated = true"
+        :class="{ 'animate-fade-up': show }"
+        class="animate-delay-800 absolute h-full w-[1500px] -translate-x-1/2 -translate-y-1/2 animate-fade-up animate-duration-[1400ms] [filter:blur(200px)] dark:[background-image:linear-gradient(to_bottom,#2785f1,transparent_70%)]"
+      ></div>
+    </div>
     <div class="element relative isolate bg-cover">
       <div id="scroll" class="animate-fade-up pt-10 animate-delay-[300ms]">
         <div class="pb-24">
@@ -218,7 +220,7 @@
             class="relative mx-auto flex items-center justify-center rounded-xl"
           >
             <video
-              class="relative h-auto max-h-[780px] animate-border rounded-xl border-2 border-transparent animate-delay-[300ms] [background:linear-gradient(45deg,#031222,theme(colors.slate.800)_50%,#031222)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.grayLine)_80%,_theme(colors.lightyellow3)_86%,_theme(colors.lightyellow2)_90%,_theme(colors.lightyellow)_94%,_theme(colors.yellow))_border-box]"
+              class="relative h-auto max-h-[720px] animate-border rounded-xl border-2 border-transparent animate-delay-[300ms] [background:linear-gradient(45deg,#031222,theme(colors.slate.800)_50%,#031222)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.blue)_80%,_theme(colors.lightyellow3)_86%,_theme(colors.lightyellow2)_90%,_theme(colors.lightyellow)_94%,_theme(colors.yellow))_border-box]"
               autoplay
               muted
               loop
@@ -687,13 +689,8 @@
         />
       </svg>
       <!-- CTA animation -->
-      <section
-        x-data="{ hasAnimated: false, show: false }"
-        x-intersect.once="show = true; hasAnimated = true"
-        :class="{ 'animate-fade-right': show }"
-        class="relative z-0 animate-fade-right animate-delay-[300ms] animate-duration-[1200ms]"
-      >
-        <div class="max-w-8xl py-28">
+      <section class="relative z-0">
+        <div class="max-w-8xl">
           <div class="mx-auto w-full max-w-5xl bg-cover px-4 py-48 md:px-6">
             <div
               class="group flex flex-col items-center justify-center space-y-4 text-center font-outfit text-3xl font-semibold text-slate-900 before:absolute before:inset-0 before:-z-10 before:transition-colors before:duration-500 sm:text-4xl md:text-5xl lg:flex-row lg:space-x-6 lg:space-y-0"
@@ -963,10 +960,8 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade': show }"
-      class="relative isolate animate-fade overflow-hidden bg-cover py-32 animate-delay-[500ms] animate-duration-[1200ms] lg:px-24"
-      style="
-        background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
-      "
+      class="relative isolate animate-fade overflow-hidden py-32 animate-delay-[500ms] animate-duration-[1200ms] lg:px-24"
+   
     >
       <div class="mx-auto bg-cover px-4 md:px-6">
         <div class="relative mx-auto max-w-screen-2xl">
@@ -1049,7 +1044,7 @@
         <h1
           class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-7xl"
         >
-          Websites powered by Nimbu
+          Websites <span class="text-yellow"> powered </span> by Nimbu
         </h1>
       </div>
     </div>
@@ -1312,7 +1307,7 @@
         <h1
           class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
         >
-          Nimbu CMS Pricing
+          Nimbu CMS <span class="text-yellow"> Pricing </span>
         </h1>
       </div>
       <div class="px-4 md:px-6">
