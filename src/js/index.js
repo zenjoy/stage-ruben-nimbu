@@ -38,7 +38,6 @@ document.querySelectorAll('.swiper').forEach((swiper, index) => {
 
 if (document.querySelectorAll('.draw-svg-path').length > 0) {
   document.querySelectorAll('.draw-svg-path').forEach((svg) => {
-
     svg.querySelectorAll('.svg-path').forEach((line) => {
       const length = line.getTotalLength()
       line.style.strokeDasharray = length
@@ -71,3 +70,21 @@ function drawSvgOnScroll(svg, line, _event) {
   const draw = length * (percentageScrolled / 100)
   line.style.strokeDashoffset = length - draw
 }
+
+
+const videoElement = document.getElementById('myVideo')
+const maxVideoHeight = 720
+const minVideoHeight = 200
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight
+  const scrollFraction = scrollTop / maxScroll
+
+  const newVideoHeight = Math.min(
+    maxVideoHeight,
+    Math.max(minVideoHeight, maxVideoHeight - scrollFraction * 1800)
+  )
+
+  videoElement.style.height = `${newVideoHeight}px`
+})

@@ -205,6 +205,7 @@
         </div>
       </div>
     </div>
+
     <div class="flex w-full justify-center">
       <div
         x-data="{ hasAnimated: false, show: false }"
@@ -213,24 +214,24 @@
         class="animate-delay-800 absolute size-full -translate-x-1/2 -translate-y-1/2 animate-fade-up animate-duration-[1400ms] [filter:blur(200px)] sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] dark:[background-image:linear-gradient(to_bottom,#2785f1,transparent_70%)]"
       ></div>
     </div>
+
     <div class="element relative isolate bg-cover">
       <div id="scroll" class="animate-fade-up pt-10 animate-delay-[300ms]">
-        <div class="pb-24">
-          <div
-            class="relative mx-auto flex items-center justify-center rounded-xl"
+        <div
+          class="relative mx-auto flex items-center justify-center rounded-xl"
+        >
+          <video
+            id="myVideo"
+            class="relative h-auto max-h-[720px] animate-border rounded-xl border-2 border-transparent animate-delay-[300ms]"
+            autoplay
+            muted
+            loop
           >
-            <video
-              class="relative h-auto max-h-[720px] animate-border rounded-xl border-2 border-transparent animate-delay-[300ms] [background:linear-gradient(45deg,#031222,theme(colors.slate.800)_50%,#031222)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.blue)_80%,_theme(colors.lightyellow3)_86%,_theme(colors.lightyellow2)_90%,_theme(colors.lightyellow)_94%,_theme(colors.yellow))_border-box]"
-              autoplay
-              muted
-              loop
-            >
-              <source
-                src="<%= require('./images/nimbu_promoVideo.mp4') %>"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+            <source
+              src="<%= require('./images/nimbu_promoVideo.mp4') %>"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </div>
     </div>
@@ -239,10 +240,10 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-up': show }"
-      class="mx-auto max-w-2xl animate-fade-up pt-20 animate-duration-[1200ms]"
+      class="mx-auto max-w-2xl animate-fade-up pt-10 animate-duration-[1200ms]"
     >
       <div class="text-center">
-        <p class="mt-28 pb-3 text-lg leading-8 text-white lg:text-2xl">
+        <p class="pb-3 text-lg leading-8 text-white lg:text-2xl">
           Let us take care of your infrastructure
         </p>
         <h1
@@ -255,7 +256,7 @@
 
     <section id="solutions" class="loading demo-10">
       <main>
-        <div class="wrap rounded-xl">
+        <div class="wrap rounded-xl pt-20">
           <div
             x-data="{ hasAnimated: false, show: false }"
             x-intersect.once="show = true; hasAnimated = true"
@@ -350,7 +351,7 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-up': show }"
-      class="relative isolate animate-fade-up bg-darkblue px-6 pt-5 animate-duration-[1200ms] lg:px-8"
+      class="relative isolate animate-fade-up bg-darkblue px-6 pt-36 animate-duration-[1200ms] lg:px-8"
     >
       <div class="px-6 lg:px-8">
         <div class="mx-auto max-w-2xl pt-16">
@@ -574,7 +575,7 @@
     >
       <div class="mx-auto bg-darkblue bg-cover">
         <div class="relative mx-auto max-w-screen-2xl">
-          <div class="mx-auto max-w-7xl py-16 sm:py-24">
+          <div class="mx-auto max-w-7xl py-16 sm:py-36">
             <div
               class="relative isolate overflow-hidden rounded-xl bg-blue px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
             >
