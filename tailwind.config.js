@@ -35,6 +35,9 @@ module.exports = {
         lightyellow2: '#fee3ac',
         lightyellow3: '#ffe9be9c',
         grayLine: '#323c48',
+        pomelo: '#D44D5C',
+        lime: '#78BC61',
+        orange: '#F15025',
       },
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],

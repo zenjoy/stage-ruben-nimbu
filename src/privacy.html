@@ -63,7 +63,7 @@
             <a href="index.html" class="-m-1.5 p-1.5">
               <img
                 class="h-7 w-auto transition-transform duration-300 hover:scale-95"
-                src="<%= require('./images/nimbu_logo_white.png') %>"
+                src="<%= require('./images/nimbu_logo_white.svg') %>"
                 alt="logo"
               />
             </a>
@@ -492,7 +492,7 @@
         x-data="{ hasAnimated: false, show: false }"
         x-intersect.once="show = true; hasAnimated = true"
         :class="{ 'animate-fade': show }"
-        class="relative isolate animate-fade px-4 pb-24 pt-28 animate-delay-[400ms] animate-duration-[1200ms] md:px-6"
+        class="relative isolate animate-fade px-4 pb-24 pt-28 md:px-6"
       >
         <div class="mx-auto max-w-7xl">
           <footer class="rounded-xl bg-blue" aria-labelledby="footer-heading">
@@ -506,7 +506,7 @@
                   <a href="#">
                     <img
                       class="h-8 transition-transform duration-300 hover:scale-95"
-                      src="<%= require('./images/nimbu_logo.png') %>"
+                      src="<%= require('./images/nimbu_logo.svg') %>"
                       alt="Logo Nimbu"
                     />
                   </a>
