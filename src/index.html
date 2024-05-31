@@ -650,18 +650,18 @@
                       data-netlify="true"
                       class="mx-auto mt-10"
                       x-data="{
-    errorMessage: '',
-    showError: false,
-    submitForm() {
-      this.errorMessage = '';
-      if (this.$refs.email.value) {
-        this.$el.submit();
-      } else {
-        this.errorMessage = 'Please enter your email.';
-        this.showError = true;
-      }
-    }
-  }"
+                        errorMessage: '',
+                        showError: false,
+                        submitForm() {
+                          this.errorMessage = '';
+                          if (this.$refs.email.value) {
+                            this.$el.submit();
+                          } else {
+                            this.errorMessage = 'Please enter your email.';
+                            this.showError = true;
+                          }
+                        }
+                      }"
                       x-on:submit.prevent="submitForm"
                     >
                       <div class="sm:col-span-2">
@@ -671,6 +671,11 @@
                           >Email</label
                         >
                         <div class="mt-2.5 font-franklin font-semibold">
+                          <input
+                            type="hidden"
+                            name="form-name"
+                            value="emailentry"
+                          />
                           <input
                             placeholder="yourname@gmail.com"
                             type="email"
@@ -1900,6 +1905,8 @@
                         >Name</label
                       >
                       <div class="mt-2.5 font-franklin text-lg font-semibold">
+                        <input type="hidden" name="form-name" value="contact" />
+
                         <input
                           placeholder="Your Name"
                           type="text"
