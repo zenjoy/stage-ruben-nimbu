@@ -221,7 +221,7 @@
         class="animate-fade-up pt-10 animate-delay-[300ms] animate-duration-[1400ms]"
       >
         <div
-          class="relative mx-auto flex customVideo items-center justify-center rounded-xl"
+          class="customVideo relative mx-auto flex items-center justify-center rounded-xl"
         >
           <video
             id="myVideo"
@@ -645,14 +645,16 @@
                 </p>
                 <div class="pt-8 sm:col-span-2">
                   <div class="mt-2.5 font-franklin font-semibold">
-                    <input
-                      placeholder="E-mail"
-                      type="email"
-                      name="email"
-                      id="email"
-                      autocomplete="email"
-                      class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                    />
+                    <form name="contact" method="POST" data-netlify="true">
+                      <input
+                        placeholder="E-mail"
+                        type="email"
+                        name="email"
+                        id="email"
+                        autocomplete="email"
+                        class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                      />
+                    </form>
                   </div>
                 </div>
                 <div
@@ -2003,7 +2005,7 @@
       const videoElement = document.getElementById('myVideo')
       const maxVideoHeight = 720
       const minVideoHeight = 200
-      const stopWidth = 768 // Typical maximum width for smartphones
+      const stopWidth = 768
 
       const adjustVideoHeight = () => {
         if (window.innerWidth <= stopWidth) {
@@ -2019,7 +2021,7 @@
 
         const newVideoHeight = Math.min(
           maxVideoHeight,
-          Math.max(minVideoHeight, maxVideoHeight - scrollFraction * 1800)
+          Math.max(minVideoHeight, maxVideoHeight - scrollFraction * 2200)
         )
 
         videoElement.style.height = `${newVideoHeight}px`
