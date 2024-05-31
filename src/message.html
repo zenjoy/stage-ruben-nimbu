@@ -68,7 +68,10 @@
 
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div
-          class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+          class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0 bg-cover"
+          style="
+          background-image: url('<%= require('./images/bg-nimbu-lines.svg') %>');
+        "
         >
           <!--
               Modal panel, show/hide based on modal state.
@@ -82,6 +85,7 @@
             -->
           <div
             class="relative overflow-hidden rounded-xl bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-6"
+          
           >
             <div>
               <div
@@ -120,7 +124,7 @@
               <a href="index.html">
                 <button
                   type="button"
-                  class="inline-flex w-full justify-center rounded-xl bg-darkblue px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-yellow hover:text-darkblue"
+                  class="inline-flex w-full justify-center rounded-xl bg-darkblue px-3 py-2 text-sm font-semibold text-white shadow-sm transition-colors duration-300 hover:bg-yellow hover:text-darkblue"
                 >
                   Go back to our site
                 </button>
