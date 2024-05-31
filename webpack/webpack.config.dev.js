@@ -16,6 +16,7 @@ module.exports = merge(webpackCommonConfig, {
         { from: /^\/$/, to: '/index.html' },
         { from: /^\/privacy$/, to: '/privacy.html' },
         { from: /^\/terms$/, to: '/terms.html' },
+        { from: /^\/message$/, to: '/message.html' },
       ],
     },
   },
