@@ -645,23 +645,23 @@
                   <div class="mt-2.5 font-franklin font-semibold">
                     <form
                       name="emailentry"
-                      action="/src/message.html"
+                      action="/message"
                       method="POST"
                       data-netlify="true"
                       class="mx-auto mt-10"
                       x-data="{
-      errorMessage: '',
-      showError: false,
-      submitForm() {
-        this.errorMessage = '';
-        if (this.$refs.email.value) {
-          this.$el.submit();
-        } else {
-          this.errorMessage = 'Please enter your email.';
-          this.showError = true;
-        }
+    errorMessage: '',
+    showError: false,
+    submitForm() {
+      this.errorMessage = '';
+      if (this.$refs.email.value) {
+        this.$el.submit();
+      } else {
+        this.errorMessage = 'Please enter your email.';
+        this.showError = true;
       }
-    }"
+    }
+  }"
                       x-on:submit.prevent="submitForm"
                     >
                       <div class="sm:col-span-2">
