@@ -8,7 +8,6 @@
     <!-- TODO: Change favicons / images / values -->
     <!-- TODO: https://realfavicongenerator.net/ -->
 
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link
@@ -650,6 +649,20 @@
                       method="POST"
                       data-netlify="true"
                       class="mx-auto mt-10"
+                      x-data="{
+      errorMessage: '',
+      showError: false,
+      submitForm() {
+        this.errorMessage = '';
+        if (this.$refs.email.value) {
+          this.$el.submit();
+        } else {
+          this.errorMessage = 'Please enter your email.';
+          this.showError = true;
+        }
+      }
+    }"
+                      x-on:submit.prevent="submitForm"
                     >
                       <div class="sm:col-span-2">
                         <label
@@ -665,17 +678,23 @@
                             id="email"
                             autocomplete="email"
                             class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                            x-ref="email"
                           />
                         </div>
                       </div>
 
-                      <div class="mt-[35px]">
+                      <div class="relative mt-[35px]">
                         <button
                           type="submit"
                           class="block w-40 rounded-xl bg-white px-3.5 py-2.5 text-center font-outfit text-lg font-semibold text-blue ring-2 ring-white transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                         >
                           Let's talk
                         </button>
+                        <div
+                          x-show="showError"
+                          class="absolute top-full pt-6 text-yellow"
+                          x-text="errorMessage"
+                        ></div>
                       </div>
                     </form>
                   </div>
@@ -1860,6 +1879,18 @@
                   action="/message"
                   data-netlify="true"
                   class="mx-auto mt-10"
+                  x-data="{
+                  errorMessage: '',
+                  submitForm() {
+                    this.errorMessage = '';
+                    if (this.$refs.firstName.value && this.$refs.email.value && this.$refs.message.value) {
+                      this.$el.submit();
+                    } else {
+                      this.errorMessage = 'Please fill out all fields.';
+                    }
+                  }
+                }"
+                  x-on:submit.prevent="submitForm"
                 >
                   <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div class="sm:col-span-2">
@@ -1876,6 +1907,7 @@
                           id="first-name"
                           autocomplete="given-name"
                           class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                          x-ref="firstName"
                         />
                       </div>
                     </div>
@@ -1893,6 +1925,7 @@
                           id="email"
                           autocomplete="email"
                           class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                          x-ref="email"
                         />
                       </div>
                     </div>
@@ -1909,6 +1942,7 @@
                           id="message"
                           rows="4"
                           class="block w-full rounded-xl border-0 bg-white/5 px-3.5 py-4 text-white ring-1 ring-inset ring-gray-300 duration-300 placeholder:text-white hover:ring-white focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                          x-ref="message"
                         />
                       </div>
                     </div>
@@ -1920,6 +1954,16 @@
                     >
                       Let's talk
                     </button>
+                    <!-- error message -->
+                    <div class="sm:col-span-2">
+                      <div class="mt-4 h-6">
+                        <div
+                          x-show="errorMessage"
+                          class="pt-3 font-outfit font-semibold text-yellow"
+                          x-text="errorMessage"
+                        ></div>
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>

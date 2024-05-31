@@ -70,3 +70,5 @@ function drawSvgOnScroll(svg, line, _event) {
   const draw = length * (percentageScrolled / 100)
   line.style.strokeDashoffset = length - draw
 }
+
+
