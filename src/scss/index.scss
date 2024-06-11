@@ -46,7 +46,10 @@ header {
 
 // element
 .backBlur {
-
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
   will-change: transform;
 }
 .element {
@@ -91,15 +94,23 @@ header {
 }
 @media (max-width: 400px) {
   .customVideo {
-    height: 300px;
+    height: 200px;
   }
 }
 .lineCustom {
   top: 87rem;
 }
-
+@media (max-width: 450px) {
+  .lineCustom {
+    top: 75rem;
+  }
+}
+@media (max-width: 450px) {
+  .lineCustom2 {
+    top: 30rem;
+  }
+}
 // carts
-
 .demo-10 {
   --color-text: #000;
   --color-bg: #e1e1e1;
@@ -176,13 +187,10 @@ header {
   font-size: clamp(2rem, 6vw, 3rem);
   margin: 0;
   font-weight: bold;
-  font-family: $font-outfit;
-  color: #f7f7f7;
   padding-top: 60px;
 }
 
 .content__text {
-  color: #f7f7f7;
   margin: 0;
   max-width: 700px;
   grid-area: content-text;
@@ -190,8 +198,6 @@ header {
   line-height: 1.5;
   padding: 0 1rem;
   backface-visibility: hidden;
-  font-family: $font-franklin;
-  font-size: clamp(0.2rem, 3vw, 1rem);
 }
 
 .content__text--narrow {
@@ -353,4 +359,12 @@ ol.custom-list li {
 ol.custom-list li::before {
   content: counter(list-counter) '.';
   flex: 0 0 2em;
+}
+@media (max-width: 500px) {
+  .responsiveNav {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
 }

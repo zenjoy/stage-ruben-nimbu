@@ -72,3 +72,24 @@ function drawSvgOnScroll(svg, line, _event) {
 }
 
 
+function adjustStrokeWidth(svgId) {
+  const svg = document.getElementById(svgId);
+  if (!svg) return;
+  const paths = svg.querySelectorAll('path');
+
+  const scaleFactor = window.innerWidth / 1440;
+
+  paths.forEach(path => {
+    const originalStrokeWidth = path.getAttribute('stroke-width') || 2; 
+    path.style.strokeWidth = originalStrokeWidth / scaleFactor;
+  });
+}
+
+function adjustAllSVGs() {
+  adjustStrokeWidth('responsiveSVG');
+  adjustStrokeWidth('responsiveSVG2');
+}
+
+window.addEventListener('resize', adjustAllSVGs);
+window.addEventListener('DOMContentLoaded', adjustAllSVGs);
+

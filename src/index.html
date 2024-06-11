@@ -54,7 +54,7 @@
         class="navbar-expand-lg absolute inset-x-0 top-0 z-50"
       >
         <nav
-          class="mx-10 flex animate-fade-down items-center justify-between p-10 animate-delay-500 animate-duration-[1200ms]"
+          class="responsiveNav mx-10 flex animate-fade-down items-center justify-between p-10 animate-delay-500 animate-duration-[1200ms]"
           aria-label="Global"
         >
           <div class="flex lg:flex-1">
@@ -88,7 +88,7 @@
             <button
               @click="isOpen = !isOpen"
               type="button"
-              class="group -m-2.5 rounded-full bg-white/10 p-2.5 transition hover:bg-white/5"
+              class="group -m-2.5 rounded-full bg-white/5 p-2.5 transition hover:bg-white/5"
             >
               <span class="sr-only">Open main menu</span>
               <svg
@@ -127,7 +127,7 @@
               <button
                 @click="isOpen = !isOpen"
                 type="button"
-                class="group -m-2.5 rounded-full bg-white/15 p-2.5 transition hover:bg-white/10"
+                class="group -m-2.5 rounded-full bg-white/5 p-2.5 transition hover:bg-white/10"
               >
                 <span class="sr-only">Close menu</span>
                 <svg
@@ -179,7 +179,7 @@
           ></div>
           <div class="text-center">
             <h1
-              class="font-outfit text-6xl font-bold tracking-tight text-white sm:text-8xl"
+              class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl md:text-8xl"
             >
               <span class="line-clamp-2 block overflow-hidden">
                 A Revolutionary<span class="text-yellow"> Web </span>&
@@ -187,11 +187,12 @@
               </span>
             </h1>
             <p
-              class="m-auto mt-6 flex max-w-2xl pt-5 font-franklin text-xl text-white"
+              class="m-auto mt-6 flex max-w-lg pt-5 font-franklin text-lg text-white sm:mt-8 sm:max-w-xl sm:pt-6 sm:text-xl md:mt-10 md:max-w-2xl md:pt-8 md:text-2xl lg:mt-12 lg:pt-10"
             >
               Nimbu combines content management, e-commerce and a scalable cloud
               database into a single system that's amazingly easy to use.
             </p>
+
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#scroll"
@@ -209,7 +210,7 @@
         x-data="{ hasAnimated: false, show: false }"
         x-intersect.once="show = true; hasAnimated = true"
         :class="{ 'animate-fade-up': show }"
-        class="backBlur absolute size-full -translate-x-1/2 -translate-y-1/2 animate-fade-up animate-delay-500 animate-duration-[1400ms] [filter:blur(200px)] sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] dark:[background-image:linear-gradient(to_bottom,#0a6cdd,transparent_70%)]"
+        class="absolute size-full -translate-x-1/2 -translate-y-1/2 animate-fade-up animate-delay-500 animate-duration-[1400ms] [filter:blur(200px)] sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1500px] dark:[background-image:linear-gradient(to_bottom,#0a6cdd,transparent_70%)]"
       ></div>
     </div>
 
@@ -225,8 +226,9 @@
             id="myVideo"
             class="relative h-auto max-h-[720px] animate-border rounded-xl border-2 border-transparent animate-delay-[300ms]"
             autoplay
-            muted
             loop
+            muted
+            playsinline
           >
             <source
               src="<%= require('./images/nimbu_promoVideo_opt.mp4') %>"
@@ -241,6 +243,7 @@
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 185"
       class="draw-svg-path lineCustom absolute"
+      id="responsiveSVG"
     >
       <defs>
         <style>
@@ -301,8 +304,9 @@
               <video
                 class="max-h-[550px] rounded-xl transition-shadow duration-200 hover:shadow-2xl hover:shadow-yellow/30"
                 autoplay
-                muted
                 loop
+                muted
+                playsinline
               >
                 <source
                   src="<%= require('./images/video1_website_opt.mp4') %>"
@@ -310,9 +314,11 @@
                 />
               </video>
             </div>
-            <h2 class="content__title">Building websites</h2>
+            <h2 class="content__title font-outfit text-white">
+              Building websites
+            </h2>
             <p
-              class="content__text backColor content__text--narrow text-meta w-[600px]"
+              class="content__text backColor content__text--narrow text-meta w-[600px] font-franklin text-white"
             >
               Creating your website with Nimbu is a simple, intuitive process.
               Just add and arrange your content anywhere you want. Or dive in
@@ -330,8 +336,9 @@
               <video
                 class="max-h-[550px] rounded-xl transition-shadow duration-200 hover:shadow-2xl hover:shadow-yellow/30"
                 autoplay
-                muted
                 loop
+                muted
+                playsinline
               >
                 <source
                   src="<%= require('./images/video2_channels_opt.mp4') %>"
@@ -339,8 +346,10 @@
                 />
               </video>
             </div>
-            <h2 class="content__title">Channels</h2>
-            <p class="content__text content__text--narrow text-meta w-[600px]">
+            <h2 class="content__title font-outfit text-white">Channels</h2>
+            <p
+              class="content__text content__text--narrow text-meta w-[600px] font-franklin text-white"
+            >
               Using channels helps provide a more personalized user experience.
               You can segment your audience and deliver content that is most
               relevant to their interests and preferences, increasing engagement
@@ -357,8 +366,9 @@
               <video
                 class="max-h-[550px] rounded-xl transition-shadow duration-200 hover:shadow-2xl hover:shadow-yellow/30"
                 autoplay
-                muted
                 loop
+                muted
+                playsinline
               >
                 <source
                   src="<%= require('./images/video3_ecommerce_opt.mp4') %>"
@@ -366,8 +376,10 @@
                 />
               </video>
             </div>
-            <h2 class="content__title">Ecommerce</h2>
-            <p class="content__text content__text--narrow text-meta w-[600px]">
+            <h2 class="content__title font-outfit text-white">Ecommerce</h2>
+            <p
+              class="content__text content__text--narrow text-meta w-[600px] font-franklin text-white"
+            >
               Nimbu offers a secure e-commerce platform with various payment
               options, order management and effective sales recovery. Flexible
               shipping, tax rates, and Exact Online integration simplify
@@ -382,10 +394,10 @@
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
       :class="{ 'animate-fade-up': show }"
-      class="relative isolate animate-fade-up bg-darkblue px-6 pt-36 animate-duration-[1200ms] lg:px-8"
+      class="relative isolate bg-darkblue px-6 pt-20 animate-duration-[1200ms] sm:pt-24 md:pt-28 lg:px-8 lg:pt-36"
     >
       <div class="px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl pt-16">
+        <div class="mx-auto max-w-2xl pt-8 sm:pt-12 md:pt-16">
           <div class="text-center">
             <h1
               class="font-outfit text-4xl font-bold tracking-tight text-white sm:text-6xl"
@@ -396,6 +408,7 @@
         </div>
       </div>
     </div>
+
     <div
       x-data="{ hasAnimated: false, show: false }"
       x-intersect.once="show = true; hasAnimated = true"
@@ -606,7 +619,7 @@
     >
       <div class="mx-auto bg-darkblue bg-cover">
         <div class="relative mx-auto max-w-screen-2xl">
-          <div class="mx-auto max-w-7xl py-16 sm:py-36">
+          <div class="mx-auto max-w-7xl py-36">
             <div
               class="relative isolate overflow-hidden rounded-xl bg-blue px-6 pt-16 shadow-2xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
             >
@@ -688,7 +701,9 @@
                         </div>
                       </div>
 
-                      <div class="relative mt-[35px]">
+                      <div
+                        class="relative mt-[35px] flex justify-center lg:justify-start"
+                      >
                         <button
                           type="submit"
                           class="block w-40 rounded-xl bg-white px-3.5 py-2.5 text-center font-outfit text-lg font-semibold text-blue ring-2 ring-white transition-colors duration-300 placeholder:text-gray-400 hover:bg-blue hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
@@ -726,7 +741,8 @@
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 185"
-        class="draw-svg-path bottom-50 absolute"
+        class="draw-svg-path fixed-stroke-width lineCustom2 absolute"
+        id="responsiveSVG2"
       >
         <defs>
           <style>
@@ -748,7 +764,7 @@
             }
 
             .cls-3 {
-              stroke-width: 3px;
+              stroke-width: 2px;
             }
           </style>
         </defs>
@@ -1980,8 +1996,9 @@
                 :class="{ 'animate-fade-left': show }"
                 class="size-full flex-none animate-fade-left rounded-xl animate-delay-[300ms] animate-duration-[1400ms] lg:h-full lg:max-w-lg"
                 autoplay
-                muted
                 loop
+                muted
+                playsinline
               >
                 <source
                   src="<%= require('./images/nimbu_3d.mp4') %>"
