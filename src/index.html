@@ -110,17 +110,19 @@
         >
           <div class="fixed inset-0 z-50"></div>
           <div
-            class="transition-background fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-yellow bg-cover p-10 duration-300 sm:max-w-lg sm:ring-gray-900/10"
+            class="transition-background fixed inset-y-0 left-0 z-50 w-full animate-flip-up overflow-y-auto bg-yellow bg-cover sm:max-w-lg sm:ring-gray-900/10"
             style="
               background-image: url('<%= require('./images/bg-nimbu-linesWhite.svg') %>');
             "
           >
-            <div class="flex items-center justify-between">
+            <div
+              class="responsiveNav flex animate-fade-down items-center justify-between p-10 animate-delay-[500ms] animate-duration-[1000ms]"
+            >
               <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
                 <img
                   class="h-7 w-auto"
-                  src="<%= require('./images/nimbu_logo_dark.svg') %>"
+                  src="<%= require('./images/nimbu_logo_white.svg') %>"
                   alt="logomark_nimbu"
                 />
               </a>
@@ -144,25 +146,25 @@
                 </svg>
               </button>
             </div>
-            <div class="mt-6 flow-root pt-5">
+            <div class="flow-root">
               <div class="-my-6">
                 <div class="space-y-2 py-6 font-franklin">
                   <a
                     @click="isOpen = false"
                     href="#solutions"
-                    class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
+                    class="-mx-3 ml-5 block animate-fade-right rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 animate-delay-[400ms] animate-duration-[1000ms] hover:bg-gray-50"
                     >Solutions</a
                   >
                   <a
                     @click="isOpen = false"
                     href="#pricing"
-                    class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
+                    class="-mx-3 ml-5 block animate-fade-right rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 animate-delay-[600ms] animate-duration-[1000ms] hover:bg-gray-50"
                     >Pricing</a
                   >
                   <a
                     @click="isOpen = false"
                     href="#contact"
-                    class="-mx-3 block rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 hover:bg-gray-50"
+                    class="-mx-3 ml-5 block animate-fade-right rounded-xl px-3 py-2 text-base font-semibold leading-7 text-gray-900 transition duration-300 animate-delay-[800ms] animate-duration-[1000ms] hover:bg-gray-50"
                     >Contact</a
                   >
                 </div>
@@ -780,7 +782,9 @@
 
       <section class="relative z-0">
         <div class="max-w-8xl">
-          <div class="mx-auto w-full max-w-5xl bg-cover px-4 py-48 md:px-6">
+          <div
+            class="responsiveSection mx-auto w-full max-w-5xl bg-cover px-4 py-48 md:px-6"
+          >
             <div
               class="group flex flex-col items-center justify-center space-y-4 text-center font-outfit text-3xl font-semibold text-slate-900 before:absolute before:inset-0 before:-z-10 before:transition-colors before:duration-500 sm:text-4xl md:text-5xl lg:flex-row lg:space-x-6 lg:space-y-0"
             >
@@ -1032,7 +1036,8 @@
           class="mt-10 flex animate-fade-up items-center justify-center gap-x-6"
         >
           <a
-            href="#"
+            href="link-naar-je-pdf-bestand.pdf"
+            download="bestandsnaam.pdf"
             class="rounded-xl bg-yellow px-8 py-2.5 font-franklin text-lg font-semibold text-darkblue ring-2 ring-yellow transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >Download the full feature list</a
           >

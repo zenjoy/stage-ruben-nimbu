@@ -103,9 +103,17 @@ header {
 }
 @media (max-width: 450px) {
   .lineCustom2 {
-    top: 30rem;
+    top: 9.5rem;
   }
 }
+
+@media (max-width: 550px) {
+  .responsiveSection {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
 // carts
 .demo-10 {
   --color-text: #000;
@@ -358,9 +366,27 @@ ol.custom-list li::before {
 }
 @media (max-width: 500px) {
   .responsiveNav {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
+    padding-top: 3rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
   }
+}
+
+
+
+@keyframes flip-down {
+  from {
+      transform: translateY(-100%);
+      opacity: 1;
+  }
+  to {
+      transform: translateY(0%);
+      opacity: 0;
+  }
+}
+
+.animate-flip-down {
+  animation: flip-down 0.5s ease-in-out;
 }
