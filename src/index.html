@@ -58,7 +58,7 @@
           aria-label="Global"
         >
           <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
+            <a href="index.html" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
               <img
                 class="h-7 w-auto transition-transform duration-300 hover:scale-95"
@@ -118,7 +118,7 @@
             <div
               class="responsiveNav flex animate-fade-down items-center justify-between p-10 animate-delay-[500ms] animate-duration-[1000ms]"
             >
-              <a href="#" class="-m-1.5 p-1.5">
+              <a href="index.html" class="-m-1.5 p-1.5">
                 <span class="sr-only">Your Company</span>
                 <img
                   class="h-7 w-auto"
@@ -184,8 +184,12 @@
               class="font-outfit text-4xl font-bold text-white sm:text-6xl md:text-[94px]"
             >
               <span class="overflow-hidden">
-                A Revolutionary<span class="text-yellow"> Web </span>
-                &<span class="text-yellow"> App</span> platform
+                A Revolutionary<span class="text-yellow"> Web </span> &<span
+                  class="text-yellow"
+                >
+                  App</span
+                >
+                platform
               </span>
             </h1>
             <p
@@ -1036,8 +1040,8 @@
           class="mt-10 flex animate-fade-up items-center justify-center gap-x-6"
         >
           <a
-            href="link-naar-je-pdf-bestand.pdf"
-            download="bestandsnaam.pdf"
+            href="<%= require('./pdf/featureList.pdf') %>"
+            download="featureList.pdf"
             class="rounded-xl bg-yellow px-8 py-2.5 font-franklin text-lg font-semibold text-darkblue ring-2 ring-yellow transition-colors duration-300 hover:bg-transparent hover:text-white hover:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             >Download the full feature list</a
           >
@@ -1056,10 +1060,11 @@
           <div class="mx-auto max-w-7xl rounded-xl bg-blue">
             <div class="text-center">
               <h2
-                class="pb-10 pt-20 font-outfit text-4xl font-bold tracking-tight text-white sm:text-7xl"
+                class="pb-10 pt-20 font-outfit text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
               >
                 Empowering <span class="text-yellow">success</span> in numbers
               </h2>
+
               <p class="text-md mx-auto mt-4 max-w-4xl px-6 text-white lg:px-8">
                 We redefine collaboration, innovation, and success. From our
                 unwavering commitment to excellence to our dynamic approach that
@@ -1072,14 +1077,14 @@
             <dl
               class="mt-16 grid grid-cols-1 overflow-hidden rounded-xl text-center sm:grid-cols-1 lg:grid-cols-3"
             >
-              <div class="flex flex-col bg-lightblue p-10">
+              <div class="flex flex-col bg-lightblue p-8 sm:p-4 lg:p-8">
                 <dt
-                  class="pt-5 text-3xl font-semibold leading-6 text-white sm:text-sm lg:text-3xl"
+                  class="pt-5 text-xl font-semibold leading-6 text-white sm:text-sm md:text-2xl lg:text-3xl"
                 >
                   Uptime
                 </dt>
                 <span
-                  class="order-first text-6xl font-semibold tabular-nums tracking-tight text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  class="order-first text-5xl font-semibold tabular-nums tracking-tight text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)] sm:text-4xl md:text-5xl lg:text-6xl"
                   x-data="{ shown: false }"
                   x-intersect="shown = true"
                   :class="shown && '[--num:99]'"
@@ -1087,14 +1092,14 @@
                   <span class="supports-[counter-set]:sr-only">99</span>%
                 </span>
               </div>
-              <div class="flex flex-col bg-lightblue p-8">
+              <div class="flex flex-col bg-lightblue p-8 sm:p-4 lg:p-8">
                 <dt
-                  class="pt-5 text-3xl font-semibold leading-6 text-white sm:text-sm lg:text-3xl"
+                  class="pt-5 text-xl font-semibold leading-6 text-white sm:text-sm md:text-2xl lg:text-3xl"
                 >
                   Delivered projects
                 </dt>
                 <span
-                  class="order-first text-6xl font-semibold tabular-nums tracking-tight text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  class="order-first text-5xl font-semibold tabular-nums tracking-tight text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)] sm:text-4xl md:text-5xl lg:text-6xl"
                   x-data="{ shown: false }"
                   x-intersect="shown = true"
                   :class="shown && '[--num:1000]'"
@@ -1102,14 +1107,14 @@
                   <span class="supports-[counter-set]:sr-only">1000</span>+
                 </span>
               </div>
-              <div class="flex flex-col bg-lightblue p-8">
+              <div class="flex flex-col bg-lightblue p-8 sm:p-4 lg:p-8">
                 <dt
-                  class="pt-5 text-3xl font-semibold leading-6 text-white sm:text-sm lg:text-3xl"
+                  class="pt-5 text-xl font-semibold leading-6 text-white sm:text-sm md:text-2xl lg:text-3xl"
                 >
                   Years of experience
                 </dt>
                 <span
-                  class="order-first text-6xl font-semibold tabular-nums tracking-tight text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                  class="order-first text-5xl font-semibold tabular-nums tracking-tight text-white transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)] sm:text-4xl md:text-5xl lg:text-6xl"
                   x-data="{ shown: false }"
                   x-intersect="shown = true"
                   :class="shown && '[--num:10]'"

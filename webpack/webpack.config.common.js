@@ -49,6 +49,14 @@ module.exports = {
           filename: 'fonts/[name][ext][query]',
         },
       },
+      // PDF assets
+      {
+        test: /\.pdf$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'pdf/[name].[contenthash][ext]',
+        },
+      },
     ],
   },
   plugins: pages

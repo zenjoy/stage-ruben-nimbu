@@ -1,8 +1,8 @@
-const { merge } = require('webpack-merge');
-const webpackCommonConfig = require('./webpack.config.common');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { merge } = require('webpack-merge')
+const webpackCommonConfig = require('./webpack.config.common')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = merge(webpackCommonConfig, {
   mode: 'production',
@@ -43,11 +43,18 @@ module.exports = merge(webpackCommonConfig, {
           filename: 'fonts/[name].[contenthash].[ext][query]',
         },
       },
+      // PDF assets
+      {
+        test: /\.pdf$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'pdf/[name].[contenthash][ext]',
+        },
+      },
     ],
   },
   optimization: {
     minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`)
       '...',
       new CssMinimizerPlugin({
         minimizerOptions: {
@@ -63,7 +70,12 @@ module.exports = merge(webpackCommonConfig, {
         minimizer: {
           implementation: ImageMinimizerPlugin.imageminMinify,
           options: {
-            plugins: ['imagemin-gifsicle', 'imagemin-mozjpeg', 'imagemin-pngquant', 'imagemin-svgo'],
+            plugins: [
+              'imagemin-gifsicle',
+              'imagemin-mozjpeg',
+              'imagemin-pngquant',
+              'imagemin-svgo',
+            ],
           },
         },
       }),
@@ -74,4 +86,4 @@ module.exports = merge(webpackCommonConfig, {
       filename: 'css/[name].[contenthash].css',
     }),
   ],
-});
+})
